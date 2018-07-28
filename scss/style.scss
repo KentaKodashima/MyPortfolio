@@ -1,0 +1,22 @@
+/* ==============
+      Header
+  ============= */
+#header {
+  position: relative;
+  .container {
+    min-height: 300px;
+    #heroText {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 50%;
+      text-align: center;
+    }
+  }
+}
+
+/* ==============
+      Works
+  ============= */
