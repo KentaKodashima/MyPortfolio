@@ -3,14 +3,14 @@ var sass = require('gulp-sass');
 
 // Where to put Scss files and compiled CSS files
 gulp.task('sass', function(){
-  gulp.src('./scss/style.scss')
+  gulp.src('./scss/**/*.scss')
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(gulp.dest('./css/'));
 });
 
 // Create auto-watch task named "sass-watch"
 gulp.task('sass-watch', ['sass'], function(){
-  var watcher = gulp.watch('./scss/style.scss', ['sass']);
+  var watcher = gulp.watch('./scss/**/*.scss', ['sass']);
   watcher.on('change', function(event) {
   });
 });

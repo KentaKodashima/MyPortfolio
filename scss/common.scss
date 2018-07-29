@@ -1,0 +1,33 @@
+/* ==============
+   Common styles
+  ============= */
+.sectionTitle {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.icons {
+  font-size: 0;
+}
+
+.icons li {
+  display: inline-block;
+  background-color: #586358;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 0;
+}
+
+.icons li:last-child {
+  margin-right: 0;
+}
+
+.icons li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 1.9rem;
+  line-height: 40px;
+}

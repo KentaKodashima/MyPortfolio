@@ -1,0 +1,20 @@
+/* ==============
+    Base styles
+  ============= */
+body {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  word-wrap: break-word;
+}

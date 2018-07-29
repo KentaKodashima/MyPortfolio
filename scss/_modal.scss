@@ -1,47 +1,3 @@
-/* ==============
-      Header
-  ============= */
-#header {
-  background: url("../img/header-bg.jpg") top center no-repeat;
-  background-size: cover;
-  padding: 20% 0 20%;
-  color: #fff;
-}
-
-#header #nav .navScroll {
-  background-color: #596359;
-  transition: background-color 0.3s linear;
-  top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  transition: padding 0.5s;
-}
-
-#header #nav .navScroll #logoImg {
-  transform: scale(0.7, 0.7);
-  transition: 0.3s;
-}
-
-#header .container #heroText {
-  margin: auto;
-  width: 100%;
-  text-align: center;
-}
-
-#header .container #heroText .title {
-  font-size: 5rem;
-  margin: 0;
-  line-height: 1;
-}
-
-#header .container #heroText .subTitle {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* ==============
-      Works
-  ============= */
 /**
   Modal Overlay Effect for "#works"
 **/
@@ -49,16 +5,16 @@
   display: none;
 }
 
-.modal {
+.modal{
   display: none;
   width: 100%;
-  height: 100%;
+  height:100%;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1001;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0,0.9);
   overflow-y: scroll;
 }
 
@@ -152,18 +108,4 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
-}
-
-/* ==============
-      Contact
-  ============= */
-#contact .icons li {
-  text-align: center;
-}
-
-/* ==============
-      Footer
-  ============= */
-#footer {
-  text-align: center;
 }
