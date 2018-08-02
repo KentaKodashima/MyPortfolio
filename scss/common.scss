@@ -1,33 +1,87 @@
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : common.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+
+@import "variables";
+@import "mixin";
+
 /* ==============
    Common styles
   ============= */
-.sectionTitle {
-  text-align: center;
-  font-size: 4.5rem;
+#works,
+#skills,
+#resouces,
+#contact,
+#experience {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  .container {
+    max-width: 1020px;
+  }
 }
 
-.icons {
-  font-size: 0;
+.sectionTitle {
+  text-align: center;
+  font-size: $sectionTitle;
+  font-weight: bold;
+  margin-bottom: 5%;
+  @include max-screen($breakpMobileLand-max) {
+    font-size: 2rem;
+  }
+}
+
+.sectionTitleC {
+  color: $codingGreen;
 }
 
 .icons li {
   display: inline-block;
-  background-color: #586358;
+  background-color: $codingGreen;
   border-radius: 5px;
   margin-right: 10px;
   font-size: 0;
+  a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.9rem;
+    line-height: 40px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-.icons li:last-child {
-  margin-right: 0;
+.tags {
+  text-align: left;
+  .tagItem {
+    display: inline-block;
+    color: $textColorWhite;
+    background-color: $baseColor;
+    border: 3px solid $codingGreen;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 0 5px 8px 0;
+  }
 }
 
-.icons li a {
-  display: block;
-  width: 40px;
-  height: 40px;
-  box-sizing: border-box;
-  color: #fff;
-  font-size: 1.9rem;
-  line-height: 40px;
+.thumbnail {
+  text-align: center;
+  .thumbnailImg {
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
 }

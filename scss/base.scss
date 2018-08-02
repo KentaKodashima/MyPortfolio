@@ -1,8 +1,25 @@
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : base.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+
+@import "variables";
+
 /* ==============
     Base styles
   ============= */
 body {
-  font-size: 16px;
+  font-family: $fontFamilyBase;
+  font-size: $fontSizeBase;
+  color: $textColorBase;
 }
 
 ul {

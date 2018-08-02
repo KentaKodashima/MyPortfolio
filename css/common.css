@@ -1,25 +1,125 @@
+@charset "UTF-8";
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : common.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _mixin.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/* ==============
+    Link styles
+  ============= */
+/* ==============
+   Media queries
+  ============= */
 /* ==============
    Common styles
   ============= */
+#works,
+#skills,
+#resouces,
+#contact,
+#experience {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#works .container,
+#skills .container,
+#resouces .container,
+#contact .container,
+#experience .container {
+  max-width: 1020px;
+}
+
 .sectionTitle {
   text-align: center;
   font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 5%;
 }
 
-.icons {
-  font-size: 0;
+@media screen and (max-width: 600px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+.sectionTitleC {
+  color: #1DA9A2;
 }
 
 .icons li {
   display: inline-block;
-  background-color: #586358;
+  background-color: #1DA9A2;
   border-radius: 5px;
   margin-right: 10px;
   font-size: 0;
-}
-
-.icons li:last-child {
-  margin-right: 0;
 }
 
 .icons li a {
@@ -30,4 +130,34 @@
   color: #fff;
   font-size: 1.9rem;
   line-height: 40px;
+}
+
+.icons li:last-child {
+  margin-right: 0;
+}
+
+.tags {
+  text-align: left;
+}
+
+.tags .tagItem {
+  display: inline-block;
+  color: #fff;
+  background-color: #1F2029;
+  border: 3px solid #1DA9A2;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 0 5px 8px 0;
+}
+
+.thumbnail {
+  text-align: center;
+}
+
+.thumbnail .thumbnailImg {
+  margin-bottom: 20px;
+}
+
+.thumbnail .thumbnailImg img {
+  width: 100%;
 }
