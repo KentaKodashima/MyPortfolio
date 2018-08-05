@@ -1,0 +1,37 @@
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : app_detail.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+
+@import "variables";
+@import "mixin";
+
+/* ==============
+     Header
+  ============= */
+#header {
+  background-color: $baseColor;
+  padding: 10% 0 3% 0;
+  .appName {
+    color: $codingGreen;
+    font-size: 3rem;
+  }
+  .appInfo {
+    p {
+      color: $textColorWhite;
+    }
+  }
+}
+
+/* ==============
+     Footer
+  ============= */
+@import "_footer";

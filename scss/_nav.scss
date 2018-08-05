@@ -1,0 +1,59 @@
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _nav.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+
+@import "variables";
+@import "mixin";
+
+#nav.navScroll {
+  background-color: $baseColor;
+  transition: background-color 0.3s linear;
+  top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: padding 0.5s;
+  #logoImg {
+    transform: scale(0.7, 0.7);
+    transition: 0.3s;
+  }
+}
+#nav {
+  #navbarNav {
+    .nav-link {
+      color: $textColorWhite;
+      font-size: 1.5rem;
+    }
+  }
+  .isOpen {
+    .navContents {
+      display: block !important;
+      float: none;
+      padding-top: 66px;
+      li {
+        display: block;
+        margin-right: 0;
+        width: 100%;
+        border-bottom:1px solid #fff;
+        &:last-child {
+          border-bottom: none;
+        }
+        a {
+          display: block;
+          width: 100%;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

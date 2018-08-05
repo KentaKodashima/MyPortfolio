@@ -80,14 +80,85 @@ reproduced or used in any manner whatsoever.
 /* ==============
       Header
   ============= */
-#header {
-  background: url("../img/header-bg.jpg") top center no-repeat;
-  background-size: cover;
-  padding: 20% 0 20%;
-  color: #fff;
-}
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _nav.scss
+Encoding        : UTF-8
 
-#header #nav.navScroll {
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _mixin.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/* ==============
+    Link styles
+  ============= */
+/* ==============
+   Media queries
+  ============= */
+#nav.navScroll {
   background-color: #1F2029;
   transition: background-color 0.3s linear;
   top: 0;
@@ -96,40 +167,47 @@ reproduced or used in any manner whatsoever.
   transition: padding 0.5s;
 }
 
-#header #nav.navScroll #logoImg {
+#nav.navScroll #logoImg {
   transform: scale(0.7, 0.7);
   transition: 0.3s;
 }
 
-#header #nav #navbarNav .nav-link {
+#nav #navbarNav .nav-link {
   color: #fff;
   font-size: 1.5rem;
 }
 
-#header #nav .isOpen .navContents {
+#nav .isOpen .navContents {
   display: block !important;
   float: none;
   padding-top: 66px;
 }
 
-#header #nav .isOpen .navContents li {
+#nav .isOpen .navContents li {
   display: block;
   margin-right: 0;
   width: 100%;
   border-bottom: 1px solid #fff;
 }
 
-#header #nav .isOpen .navContents li:last-child {
+#nav .isOpen .navContents li:last-child {
   border-bottom: none;
 }
 
-#header #nav .isOpen .navContents li a {
+#nav .isOpen .navContents li a {
   display: block;
   width: 100%;
 }
 
-#header #nav .isOpen .navContents li a:hover {
+#nav .isOpen .navContents li a:hover {
   opacity: 0.7;
+}
+
+#header {
+  background: url("../img/header-bg.jpg") top center no-repeat;
+  background-size: cover;
+  padding: 20% 0 20%;
+  color: #fff;
 }
 
 #header .container #heroText {
@@ -338,34 +416,78 @@ reproduced or used in any manner whatsoever.
   color: gray;
 }
 
+#resouces a .resourceName {
+  font-size: 1.5rem;
+}
+
 /* ==============
-      Contact
+      Profile
   ============= */
-#contact {
+#profile {
   background-color: #1F2029;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  #profile .container {
+    text-align: center;
+  }
+}
+
+#profile .container .sectionTitle {
+  text-align: left;
   color: #1DA9A2;
 }
 
 @media screen and (max-width: 600px) {
-  #contact .container {
+  #profile .container .sectionTitle {
     text-align: center;
   }
 }
 
-#contact .container .sectionTitle {
-  text-align: left;
-}
-
-@media screen and (max-width: 600px) {
-  #contact .container .sectionTitle {
-    text-align: center;
-  }
-}
-
-#contact .container .icons li {
+#profile .container .icons li {
   text-align: center;
 }
 
+/* ==============
+      Contact
+  ============= */
+#contact {
+  text-align: center;
+  padding-bottom: 3% !important;
+}
+
+#contact .greetingText {
+  font-size: 1.2rem;
+  margin-bottom: 3%;
+}
+
+#contact .contactButton {
+  display: block;
+  width: 280px;
+  margin: auto;
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 1rem 1.8rem;
+  background-color: #1DA9A2;
+  border-radius: 15px;
+}
+
+/* ==============
+      Footer
+  ============= */
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _footer.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
 /* ==============
       Footer
   ============= */
