@@ -78,11 +78,213 @@ reproduced or used in any manner whatsoever.
    Media queries
   ============= */
 /* ==============
+     Base / Common
+  ============= */
+.mainArea {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+#home,
+#creation,
+#favorite,
+#search,
+#yourPage {
+  padding-bottom: 50px;
+}
+
+/* ==============
      Header
   ============= */
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _nav.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _mixin.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/* ==============
+    Link styles
+  ============= */
+/* ==============
+   Media queries
+  ============= */
+#nav.navScroll {
+  background-color: #1F2029;
+  transition: background-color 0.3s linear;
+  top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: padding 0.5s;
+}
+
+#nav.navScroll #logoImg {
+  transform: scale(0.7, 0.7);
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  #nav {
+    background-color: #1F2029;
+  }
+}
+
+#nav .navbar-toggler {
+  height: 30px;
+  padding: 25px 15px;
+  background-color: #1DA9A2;
+}
+
+#nav .navbar-toggler .hamburgerBorder {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 0;
+  position: relative;
+}
+
+#nav .navbar-toggler .hamburgerBorder:before {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: -10px;
+}
+
+#nav .navbar-toggler .hamburgerBorder:after {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 10px;
+}
+
+#nav.isOpen .navbar-toggler .hamburgerBorder {
+  background-color: transparent;
+}
+
+#nav.isOpen .navbar-toggler .hamburgerBorder:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  transition: all 100ms ease;
+}
+
+#nav.isOpen .navbar-toggler .hamburgerBorder:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+  transition: all 100ms ease;
+}
+
+#nav #navbarNav .nav-link {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+#nav .isOpen .navContents {
+  display: block !important;
+  float: none;
+  padding-top: 66px;
+}
+
+#nav .isOpen .navContents li {
+  display: block;
+  margin-right: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+
+#nav .isOpen .navContents li:last-child {
+  border-bottom: none;
+}
+
+#nav .isOpen .navContents li a {
+  display: block;
+  width: 100%;
+}
+
+#nav .isOpen .navContents li a:hover {
+  opacity: 0.7;
+}
+
 #header {
   background-color: #1F2029;
   padding: 10% 0 3% 0;
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    padding: 20% 0 5% 0;
+  }
 }
 
 #header .appName {
@@ -90,8 +292,79 @@ reproduced or used in any manner whatsoever.
   font-size: 3rem;
 }
 
-#header .appInfo p {
+@media screen and (max-width: 600px) {
+  #header .appInfo .infoCol {
+    margin-bottom: 1rem;
+  }
+}
+
+#header .appInfo .infoCol p {
+  color: #E1E2E7;
+}
+
+@media screen and (max-width: 600px) {
+  #header .appInfo .infoCol p {
+    margin: 0;
+  }
+}
+
+/* ==============
+     Body
+  ============= */
+@media screen and (max-width: 600px) {
+  .appScreenshots {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .appScreenshots .appScreenshotImg {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .appScreenshots .appScreenshotImg img {
+    max-width: 280px;
+  }
+}
+
+/* ==============
+     Marketing
+  ============= */
+#marketingButtons {
+  text-align: center;
+}
+
+#marketingButtons .githubArea {
+  margin-bottom: 10px;
+}
+
+#marketingButtons .githubArea .githubButton {
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  padding: 15px 20px;
+  background-color: #333;
+  width: 180px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+#marketingButtons .githubArea .githubButton i {
+  margin-right: 7px;
+}
+
+#marketingButtons .githubArea .githubButton:link {
   color: #fff;
+}
+
+#marketingButtons .appStoreArea .appStoreButton {
+  display: inline-block;
+}
+
+#marketingButtons .appStoreArea .appStoreButton #appStoreButtonImg {
+  width: 180px;
 }
 
 /* ==============
@@ -115,13 +388,13 @@ reproduced or used in any manner whatsoever.
 #footer {
   text-align: center;
   background-color: #1F2029;
-  color: #fff;
-  padding-top: 2%;
+  color: #E1E2E7;
+  padding-top: 30px;
   padding-bottom: 10px;
 }
 
 #footer a {
-  color: #fff;
+  color: #E1E2E7;
 }
 
 #footer a:hover, #footer a:active, #footer a:focus {

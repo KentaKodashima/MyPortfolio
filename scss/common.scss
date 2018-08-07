@@ -22,10 +22,19 @@ reproduced or used in any manner whatsoever.
 #resouces,
 #profile,
 #contact {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  .container {
-    max-width: 1020px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  @include max-screen($breakpMobileLand-max) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.container {
+  max-width: 1020px;
+  @include max-screen($breakpMobileLand-max) {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -55,7 +64,7 @@ reproduced or used in any manner whatsoever.
     width: 40px;
     height: 40px;
     box-sizing: border-box;
-    color: #fff;
+    color: $colorWhite;
     font-size: 1.9rem;
     line-height: 40px;
   }
@@ -68,7 +77,7 @@ reproduced or used in any manner whatsoever.
   text-align: left;
   .tagItem {
     display: inline-block;
-    color: $textColorWhite;
+    color: $colorPlainText;
     background-color: $baseColor;
     border: 3px solid $codingGreen;
     border-radius: 10px;

@@ -172,6 +172,63 @@ reproduced or used in any manner whatsoever.
   transition: 0.3s;
 }
 
+@media screen and (max-width: 600px) {
+  #nav {
+    background-color: #1F2029;
+  }
+}
+
+#nav .navbar-toggler {
+  height: 30px;
+  padding: 25px 15px;
+  background-color: #1DA9A2;
+}
+
+#nav .navbar-toggler .hamburgerBorder {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 0;
+  position: relative;
+}
+
+#nav .navbar-toggler .hamburgerBorder:before {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: -10px;
+}
+
+#nav .navbar-toggler .hamburgerBorder:after {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 10px;
+}
+
+#nav.isOpen .navbar-toggler .hamburgerBorder {
+  background-color: transparent;
+}
+
+#nav.isOpen .navbar-toggler .hamburgerBorder:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  transition: all 100ms ease;
+}
+
+#nav.isOpen .navbar-toggler .hamburgerBorder:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+  transition: all 100ms ease;
+}
+
 #nav #navbarNav .nav-link {
   color: #fff;
   font-size: 1.5rem;
@@ -210,6 +267,12 @@ reproduced or used in any manner whatsoever.
   color: #fff;
 }
 
+@media screen and (max-width: 600px) {
+  #header {
+    padding: 40% 0 20%;
+  }
+}
+
 #header .container #heroText {
   margin: auto;
   width: 100%;
@@ -244,130 +307,6 @@ reproduced or used in any manner whatsoever.
 /* ==============
       Works
   ============= */
-/*
-======================================================================
-Project Name    : My Portfolio
-File Name       : _modal.scss
-Encoding        : UTF-8
-
-Copyright © 2018 Kenta Kodashima. All rights reserved.
-
-This source code or any portion there of must not be
-reproduced or used in any manner whatsoever.
-======================================================================
-*/
-/**
-  Modal Overlay Effect for "#works"
-**/
-#modalContainer {
-  display: none;
-}
-
-.modal {
-  display: none;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1100;
-  background: rgba(0, 0, 0, 0.9);
-  overflow-y: scroll;
-}
-
-.modalBody {
-  font-size: 40px;
-  color: #eee;
-  vertical-align: middle;
-  font-weight: bold;
-}
-
-.modalCloseBtnArea {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 75px;
-  height: 75px;
-  cursor: pointer;
-}
-
-.modalCloseBtn {
-  display: block;
-  z-index: 1051;
-  width: 1px;
-  height: 75px;
-  margin-left: 35px;
-  background-color: #fff;
-  transform: rotate(45deg);
-}
-
-.modalCloseBtn:before {
-  display: block;
-  content: "";
-  z-index: 1052;
-  width: 1px;
-  height: 75px;
-  background-color: #fff;
-  transform: rotate(90deg);
-}
-
-.modalContainer {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.appBasicInfo {
-  font-size: 1.4rem;
-  font-weight: normal;
-  margin-bottom: 50px;
-}
-
-.infoText {
-  margin: 0;
-  line-height: 2rem;
-}
-
-.screenshot {
-  margin-bottom: 50px;
-}
-
-.screenshot img {
-  max-width: 100%;
-}
-
-.appDescriptionText {
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-.appDescriptionText .link {
-  display: block;
-}
-
-.appDescriptionText .link .iTunesLink {
-  text-decoration: none;
-  color: #0275d8;
-}
-
-.appProductionDetail {
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-.modalCloseBtnBottom {
-  color: #fff;
-  background-color: #0275d8;
-  width: auto;
-  margin: auto;
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
 #works .imgArea .imgBox {
   margin-bottom: 30px;
 }
@@ -395,13 +334,13 @@ reproduced or used in any manner whatsoever.
 
 #skills .container .skillName {
   font-weight: bold;
-  color: #fff;
+  color: #E1E2E7;
   font-size: 1.3rem;
   margin: 15px 0 20px;
 }
 
 #skills .container .description {
-  color: #fff;
+  color: #E1E2E7;
   text-align: left;
 }
 
@@ -409,11 +348,11 @@ reproduced or used in any manner whatsoever.
     Recources
    ============= */
 #resouces a {
-  color: #4d4d4d;
+  color: #55747C;
 }
 
 #resouces a:hover, #resouces a:active, #resouces a:focus {
-  color: gray;
+  color: #89a6ae;
 }
 
 #resouces a .resourceName {
@@ -425,12 +364,18 @@ reproduced or used in any manner whatsoever.
   ============= */
 #profile {
   background-color: #1F2029;
-  color: #fff;
+  color: #E1E2E7;
 }
 
 @media screen and (max-width: 600px) {
   #profile .container {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #profile .container .profileImg {
+    margin-bottom: 20px;
   }
 }
 
@@ -454,11 +399,10 @@ reproduced or used in any manner whatsoever.
   ============= */
 #contact {
   text-align: center;
-  padding-bottom: 3% !important;
+  padding-bottom: 30px !important;
 }
 
 #contact .greetingText {
-  font-size: 1.2rem;
   margin-bottom: 3%;
 }
 
@@ -494,13 +438,13 @@ reproduced or used in any manner whatsoever.
 #footer {
   text-align: center;
   background-color: #1F2029;
-  color: #fff;
-  padding-top: 2%;
+  color: #E1E2E7;
+  padding-top: 30px;
   padding-bottom: 10px;
 }
 
 #footer a {
-  color: #fff;
+  color: #E1E2E7;
 }
 
 #footer a:hover, #footer a:active, #footer a:focus {

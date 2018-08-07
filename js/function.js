@@ -18,40 +18,33 @@ $(window).scroll(function () {
   if (ua.indexOf('iPhone') > 0 ||
       ua.indexOf('iPod') > 0 ||
       ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
-    // $(".toggleBtn").click(function(){
-    //   $('#nav').toggleClass("isOpen");
-    // });
-    // Toggle the menu when nav li a is clicked
-    $('#nav a').on('click', function(){
-      $('.toggleBtn').click();
-    });
+
     // If #nav isOpen, fix the bg
-    // if ($('nav').hasClass("isOpen")) {
-    //   $('body,html').css({"overflow":"hidden","height":"100%"});
-    // }
-    // if (!$('nav').hasClass("isOpen")) {
-    //   $('body,html').css({"overflow":"visible","height":"auto"});
-    // }
+    if ($('nav').hasClass("isOpen")) {
+      $('body,html').css({"overflow":"hidden","height":"100%"});
+    }
+    if (!$('nav').hasClass("isOpen")) {
+      $('body,html').css({"overflow":"visible","height":"auto"});
+    }
   } else {
     /* How many pixels did the nav move? */
     if ($(window).scrollTop() >= 600) {
-      /* Action */
       $("#nav").addClass('navScroll');
     } else if($(window).scrollTop() <= 600) {
-      /* Normal state */
       $("#nav").removeClass('navScroll');
     }
   }
 });
 
-// Overlay
 $(function() {
-  $("#modalTarget1").click(function() {
-    $("#modalItem1").fadeIn();
-    $('body').css('overflow','hidden');
+  // Toggling isOpen class
+  $('button.navbar-toggler').click(function(){
+    $("#nav").toggleClass('isOpen');
   });
-  $(".modalCloseBtnArea, .modalCloseBtnBottom").click(function() {
-    $("#modalItem1").fadeOut();
-    $('body').css('overflow','visible');
+
+  $('a.nav-link').click(function(){
+    $("button.navbar-toggler").addClass('collapsed');
+    $("div.navbar-collapse").removeClass('show');
+    $("#nav").removeClass('isOpen');
   });
 });

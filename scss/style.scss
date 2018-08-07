@@ -22,7 +22,10 @@ reproduced or used in any manner whatsoever.
   background: url('../img/header-bg.jpg') top center no-repeat;
   background-size: cover;
   padding: 20% 0 20%;
-  color: $textColorWhite;
+  color: $colorWhite;
+  @include max-screen($breakpMobileLand-max) {
+    padding: 40% 0 20%;
+  }
   .container {
     #heroText {
       margin: auto;
@@ -52,8 +55,6 @@ reproduced or used in any manner whatsoever.
 /* ==============
       Works
   ============= */
-@import "_modal";
-
 #works {
   .imgArea {
     .imgBox {
@@ -83,12 +84,12 @@ reproduced or used in any manner whatsoever.
     }
     .skillName {
       font-weight: bold;
-      color: #fff;
+      color: $colorPlainText;
       font-size: 1.3rem;
       margin: 15px 0 20px;
     }
     .description {
-      color: #fff;
+      color: $colorPlainText;
       text-align: left;
     }
   }
@@ -111,10 +112,15 @@ reproduced or used in any manner whatsoever.
   ============= */
 #profile {
   background-color: $baseColor;
-  color: $textColorWhite;
+  color: $colorPlainText;
   .container {
     @include max-screen($breakpMobileLand-max) {
       text-align: center;
+    }
+    .profileImg {
+      @include max-screen($breakpMobileLand-max) {
+        margin-bottom: 20px;
+      }
     }
     .sectionTitle {
       text-align: left;
@@ -136,9 +142,8 @@ reproduced or used in any manner whatsoever.
   ============= */
 #contact {
   text-align: center;
-  padding-bottom: 3% !important;
+  padding-bottom: 30px !important;
   .greetingText {
-    font-size: 1.2rem;
     margin-bottom: 3%;
   }
   .contactButton {
@@ -146,7 +151,7 @@ reproduced or used in any manner whatsoever.
     width: 280px;
     margin: auto;
     font-size: 1.4rem;
-    color: $textColorWhite;
+    color: $colorWhite;
     padding: 1rem 1.8rem;
     background-color: $codingGreen;
     border-radius: 15px;

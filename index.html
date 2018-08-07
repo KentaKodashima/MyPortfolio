@@ -33,7 +33,7 @@
     <div id="wrapper">
 
 			<header id="header">
-        <nav id="nav" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <nav id="nav" class="navbar navbar-expand-lg fixed-top">
           <a href="#header" class="logoImg navbar-brand">
             <!-- <span class="logoText">MyLogo</span> -->
             <object id="logoImg" type="image/svg+xml" data="./img/logo.svg">
@@ -41,7 +41,7 @@
             </object>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="hamburgerBorder"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
@@ -71,51 +71,10 @@
 				<div class="container">
 					<h2 class="sectionTitle">Works</h2>
 					<ul class="imgArea row cf">
-						<li id="modalTarget1" class="imgBox col-md-4">
+						<li class="imgBox col-md-4">
 							<a href="./works/amtrip/"><img src="./img/amtrip_icon.png" alt="Amtrip"></a>
 						</li>
 					</ul>
-					<!-- Modals -->
-					<div id="modalItem1" class="modal">
-						<div class="modalContents">
-							<div class="modalCloseBtnArea">
-								<span class="modalCloseBtn"></span>
-							</div>
-							<div class="modalContainer">
-								<div class="modalBody">
-									<h3 class="appTitle sectionTitle sectionTitleC">Amtrip</h3>
-									<div class="appBasicInfo">
-										<p class="infoText">Language: Swift</p>
-										<p class="infoText">Features: Realm, Google Places Autocomplete API</p>
-									</div>
-                  <div class="row">
-                    <div class="col-md-6">
-  										<p class="infoText">App Summary:</p>
-  										<p class="infoText">Features: Realm, Google Places Autocomplete API</p>
-  									</div>
-                    <div class="col-md-6">
-  										<p class="infoText">Challenges:</p>
-  										<p class="infoText">Features: Realm, Google Places Autocomplete API</p>
-  									</div>
-                  </div>
-									<div class="screenshot">
-										<img src="./img/screenshot.jpg" alt="Screenshot of the app.">
-									</div>
-									<div class="appDescriptionArea">
-										<p class="appDescriptionText">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-											<span class="link"><a href="https://itunes.apple.com/ca/app/amtrip/id1416443046?mt=8" class="iTunesLink">Available on iTunes</a></span>
-										</p>
-										<p class="appProductionDetail">
-											<span class="detailText">Client: My Own Project</span>
-											<span class="detailText">Category: iOS App</span>
-										</p>
-										<button type="button" class="modalCloseBtnBottom">Close</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</section>
 			<section id="skills">
@@ -126,7 +85,7 @@
 							<p class="icons"><i class="fas fa-mobile-alt"></i></p>
 							<p class="skillName">iOS Development</p>
 							<p class="description">
-								In July of 2018, I built and published an app as my own project. By building my own project, I could learn so many things such as the way UI components work in the real app, the method of implementing CRUD functions and the process of releasing an app.
+								In July of 2018, I built and published an app as my own project. By building my own project, I could learn so many things such as the way UI components works in the real app, the method of implementing CRUD functions and the process of releasing an app.
 							</p>
               <ul class="tags">
                 <li class="tagItem">Xcode</li>
@@ -153,7 +112,7 @@
 							<p class="icons"><i class="fas fa-laptop-code"></i></p>
 							<p class="skillName">Front-end Development</p>
 							<p class="description">
-								As a Front-end developer in a design studio, I built some website and HTML emails.
+								As a Front-end developer in a design studio, I built some website and HTML emails. When I build a website, I pay close attention to the details such as
 							</p>
               <ul class="tags">
                 <li class="tagItem">HTML5</li>
@@ -252,7 +211,7 @@
 			<section id="profile" class="cf">
 				<div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 profileImg">
 							<img src="./img/profile_img.jpg" alt="Picture of my self">
 						</div>
 						<div class="col-md-8">
@@ -279,7 +238,7 @@
           <div class="content">
             <p class="greetingText">
               Thank you for visiting this website.<br>
-              I'm looking for a job opportunity as a iOS developer.<br>
+              Currently, I'm looking for a job opportunity as an iOS developer.<br>
               Please feel free to contact me.
             </p>
             <a class="contactButton" href="mailto:kentakodashima@gmail.com">

@@ -27,9 +27,48 @@ reproduced or used in any manner whatsoever.
   }
 }
 #nav {
+  @include max-screen($breakpMobileLand-max) {
+    background-color: $baseColor;
+  }
+  .navbar-toggler {
+    height: 30px;
+    padding: 25px 15px;
+    background-color: $codingGreen;
+    .hamburgerBorder {
+      @include hamburgerBorder(0);
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        transition: all 100ms ease;
+        @include hamburgerBorder(-10px);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        transition: all 100ms ease;
+        @include hamburgerBorder(10px);
+      }
+    }
+  }
+  &.isOpen {
+    .navbar-toggler {
+      .hamburgerBorder {
+        background-color: transparent;
+        &:before {
+          transform: rotate(45deg) translate(7px, 7px);
+          transition: all 100ms ease;
+        }
+        &:after {
+          transform: rotate(-45deg) translate(7px, -7px);
+          transition: all 100ms ease;
+        }
+      }
+    }
+  }
   #navbarNav {
     .nav-link {
-      color: $textColorWhite;
+      color: $colorWhite;
       font-size: 1.5rem;
     }
   }

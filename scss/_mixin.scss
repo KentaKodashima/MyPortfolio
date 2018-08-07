@@ -13,6 +13,14 @@ reproduced or used in any manner whatsoever.
 
 @import "variables";
 
+@mixin hamburgerBorder($top) {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: $colorPlainText;
+  top: $top;
+}
+
 /* ==============
     Link styles
   ============= */

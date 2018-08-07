@@ -29,22 +29,22 @@
 
 			<header id="header">
         <nav id="nav" class="navbar navbar-expand-lg navbar-light fixed-top">
-          <a href="#header" class="logoImg navbar-brand">
+          <a href="../../index.html" class="logoImg navbar-brand">
             <!-- <span class="logoText">MyLogo</span> -->
             <object id="logoImg" type="image/svg+xml" data="../../img/logo.svg">
-              <img src="./img/logo.png" alt="Logo">
+              <img src="../../img/logo.png" alt="Logo">
             </object>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="hamburgerBorder"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item active"><a class="nav-link" href="#works">Works</a></li>
-              <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-              <li class="nav-item"><a class="nav-link" href="#resouces">Recources</a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-              <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+              <li class="nav-item active"><a class="nav-link" href="../../#works">Works</a></li>
+              <li class="nav-item"><a class="nav-link" href="../../#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="../../#resouces">Recources</a></li>
+              <li class="nav-item"><a class="nav-link" href="../../#contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="../../#experience">Experience</a></li>
             </ul>
           </div>
         </nav>
@@ -52,19 +52,19 @@
           <div class="appOverviewBox">
             <h1 class="appName">Amtrip</h1>
             <div class="appInfo row">
-              <div class="col-md-3">
+              <div class="col-md-3 col-6 infoCol">
                 <p class="appInfoLabel">Category:</p>
                 <p class="appInfoContent">iOS app</p>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-6 infoCol">
                 <p class="appInfoLabel">LANGUAGE:</p>
                 <p class="appInfoContent">Swift 4</p>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-6 infoCol">
                 <p class="appInfoLabel">FEATURES:</p>
                 <p class="appInfoContent">Realm, Google Places Autocomplete API</p>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-6 infoCol">
                 <p class="appInfoLabel">Production:</p>
                 <p class="appInfoContent">March 2018 - July 2018</p>
               </div>
@@ -72,40 +72,143 @@
           </div>
         </div>
 			</header>
-			<section id="works">
-				<div class="container">
-					<h2 class="sectionTitle">Works</h2>
-
-
-				</div>
-			</section>
-			<section id="skills">
-				<div class="container">
-					<h2 class="sectionTitle sectionTitleC">Skills</h2>
-
-
-				</div>
-			</section>
-			<section id="resouces">
-				<div class="container">
-					<h2 class="sectionTitle">Favorite Study Resouces</h2>
-
-				</div>
-			</section>
-			<section id="contact" class="cf">
-				<div class="container">
-
-				</div>
-			</section>
-			<section id="experience">
-				<div class="container">
-					<h2 class="sectionTitle">Experience</h2>
-
-				</div>
-			</section>
+      <div class="mainArea">
+        <section id="home">
+  				<div class="container">
+  					<h2 class="sectionTitle">Top Page</h2>
+            <ul class="row appScreenshots">
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/top_no_data_label.png" alt="Top page screen 1">
+              </li>
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/top_page.png" alt="Top page screen 2">
+              </li>
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/top_thumbnail.png" alt="Top page screen 3">
+              </li>
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/top_multi_thumbs.png" alt="Top page screen 4">
+              </li>
+            </ul>
+            <div class="detailText">
+              <h3>Fetures</h3>
+              <ol>
+                <li>When there is no data, it shows texts saying "There are no pages yet.".</li>
+                <li>The background picture is randomly piccked from the images of the pages which belong to the album.</li>
+                <li>The date label would be updated when the user creates the new page which has older date.</li>
+                <li>I chose UICollecUICollectionView to show thumbnails because it's more flexible than UITableView.</li>
+              </ol>
+            </div>
+  				</div>
+  			</section>
+  			<section id="creation">
+  				<div class="container">
+  					<h2 class="sectionTitle">Creation Page</h2>
+            <ul class="row appScreenshots">
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/creation_page.png" alt="Creation page screen 1">
+              </li>
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/ceration_create_album.png" alt="Creation page screen 2">
+              </li>
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/creation_google_places_api.png" alt="Creation page screen 3">
+              </li>
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/creation_imagepicker.png" alt="Creation page screen 4">
+              </li>
+            </ul>
+            <div class="detailText">
+              <h3>Fetures</h3>
+              <ol>
+                <li>When the user taps on "Album Title" textField, AlbumCreateVC shows up. This let user choose from existing album or create a new album.</li>
+                <li>When the user taps on "Date" textField, UIDatePicker shows up. Texts change responding to the user's action. The default value is today's date.</li>
+                <li>When the user taps on "Location" textField, Autocomplete Controller from Google Places API shows up. The user can easily search and pick a location.</li>
+                <li>Tapping on the buttons with the camera icon and library icon brings up UIImagePickerController.</li>
+                <li>In order to display thumbnails of images, I used UICollectionView horizontally.</li>
+                <li>The images is copied and stored into app's FileManager directory. Database just knows the path to the images.</li>
+                <li>An image is deleted from UI and FileManager directory by tapping the delete button at the right above of UICollectionViewCell.</li>
+              </ol>
+            </div>
+  				</div>
+  			</section>
+  			<section id="favorite" class="cf">
+  				<div class="container">
+            <h2 class="sectionTitle">Favorite Page</h2>
+            <ul class="row appScreenshots justify-content-center">
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/favorite_page.png" alt="Favorite page screen 1">
+              </li>
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/favorite_detail_page.png" alt="Favorite page screen 2">
+              </li>
+            </ul>
+            <div class="detailText">
+              <h3>Fetures</h3>
+              <ol>
+                <li>Only shows pages which selected as a favorite page.</li>
+                <li>Toggling the favorite state with the barButtonItem on detail page.</li>
+              </ol>
+            </div>
+  				</div>
+  			</section>
+  			<section id="search">
+  				<div class="container">
+  					<h2 class="sectionTitle">Seach Page</h2>
+            <div class="row appScreenshots justify-content-center">
+              <div class="col-md-3 appScreenshotImg">
+                <img src="./img/seach_page.png" alt="Search page screen 1">
+              </div>
+            </div>
+            <div class="detailText">
+              <h3>Fetures</h3>
+              <ol>
+                <li>Its UI show pages which contain texts on UISearchView.</li>
+                <li>Filtering the RealmObjects using NSPredicate with searchText.</li>
+              </ol>
+            </div>
+  				</div>
+  			</section>
+        <section id="yourPage">
+  				<div class="container">
+  					<h2 class="sectionTitle">Your Page</h2>
+            <ul class="row appScreenshots justify-content-center">
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/yourpage_segmented_control_albums.png" alt="Your Page screen 1">
+              </li>
+              <li class="col-md-3 appScreenshotImg">
+                <img src="./img/yourpage_segmented_control_pages.png" alt="Your Page screen 2">
+              </li>
+            </ul>
+            <div class="detailText">
+              <h3>Fetures</h3>
+              <ol>
+                <li>Using UISegmentedControl to show different contents.</li>
+              </ol>
+            </div>
+  				</div>
+  			</section>
+        <section id="marketingButtons">
+          <div class="container">
+            <div class="githubArea">
+              <a class="githubButton" href="#">
+                <i class="fab fa-github"></i>Src on Github
+              </a>
+            </div>
+            <div class="appStoreArea">
+              <a href="https://itunes.apple.com/ca/app/amtrip/id1416443046?mt=8" class="appStoreButton">
+                <!-- <span class="logoText">MyLogo</span> -->
+                <object id="appStoreButtonImg" type="image/svg+xml" data="./img/app_store_badge.svg">
+                  <img src="./img/app_store_badge.png" alt="App Store Badge">
+                </object>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
 			<footer id="footer">
 				<div class="container cf">
-					<p class="footerText">Follow me on SNS:</p>
+					<p class="footerText">Find me on SNS:</p>
 					<ul class="icons">
 						<li><a href="https://github.com/KentaKodashima"><i class="fab fa-github"></i></a></li>
 						<li><a href="https://www.linkedin.com/in/kenta-kodashima-61940611a/"><i class="fab fa-linkedin-in"></i></a></li>

@@ -85,16 +85,30 @@ reproduced or used in any manner whatsoever.
 #resouces,
 #profile,
 #contact {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 55px;
+  padding-bottom: 55px;
 }
 
-#works .container,
-#skills .container,
-#resouces .container,
-#profile .container,
-#contact .container {
+@media screen and (max-width: 600px) {
+  #works,
+  #skills,
+  #resouces,
+  #profile,
+  #contact {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.container {
   max-width: 1020px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .sectionTitle {
@@ -142,7 +156,7 @@ reproduced or used in any manner whatsoever.
 
 .tags .tagItem {
   display: inline-block;
-  color: #fff;
+  color: #E1E2E7;
   background-color: #1F2029;
   border: 3px solid #1DA9A2;
   border-radius: 10px;

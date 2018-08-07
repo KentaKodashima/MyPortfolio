@@ -17,10 +17,10 @@ reproduced or used in any manner whatsoever.
 #footer {
   text-align: center;
   background-color: $baseColor;
-  color: $textColorWhite;
-  padding-top: 2%;
+  color: $colorPlainText;
+  padding-top: 30px;
   padding-bottom: 10px;
   a {
-    @include linkColor($textColorWhite);
+    @include linkColor($colorPlainText);
   }
 }

@@ -15,18 +15,100 @@ reproduced or used in any manner whatsoever.
 @import "mixin";
 
 /* ==============
+     Base / Common
+  ============= */
+
+.mainArea {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+#home,
+#creation,
+#favorite,
+#search,
+#yourPage {
+  padding-bottom: 50px;
+}
+/* ==============
      Header
   ============= */
+@import "_nav";
+
 #header {
   background-color: $baseColor;
   padding: 10% 0 3% 0;
+  @include max-screen($breakpMobileLand-max) {
+    padding: 20% 0 5% 0;
+  }
   .appName {
     color: $codingGreen;
     font-size: 3rem;
   }
   .appInfo {
-    p {
-      color: $textColorWhite;
+    .infoCol {
+      @include max-screen($breakpMobileLand-max) {
+        margin-bottom: 1rem;
+      }
+      p {
+        color: $colorPlainText;
+        @include max-screen($breakpMobileLand-max) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+/* ==============
+     Body
+  ============= */
+.appScreenshots {
+  @include max-screen($breakpMobileLand-max) {
+    text-align: center;
+  }
+  .appScreenshotImg {
+    @include max-screen($breakpMobileLand-max) {
+      margin-bottom: 20px;
+    }
+    img {
+      @include max-screen($breakpMobileLand-max) {
+        max-width: 280px;
+      }
+    }
+  }
+}
+
+/* ==============
+     Marketing
+  ============= */
+#marketingButtons {
+  text-align: center;
+  .githubArea {
+    margin-bottom: 10px;
+    .githubButton {
+      display: inline-block;
+      line-height: 30px;
+      text-align: center;
+      padding: 15px 20px;
+      background-color: $githubGrayDark;
+      width: 180px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      i {
+        margin-right: 7px;
+      }
+      &:link {
+        color: $colorWhite;
+      }
+    }
+  }
+  .appStoreArea {
+    .appStoreButton {
+      display: inline-block;
+      #appStoreButtonImg {
+        width: 180px;
+      }
     }
   }
 }
