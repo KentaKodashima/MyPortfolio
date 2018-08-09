@@ -90,7 +90,7 @@ reproduced or used in any manner whatsoever.
 #favorite,
 #search,
 #yourPage {
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 /* ==============
@@ -311,6 +311,10 @@ reproduced or used in any manner whatsoever.
 /* ==============
      Body
   ============= */
+.appScreenshots {
+  margin-bottom: 30px;
+}
+
 @media screen and (max-width: 600px) {
   .appScreenshots {
     text-align: center;
@@ -327,6 +331,11 @@ reproduced or used in any manner whatsoever.
   .appScreenshots .appScreenshotImg img {
     max-width: 280px;
   }
+}
+
+.detailText {
+  background-color: #F3F3F3;
+  padding: 20px;
 }
 
 /* ==============

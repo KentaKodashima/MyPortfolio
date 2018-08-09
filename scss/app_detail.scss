@@ -28,7 +28,7 @@ reproduced or used in any manner whatsoever.
 #favorite,
 #search,
 #yourPage {
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 /* ==============
      Header
@@ -64,6 +64,7 @@ reproduced or used in any manner whatsoever.
      Body
   ============= */
 .appScreenshots {
+  margin-bottom: 30px;
   @include max-screen($breakpMobileLand-max) {
     text-align: center;
   }
@@ -77,6 +78,11 @@ reproduced or used in any manner whatsoever.
       }
     }
   }
+}
+
+.detailText {
+  background-color: $colorLightGray;
+  padding: 20px;
 }
 
 /* ==============
