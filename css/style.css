@@ -322,15 +322,51 @@ reproduced or used in any manner whatsoever.
 
 #works .workList .workItem .imgBox {
   position: relative;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink::after, #works .workList .workItem .imgBox .imgBoxLink::before, #works .workList .workItem .imgBox .mask::after, #works .workList .workItem .imgBox .mask::before {
+  background-color: #1DA9A2;
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 10;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink {
+  position: relative;
+  display: block;
   overflow: hidden;
   text-align: center;
+  color: #1DA9A2;
 }
 
-#works .workList .workItem .imgBox a {
-  color: #fff;
+#works .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::after {
+  height: 100%;
+  height: calc(100% + 1px);
 }
 
-#works .workList .workItem .imgBox a .mask {
+#works .workList .workItem .imgBox .imgBoxLink:hover::after, #works .workList .workItem .imgBox .imgBoxLink:hover::before {
+  width: 100%;
+  width: calc(100% + 1px);
+}
+
+#works .workList .workItem .imgBox .imgBoxLink::before {
+  bottom: -1px;
+  height: 20px;
+  right: -1px;
+  width: 0px;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink::after {
+  height: 20px;
+  left: -1px;
+  top: -1px;
+  width: 0px;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask {
   width: 100%;
   height: 100%;
   display: block;
@@ -338,23 +374,43 @@ reproduced or used in any manner whatsoever.
   top: 0;
   left: 0;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   transition: all 0.2s ease;
 }
 
-#works .workList .workItem .imgBox a .mask .maskContainer {
-  position: relative;
+#works .workList .workItem .imgBox .imgBoxLink .mask::before {
+  height: 0px;
+  right: -1px;
+  top: -1px;
+  width: 20px;
 }
 
-#works .workList .workItem .imgBox a .mask .maskContainer .captionTitle {
+#works .workList .workItem .imgBox .imgBoxLink .mask::after {
+  bottom: -1px;
+  height: 0px;
+  left: -1px;
+  width: 20px;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionDetail {
   font-size: 1.5rem;
 }
 
-#works .workList .workItem .imgBox a .mask .maskContainer .captionDetail {
-  font-size: 1.5rem;
-}
-
-#works .workList .workItem .imgBox a:hover .mask {
+#works .workList .workItem .imgBox .imgBoxLink:hover .mask {
   opacity: 1;
 }
 

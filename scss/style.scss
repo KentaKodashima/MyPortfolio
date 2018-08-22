@@ -61,10 +61,45 @@ reproduced or used in any manner whatsoever.
       margin-bottom: 30px;
       .imgBox {
         position: relative;
-        overflow: hidden;
-        text-align: center;
-        a {
-          color: $colorWhite;
+        .imgBoxLink, .mask {
+          &::after, &::before {
+            background-color: $codingGreen;
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 10;
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+          }
+        }
+        .imgBoxLink {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          text-align: center;
+          color: $codingGreen;
+          &:hover {
+            .mask::before, .mask::after {
+              height: 100%;
+              height: calc(100% + 1px);
+            }
+            &::after, &::before {
+              width: 100%;
+              width: calc(100% + 1px);
+            }
+          }
+          &::before {
+            bottom: -1px;
+            height: 20px;
+            right: -1px;
+            width: 0px;
+          }
+          &::after {
+            height: 20px;
+            left: -1px;
+            top: -1px;
+            width: 0px;
+          }
           .mask {
             width: 100%;
             height: 100%;
@@ -73,13 +108,30 @@ reproduced or used in any manner whatsoever.
             top: 0;
             left: 0;
             opacity: 0;
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(256,256,256,0.6);
             transition: all 0.2s ease;
+            &::before {
+              height: 0px;
+              right: -1px;
+              top: -1px;
+              width: 20px;
+            }
+            &::after {
+              bottom: -1px;
+              height: 0px;
+              left: -1px;
+              width: 20px;
+            }
             .maskContainer {
-              position: relative;
+              position: absolute;
+              width: 80%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -webkit-transform: translate(-50%, -50%);
               .captionTitle {
                 font-size: 1.5rem;
-                
+                font-weight: bold;
               }
               .captionDetail {
                 font-size: 1.5rem;
