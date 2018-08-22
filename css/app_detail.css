@@ -188,6 +188,15 @@ reproduced or used in any manner whatsoever.
   transition: 0.3s;
 }
 
+#nav {
+  transition: padding 0.5s;
+  transition: background-color 0.3s;
+}
+
+#nav #logoImg {
+  transition: 0.3s;
+}
+
 @media screen and (max-width: 600px) {
   #nav {
     background-color: #1F2029;
@@ -408,4 +417,8 @@ reproduced or used in any manner whatsoever.
 
 #footer a:hover, #footer a:active, #footer a:focus {
   color: white;
+}
+
+#footer .icons {
+  margin-bottom: 1rem;
 }

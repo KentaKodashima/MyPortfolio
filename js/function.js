@@ -28,9 +28,10 @@ $(window).scroll(function () {
     }
   } else {
     /* How many pixels did the nav move? */
-    if ($(window).scrollTop() >= 600) {
+    var headerBottom = $('.mainTop').offset().top;
+    if ($(window).scrollTop() >= headerBottom) {
       $("#nav").addClass('navScroll');
-    } else if($(window).scrollTop() <= 600) {
+    } else if($(window).scrollTop() <= headerBottom) {
       $("#nav").removeClass('navScroll');
     }
   }

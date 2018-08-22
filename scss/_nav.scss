@@ -27,6 +27,11 @@ reproduced or used in any manner whatsoever.
   }
 }
 #nav {
+  transition: padding 0.5s;
+  transition: background-color 0.3s;
+  #logoImg {
+    transition: 0.3s;
+  }
   @include max-screen($breakpMobileLand-max) {
     background-color: $baseColor;
   }

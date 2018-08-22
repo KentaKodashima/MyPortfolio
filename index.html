@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
 
     <!-- JS for Bootstrap -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- JS fot Vertical Timeline -->
@@ -67,12 +66,22 @@
 					</div>
 				</div>
 			</header>
-			<section id="works">
+			<section id="works" class="mainTop">
 				<div class="container">
 					<h2 class="sectionTitle">Works</h2>
-					<ul class="imgArea row cf">
-						<li class="imgBox col-md-4">
-							<a href="./works/amtrip/"><img src="./img/amtrip_icon.png" alt="Amtrip"></a>
+					<ul class="workList row cf">
+						<li class="workItem col-md-4">
+              <figure class="imgBox">
+                <a href="./works/amtrip/">
+                  <img src="./img/amtrip_icon.png" alt="Amtrip">
+                  <figcaption class="mask">
+                    <div class="maskContainer">
+                      <h3 class="captionTitle">Amtrip</h3>
+                      <p class="captionDetail">iOS App Available on the App Store</p>
+                    </div>
+                  </figcaption>
+                </a>
+              </figure>
 						</li>
 					</ul>
 				</div>
@@ -112,7 +121,7 @@
 							<p class="icons"><i class="fas fa-laptop-code"></i></p>
 							<p class="skillName">Front-end Development</p>
 							<p class="description">
-								As a Front-end developer in a design studio, I built some website and HTML emails. When I build a website, I pay close attention to the details such as
+								As a Front-end developer in a design studio, I built some website and HTML emails. When I build a website, I pay close attention to the details such as spacing in pixels and font-size. I love writing the beautifully formated code.
 							</p>
               <ul class="tags">
                 <li class="tagItem">HTML5</li>
@@ -127,7 +136,7 @@
 							<p class="icons"><i class="fab fa-github"></i></p>
 							<p class="skillName">Version Control with Github</p>
 							<p class="description">
-								Version control is an important factor in the process of the production. That's why I always care about the details when I commit and push to my repository.
+								Version control is an important factor in the process of the production. That's why I always leave the details when I commit and push to the repository. I understand the basic flow such as creating a development branch, fetch, merge, and push.
 							</p>
 						</div>
 						<div class="thumbnail col-md-4">
@@ -150,60 +159,74 @@
 					<h2 class="sectionTitle">Favorite Study Resouces</h2>
 					<div class="thumbnails row cf">
 						<div class="thumbnail col-md-4">
-              <div class="thumbnailImg">
-                <img src="./img/raywenderlichcom.png" alt="raywenderlich.com">
-              </div>
-              <p class="thumbnailText">
-                <a href="https://www.raywenderlich.com/"><span class="resourceName">raywenderlich.com</span></a>
-              </p>
+              <a href="https://www.raywenderlich.com/">
+                <div class="thumbnailImg">
+                  <img src="./img/raywenderlichcom.png" alt="raywenderlich.com">
+                </div>
+                <p class="thumbnailText">
+                  <span class="resourceName">raywenderlich.com</span>
+                </p>
+              </a>
 						</div>
 						<div class="thumbnail col-md-4">
-              <div class="thumbnailImg">
-                <img src="./img/ios_developers.png" alt="iOS developers facebook page">
-              </div>
-              <p class="thumbnailText">
-                <a href="https://www.facebook.com/apple.ios.developers/"><span class="resourceName">iOS Developers Facebook Page</span></a>
-              </p>
+              <a href="https://www.facebook.com/apple.ios.developers/">
+                <div class="thumbnailImg">
+                  <img src="./img/ios_developers.png" alt="iOS developers facebook page">
+                </div>
+                <p class="thumbnailText">
+                  <span class="resourceName">iOS Developers Facebook Page</span>
+                </p>
+              </a>
 						</div>
             <div class="thumbnail col-md-4">
-              <div class="thumbnailImg">
-                <img src="./img/udemy.png" alt="Udemy">
-              </div>
-              <p class="thumbnailText">
-                <a href="https://www.udemy.com/"><span class="resourceName">Udemy</span></a>
-              </p>
+              <a href="https://www.udemy.com/">
+                <div class="thumbnailImg">
+                  <img src="./img/udemy.png" alt="Udemy">
+                </div>
+                <p class="thumbnailText">
+                  <span class="resourceName">Udemy</span>
+                </p>
+              </a>
 						</div>
 						<div class="thumbnail col-md-3">
-              <div class="thumbnailImg">
-                <img src="./img/realm.png" alt="Realm: Building Modern Swift Apps with Realm Database">
-              </div>
-              <p class="thumbnailText">
-                <a href="https://store.raywenderlich.com/products/realm-building-modern-swift-apps-with-realm-database"><span class="resourceName">Realm: Building Modern Swift Apps with Realm Database</span></a>
-              </p>
+              <a href="https://store.raywenderlich.com/products/realm-building-modern-swift-apps-with-realm-database">
+                <div class="thumbnailImg">
+                  <img src="./img/realm.png" alt="Realm: Building Modern Swift Apps with Realm Database">
+                </div>
+                <p class="thumbnailText">
+                  <span class="resourceName">Realm: Building Modern Swift Apps with Realm Database</span>
+                </p>
+              </a>
 						</div>
 						<div class="thumbnail col-md-3">
-              <div class="thumbnailImg">
-                <img src="./img/rx_swift.png" alt="RxSwift">
-              </div>
-              <p class="thumbnailText">
-                <a href="https://store.raywenderlich.com/products/rxswift"><span class="resourceName">RxSwift</span></a>
-              </p>
+              <a href="https://store.raywenderlich.com/products/rxswift">
+                <div class="thumbnailImg">
+                  <img src="./img/rx_swift.png" alt="RxSwift">
+                </div>
+                <p class="thumbnailText">
+                  <span class="resourceName">RxSwift</span>
+                </p>
+              </a>
 						</div>
 						<div class="thumbnail col-md-3">
-              <div class="thumbnailImg">
-                <img src="./img/algorithms.png" alt="Data Structures and Algorithms in Swift">
-              </div>
-              <p class="thumbnailText">
-                <a href="https://store.raywenderlich.com/products/data-structures-and-algorithms-in-swift"><span class="resourceName">Data Structures and Algorithms in Swift</span></a>
-              </p>
+              <a href="https://www.bignerdranch.com/books/swift-programming/">
+                <div class="thumbnailImg">
+                  <img src="./img/swift_bignerdranch.jpg" alt="Swift Programming">
+                </div>
+                <p class="thumbnailText">
+                  <span class="resourceName">Swift Programming</span>
+                </p>
+              </a>
 						</div>
 						<div class="thumbnail col-md-3">
-              <div class="thumbnailImg">
-                <img src="./img/design_patterns.png" alt="Design Patterns by Tutorials">
-              </div>
-              <p class="thumbnailText">
-                <a href="https://store.raywenderlich.com/products/design-patterns-by-tutorials"><span class="resourceName">Design Patterns by Tutorials</span></a>
-              </p>
+              <a href="https://www.bignerdranch.com/books/ios-programming/">
+                <div class="thumbnailImg">
+                  <img src="./img/ios_bignerdranch.jpg" alt="iOS Programming">
+                </div>
+                <p class="thumbnailText">
+                  <span class="resourceName">iOS Programming</span>
+                </p>
+              </a>
 						</div>
 					</div>
 				</div>

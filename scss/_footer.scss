@@ -23,4 +23,7 @@ reproduced or used in any manner whatsoever.
   a {
     @include linkColor($colorPlainText);
   }
+  .icons {
+    margin-bottom: 1rem; 
+  }
 }

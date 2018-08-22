@@ -172,6 +172,15 @@ reproduced or used in any manner whatsoever.
   transition: 0.3s;
 }
 
+#nav {
+  transition: padding 0.5s;
+  transition: background-color 0.3s;
+}
+
+#nav #logoImg {
+  transition: 0.3s;
+}
+
 @media screen and (max-width: 600px) {
   #nav {
     background-color: #1F2029;
@@ -307,8 +316,46 @@ reproduced or used in any manner whatsoever.
 /* ==============
       Works
   ============= */
-#works .imgArea .imgBox {
+#works .workList .workItem {
   margin-bottom: 30px;
+}
+
+#works .workList .workItem .imgBox {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+#works .workList .workItem .imgBox a {
+  color: #fff;
+}
+
+#works .workList .workItem .imgBox a .mask {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+}
+
+#works .workList .workItem .imgBox a .mask .maskContainer {
+  position: relative;
+}
+
+#works .workList .workItem .imgBox a .mask .maskContainer .captionTitle {
+  font-size: 1.5rem;
+}
+
+#works .workList .workItem .imgBox a .mask .maskContainer .captionDetail {
+  font-size: 1.5rem;
+}
+
+#works .workList .workItem .imgBox a:hover .mask {
+  opacity: 1;
 }
 
 /* ==============
@@ -449,4 +496,8 @@ reproduced or used in any manner whatsoever.
 
 #footer a:hover, #footer a:active, #footer a:focus {
   color: white;
+}
+
+#footer .icons {
+  margin-bottom: 1rem;
 }

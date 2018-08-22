@@ -56,9 +56,43 @@ reproduced or used in any manner whatsoever.
       Works
   ============= */
 #works {
-  .imgArea {
-    .imgBox {
+  .workList {
+    .workItem {
       margin-bottom: 30px;
+      .imgBox {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        a {
+          color: $colorWhite;
+          .mask {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            background-color: rgba(0,0,0,0.4);
+            transition: all 0.2s ease;
+            .maskContainer {
+              position: relative;
+              .captionTitle {
+                font-size: 1.5rem;
+                
+              }
+              .captionDetail {
+                font-size: 1.5rem;
+              }
+            }
+          }
+          &:hover {
+            .mask {
+              opacity: 1;
+            }
+          }
+        }
+      }
     }
   }
 }
