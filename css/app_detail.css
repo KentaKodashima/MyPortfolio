@@ -255,8 +255,14 @@ reproduced or used in any manner whatsoever.
 }
 
 #nav #navbarNav .nav-link {
-  color: #fff;
+  color: #1DA9A2;
   font-size: 1.5rem;
+}
+
+#nav #navbarNav .active .nav-link {
+  background-color: #1DA9A2;
+  color: #fff !important;
+  border-radius: 10px;
 }
 
 #nav .isOpen .navContents {
@@ -411,14 +417,14 @@ reproduced or used in any manner whatsoever.
   padding-bottom: 10px;
 }
 
-#footer a {
+#footer .icons {
+  margin-bottom: 1rem;
+}
+
+#footer .footerText a {
   color: #E1E2E7;
 }
 
-#footer a:hover, #footer a:active, #footer a:focus {
+#footer .footerText a:hover, #footer .footerText a:active, #footer .footerText a:focus {
   color: white;
-}
-
-#footer .icons {
-  margin-bottom: 1rem;
 }

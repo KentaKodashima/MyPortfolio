@@ -239,8 +239,14 @@ reproduced or used in any manner whatsoever.
 }
 
 #nav #navbarNav .nav-link {
-  color: #fff;
+  color: #1DA9A2;
   font-size: 1.5rem;
+}
+
+#nav #navbarNav .active .nav-link {
+  background-color: #1DA9A2;
+  color: #fff !important;
+  border-radius: 10px;
 }
 
 #nav .isOpen .navContents {
@@ -374,7 +380,7 @@ reproduced or used in any manner whatsoever.
   top: 0;
   left: 0;
   opacity: 0;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   transition: all 0.2s ease;
 }
 
@@ -458,6 +464,14 @@ reproduced or used in any manner whatsoever.
   color: #89a6ae;
 }
 
+#resouces a .thumbnailImg {
+  display: inline-block;
+}
+
+#resouces a:hover {
+  opacity: 0.7;
+}
+
 #resouces a .resourceName {
   font-size: 1.5rem;
 }
@@ -511,13 +525,20 @@ reproduced or used in any manner whatsoever.
 
 #contact .contactButton {
   display: block;
-  width: 280px;
+  width: 270px;
   margin: auto;
   font-size: 1.4rem;
   color: #fff;
   padding: 1rem 1.8rem;
   background-color: #1DA9A2;
+  border: #1DA9A2 solid 5px;
   border-radius: 15px;
+}
+
+#contact .contactButton:hover {
+  color: #1DA9A2;
+  background-color: #fff;
+  transition: all 0.5s;
 }
 
 /* ==============
@@ -546,14 +567,14 @@ reproduced or used in any manner whatsoever.
   padding-bottom: 10px;
 }
 
-#footer a {
+#footer .icons {
+  margin-bottom: 1rem;
+}
+
+#footer .footerText a {
   color: #E1E2E7;
 }
 
-#footer a:hover, #footer a:active, #footer a:focus {
+#footer .footerText a:hover, #footer .footerText a:active, #footer .footerText a:focus {
   color: white;
-}
-
-#footer .icons {
-  margin-bottom: 1rem;
 }

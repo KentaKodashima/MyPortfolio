@@ -19,7 +19,7 @@ reproduced or used in any manner whatsoever.
   ============= */
 #works,
 #skills,
-#resouces,
+#resources,
 #profile,
 #contact {
   padding-top: 55px;
@@ -55,8 +55,6 @@ reproduced or used in any manner whatsoever.
 // SNS icons style
 .icons li {
   display: inline-block;
-  background-color: $codingGreen;
-  border-radius: 5px;
   margin-right: 10px;
   font-size: 0;
   a {
@@ -65,8 +63,15 @@ reproduced or used in any manner whatsoever.
     height: 40px;
     box-sizing: border-box;
     color: $colorWhite;
+    background-color: $codingGreen;
+    border-radius: 5px;
     font-size: 1.9rem;
     line-height: 40px;
+    &:hover {
+      transition: all 0.5s;
+      color: $codingGreen;
+      background-color: $colorWhite;
+    }
   }
   &:last-child {
     margin-right: 0;

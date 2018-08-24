@@ -73,8 +73,15 @@ reproduced or used in any manner whatsoever.
   }
   #navbarNav {
     .nav-link {
-      color: $colorWhite;
+      color: $codingGreen;
       font-size: 1.5rem;
+    }
+    .active {
+      .nav-link {
+        background-color: $codingGreen;
+        color: $colorWhite !important;
+        border-radius: 10px;
+      }
     }
   }
   .isOpen {

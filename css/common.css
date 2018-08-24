@@ -82,7 +82,7 @@ reproduced or used in any manner whatsoever.
   ============= */
 #works,
 #skills,
-#resouces,
+#resources,
 #profile,
 #contact {
   padding-top: 55px;
@@ -92,7 +92,7 @@ reproduced or used in any manner whatsoever.
 @media screen and (max-width: 600px) {
   #works,
   #skills,
-  #resouces,
+  #resources,
   #profile,
   #contact {
     padding-top: 90px;
@@ -130,8 +130,6 @@ reproduced or used in any manner whatsoever.
 
 .icons li {
   display: inline-block;
-  background-color: #1DA9A2;
-  border-radius: 5px;
   margin-right: 10px;
   font-size: 0;
 }
@@ -142,8 +140,16 @@ reproduced or used in any manner whatsoever.
   height: 40px;
   box-sizing: border-box;
   color: #fff;
+  background-color: #1DA9A2;
+  border-radius: 5px;
   font-size: 1.9rem;
   line-height: 40px;
+}
+
+.icons li a:hover {
+  transition: all 0.5s;
+  color: #1DA9A2;
+  background-color: #fff;
 }
 
 .icons li:last-child {

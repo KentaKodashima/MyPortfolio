@@ -40,24 +40,26 @@
 
     <header id="header">
       <nav id="nav" class="navbar navbar-expand-lg fixed-top">
-        <a href="#header" class="logoImg navbar-brand">
-          <!-- <span class="logoText">MyLogo</span> -->
-          <object id="logoImg" type="image/svg+xml" data="./img/logo.svg">
-            <img src="./img/logo.png" alt="Logo">
-          </object>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="hamburgerBorder"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active"><a class="nav-link" href="#works">Works</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#resouces">Recources</a></li>
-            <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
+        <div class="container">
+          <a href="#header" class="logoImg navbar-brand">
+            <!-- <span class="logoText">MyLogo</span> -->
+            <object id="logoImg" type="image/svg+xml" data="./img/logo.svg">
+              <img src="./img/logo.png" alt="Logo">
+            </object>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="hamburgerBorder"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item nav-works"><a class="nav-link" href="#works">Works</a></li>
+              <li class="nav-item nav-skills"><a class="nav-link" href="#skills">Skills</a></li>
+              <li class="nav-item nav-resources"><a class="nav-link" href="#resources">Resources</a></li>
+              <li class="nav-item nav-profile"><a class="nav-link" href="#profile">Profile</a></li>
+              <li class="nav-item nav-contact"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div class="container">
@@ -74,7 +76,7 @@
         </div>
       </div>
     </header>
-    <section id="works" class="mainTop">
+    <section id="works" class="section">
       <div class="container">
         <h2 class="sectionTitle">Works</h2>
         <ul class="workList row cf">
@@ -94,7 +96,7 @@
         </ul>
       </div>
     </section>
-    <section id="skills">
+    <section id="skills" class="section">
       <div class="container">
         <h2 class="sectionTitle sectionTitleC">Skills</h2>
         <div class="thumbnails row cf">
@@ -170,9 +172,9 @@
         </div>
       </div>
     </section>
-    <section id="resouces">
+    <section id="resources" class="section">
       <div class="container">
-        <h2 class="sectionTitle">Favorite Study Resouces</h2>
+        <h2 class="sectionTitle">Favorite Study Resources</h2>
         <div class="thumbnails row cf">
           <div class="thumbnail col-md-4">
             <a href="https://www.raywenderlich.com/">
@@ -247,7 +249,7 @@
         </div>
       </div>
     </section>
-    <section id="profile" class="cf">
+    <section id="profile" class="section">
       <div class="container">
         <div class="row">
           <div class="col-md-4 profileImg">
@@ -273,7 +275,7 @@
         </div>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="section">
       <div class="container">
         <h2 class="sectionTitle">Contact</h2>
         <div class="content">

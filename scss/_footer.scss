@@ -20,10 +20,10 @@ reproduced or used in any manner whatsoever.
   color: $colorPlainText;
   padding-top: 30px;
   padding-bottom: 10px;
-  a {
-    @include linkColor($colorPlainText);
-  }
   .icons {
     margin-bottom: 1rem; 
+  }
+  .footerText a {
+    @include linkColor($colorPlainText);
   }
 }
