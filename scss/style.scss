@@ -61,8 +61,14 @@ reproduced or used in any manner whatsoever.
   .workList {
     .workItem {
       margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
       .imgBox {
         position: relative;
+        @include max-screen($breakpMobileLand-max) {
+          margin: 0;
+        }
         .imgBoxLink, .mask {
           &::after, &::before {
             background-color: $codingGreen;
@@ -190,6 +196,7 @@ reproduced or used in any manner whatsoever.
   a {
     .thumbnailImg {
       display: inline-block;
+      width: 100%;
     }
     &:hover {
       opacity: 0.7;
@@ -213,7 +220,7 @@ reproduced or used in any manner whatsoever.
     }
     .profileImg {
       @include max-screen($breakpMobileLand-max) {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
       }
     }
     .sectionTitle {
@@ -221,6 +228,11 @@ reproduced or used in any manner whatsoever.
       color: $codingGreen;
       @include max-screen($breakpMobileLand-max) {
         text-align: center;
+      }
+    }
+    .profileText {
+      @include max-screen($breakpMobileLand-max) {
+        margin-bottom: 2rem;
       }
     }
     .icons {

@@ -85,12 +85,29 @@ reproduced or used in any manner whatsoever.
   padding-bottom: 90px;
 }
 
+@media screen and (max-width: 600px) {
+  .mainArea {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
 #home,
 #creation,
 #favorite,
 #search,
 #yourPage {
   padding-bottom: 70px;
+}
+
+@media screen and (max-width: 600px) {
+  #home,
+  #creation,
+  #favorite,
+  #search,
+  #yourPage {
+    padding-bottom: 40px;
+  }
 }
 
 /* ==============
@@ -201,6 +218,7 @@ reproduced or used in any manner whatsoever.
 
 @media screen and (max-width: 600px) {
   #nav {
+    padding: 1rem;
     background-color: #1F2029;
   }
 }
@@ -342,6 +360,9 @@ reproduced or used in any manner whatsoever.
   .appScreenshots .appScreenshotImg {
     margin-bottom: 20px;
   }
+  .appScreenshots .appScreenshotImg:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -379,7 +400,7 @@ reproduced or used in any manner whatsoever.
   display: inline-block;
   line-height: 30px;
   text-align: center;
-  padding: 15px 20px;
+  padding: 15px 15px;
   background-color: #333;
   width: 180px;
   border-radius: 10px;

@@ -21,6 +21,10 @@ reproduced or used in any manner whatsoever.
 .mainArea {
   padding-top: 90px;
   padding-bottom: 90px;
+  @include max-screen($breakpMobileLand-max) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
 }
 
 #home,
@@ -29,6 +33,9 @@ reproduced or used in any manner whatsoever.
 #search,
 #yourPage {
   padding-bottom: 70px;
+  @include max-screen($breakpMobileLand-max) {
+    padding-bottom: 40px;
+  }
 }
 /* ==============
      Header
@@ -71,6 +78,9 @@ reproduced or used in any manner whatsoever.
   .appScreenshotImg {
     @include max-screen($breakpMobileLand-max) {
       margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     img {
       @include max-screen($breakpMobileLand-max) {
@@ -103,7 +113,7 @@ reproduced or used in any manner whatsoever.
       display: inline-block;
       line-height: 30px;
       text-align: center;
-      padding: 15px 20px;
+      padding: 15px 15px;
       background-color: $githubGrayDark;
       width: 180px;
       border-radius: 10px;

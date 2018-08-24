@@ -185,6 +185,7 @@ reproduced or used in any manner whatsoever.
 
 @media screen and (max-width: 600px) {
   #nav {
+    padding: 1rem;
     background-color: #1F2029;
   }
 }
@@ -330,8 +331,18 @@ reproduced or used in any manner whatsoever.
   margin-bottom: 30px;
 }
 
+#works .workList .workItem:last-child {
+  margin-bottom: 0;
+}
+
 #works .workList .workItem .imgBox {
   position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  #works .workList .workItem .imgBox {
+    margin: 0;
+  }
 }
 
 #works .workList .workItem .imgBox .imgBoxLink::after, #works .workList .workItem .imgBox .imgBoxLink::before, #works .workList .workItem .imgBox .mask::after, #works .workList .workItem .imgBox .mask::before {
@@ -466,6 +477,7 @@ reproduced or used in any manner whatsoever.
 
 #resources a .thumbnailImg {
   display: inline-block;
+  width: 100%;
 }
 
 #resources a:hover {
@@ -496,7 +508,7 @@ reproduced or used in any manner whatsoever.
 
 @media screen and (max-width: 600px) {
   #profile .container .profileImg {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 }
 
@@ -508,6 +520,12 @@ reproduced or used in any manner whatsoever.
 @media screen and (max-width: 600px) {
   #profile .container .sectionTitle {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #profile .container .profileText {
+    margin-bottom: 2rem;
   }
 }
 
