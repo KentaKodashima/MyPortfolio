@@ -18,15 +18,17 @@ reproduced or used in any manner whatsoever.
   background-color: $baseColor;
   transition: background-color 0.3s linear;
   top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   transition: padding 0.5s;
   #logoImg {
-    transform: scale(0.7, 0.7);
+    transform: scale(0.8, 0.8);
     transition: 0.3s;
+    vertical-align: middle;
   }
 }
 #nav {
+  padding: 1rem 0;
   transition: padding 0.5s;
   transition: background-color 0.3s;
   #logoImg {

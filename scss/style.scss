@@ -31,6 +31,8 @@ reproduced or used in any manner whatsoever.
       margin: auto;
       width: 100%;
       text-align: center;
+      text-shadow: 1px 1px 20px rgba(0,0,0,0.3);
+      filter: glow(color=#000000,strength=3), alpha(opacity=70);
       .title {
         font-size: 5rem;
         margin: 0;
@@ -184,9 +186,8 @@ reproduced or used in any manner whatsoever.
 /* ==============
     Recources
    ============= */
-#resouces {
+#resources {
   a {
-    @include linkColor($textColorBase);
     .thumbnailImg {
       display: inline-block;
     }
@@ -196,6 +197,7 @@ reproduced or used in any manner whatsoever.
     .resourceName {
       font-size: 1.5rem;
     }
+    @include linkColor($textColorBase);
   }
 }
 

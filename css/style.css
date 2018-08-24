@@ -162,17 +162,19 @@ reproduced or used in any manner whatsoever.
   background-color: #1F2029;
   transition: background-color 0.3s linear;
   top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   transition: padding 0.5s;
 }
 
 #nav.navScroll #logoImg {
-  transform: scale(0.7, 0.7);
+  transform: scale(0.8, 0.8);
   transition: 0.3s;
+  vertical-align: middle;
 }
 
 #nav {
+  padding: 1rem 0;
   transition: padding 0.5s;
   transition: background-color 0.3s;
 }
@@ -292,6 +294,8 @@ reproduced or used in any manner whatsoever.
   margin: auto;
   width: 100%;
   text-align: center;
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  filter: glow(color=#000000, strength=3), alpha(opacity=70);
 }
 
 #header .container #heroText .title {
@@ -456,24 +460,24 @@ reproduced or used in any manner whatsoever.
 /* ==============
     Recources
    ============= */
-#resouces a {
+#resources a {
   color: #55747C;
 }
 
-#resouces a:hover, #resouces a:active, #resouces a:focus {
-  color: #89a6ae;
-}
-
-#resouces a .thumbnailImg {
+#resources a .thumbnailImg {
   display: inline-block;
 }
 
-#resouces a:hover {
+#resources a:hover {
   opacity: 0.7;
 }
 
-#resouces a .resourceName {
+#resources a .resourceName {
   font-size: 1.5rem;
+}
+
+#resources a:hover, #resources a:active, #resources a:focus {
+  color: #89a6ae;
 }
 
 /* ==============

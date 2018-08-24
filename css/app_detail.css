@@ -178,17 +178,19 @@ reproduced or used in any manner whatsoever.
   background-color: #1F2029;
   transition: background-color 0.3s linear;
   top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   transition: padding 0.5s;
 }
 
 #nav.navScroll #logoImg {
-  transform: scale(0.7, 0.7);
+  transform: scale(0.8, 0.8);
   transition: 0.3s;
+  vertical-align: middle;
 }
 
 #nav {
+  padding: 1rem 0;
   transition: padding 0.5s;
   transition: background-color 0.3s;
 }
@@ -360,6 +362,15 @@ reproduced or used in any manner whatsoever.
   text-align: center;
 }
 
+#marketingButtons a {
+  color: #fff;
+}
+
+#marketingButtons a:hover {
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
 #marketingButtons .githubArea {
   margin-bottom: 10px;
 }
@@ -377,10 +388,6 @@ reproduced or used in any manner whatsoever.
 
 #marketingButtons .githubArea .githubButton i {
   margin-right: 7px;
-}
-
-#marketingButtons .githubArea .githubButton:link {
-  color: #fff;
 }
 
 #marketingButtons .appStoreArea .appStoreButton {

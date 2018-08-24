@@ -28,7 +28,7 @@ $(window).scroll(function () {
     }
   } else {
     /* How many pixels did the nav move? */
-    var headerBottom = $('#works').offset().top;
+    var headerBottom = $('.mainTop').offset().top;
     var sectionTopArr = new Array();
     var currentSec = -1;
 

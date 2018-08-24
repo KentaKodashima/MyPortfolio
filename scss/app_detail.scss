@@ -90,6 +90,13 @@ reproduced or used in any manner whatsoever.
   ============= */
 #marketingButtons {
   text-align: center;
+  a {
+    color: $colorWhite;
+    &:hover {
+      opacity: 0.7;
+      transition: all 0.3s;
+    }
+  }
   .githubArea {
     margin-bottom: 10px;
     .githubButton {
@@ -103,9 +110,6 @@ reproduced or used in any manner whatsoever.
       font-size: 1.1rem;
       i {
         margin-right: 7px;
-      }
-      &:link {
-        color: $colorWhite;
       }
     }
   }
