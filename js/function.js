@@ -3,7 +3,6 @@
 Project Name    : Final Project - My Portfolio
 File Name       : function.js
 Encoding        : UTF-8
-Due Date        : February 15
 
 Copyright © 2018 Kenta Kodashima. All rights reserved.
 
@@ -106,12 +105,25 @@ $(function () {
   });
 
   // Smooth scroll
-  var headerHight = 40; // Not the navbar to cover the section title
+  var headerHeight = 40; // Not the navbar to cover the section title
+
+  // Segue from app detail page
+  var urlHash = location.hash;
+  if (urlHash) {
+    $('body,html').stop().scrollTop(0);
+    setTimeout(function () {
+      var target = $(urlHash);
+      var position = target.offset().top - headerHeight;
+      $('body,html').stop().animate({ scrollTop: position }, 500);
+    }, 200);
+  }
+
+  // Links inside the same page
   $('a[href^="#"]').click(function () {
     var speed = 400;
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top - headerHight;
+    var position = target.offset().top - headerHeight;
     $('body,html').animate({ scrollTop: position }, speed, 'swing');
     return false;
   });
