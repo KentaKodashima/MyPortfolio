@@ -24,7 +24,7 @@ reproduced or used in any manner whatsoever.
   padding: 20% 0 20%;
   color: $colorWhite;
   @include max-screen($breakpMobileLand-max) {
-    padding: 40% 0 20%;
+    padding: 40% 0 12%;
   }
   .container {
     #heroText {
@@ -39,7 +39,8 @@ reproduced or used in any manner whatsoever.
         line-height: 1;
         font-weight: bold;
         @include max-screen($breakpMobileLand-max) {
-          font-size: 2.5rem;
+          font-size: 3.2rem;
+          margin-bottom: 0.4rem;
         }
       }
       .subTitle {
@@ -47,7 +48,7 @@ reproduced or used in any manner whatsoever.
         margin-bottom: 2rem;
         font-weight: bold;
         @include max-screen($breakpMobileLand-max) {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
         }
       }
     }
@@ -78,6 +79,10 @@ reproduced or used in any manner whatsoever.
             z-index: 10;
             transition: all .3s ease;
             -webkit-transition: all .3s ease;
+            @include max-screen($breakpMobileLand-max) {
+              transition: none;
+              -webkit-transition: none;
+            }
           }
         }
         .imgBoxLink {
@@ -91,9 +96,15 @@ reproduced or used in any manner whatsoever.
               height: 100%;
               height: calc(100% + 1px);
             }
+            *::-ms-backdrop, .mask::before, .mask::after {
+              height: 100%;
+            }
             &::after, &::before {
               width: 100%;
               width: calc(100% + 1px);
+            }
+            *::-ms-backdrop, &::after, &::before {
+              width: 100%;
             }
           }
           &::before {
@@ -193,6 +204,14 @@ reproduced or used in any manner whatsoever.
     Recources
    ============= */
 #resources {
+  .thumbnail {
+    .thumbnailText {
+      margin-bottom: 0;
+    }
+    .lastRow {
+      margin-bottom: 0 !important;
+    }
+  }
   a {
     .thumbnailImg {
       display: inline-block;

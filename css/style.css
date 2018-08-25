@@ -184,8 +184,14 @@ reproduced or used in any manner whatsoever.
 }
 
 @media screen and (max-width: 600px) {
+  #nav #logoImg {
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 600px) {
   #nav {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     background-color: #1F2029;
   }
 }
@@ -287,7 +293,7 @@ reproduced or used in any manner whatsoever.
 
 @media screen and (max-width: 600px) {
   #header {
-    padding: 40% 0 20%;
+    padding: 40% 0 12%;
   }
 }
 
@@ -308,7 +314,8 @@ reproduced or used in any manner whatsoever.
 
 @media screen and (max-width: 600px) {
   #header .container #heroText .title {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
+    margin-bottom: 0.4rem;
   }
 }
 
@@ -320,7 +327,7 @@ reproduced or used in any manner whatsoever.
 
 @media screen and (max-width: 600px) {
   #header .container #heroText .subTitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -355,6 +362,13 @@ reproduced or used in any manner whatsoever.
   -webkit-transition: all .3s ease;
 }
 
+@media screen and (max-width: 600px) {
+  #works .workList .workItem .imgBox .imgBoxLink::after, #works .workList .workItem .imgBox .imgBoxLink::before, #works .workList .workItem .imgBox .mask::after, #works .workList .workItem .imgBox .mask::before {
+    transition: none;
+    -webkit-transition: none;
+  }
+}
+
 #works .workList .workItem .imgBox .imgBoxLink {
   position: relative;
   display: block;
@@ -368,9 +382,17 @@ reproduced or used in any manner whatsoever.
   height: calc(100% + 1px);
 }
 
+#works .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::after {
+  height: 100%;
+}
+
 #works .workList .workItem .imgBox .imgBoxLink:hover::after, #works .workList .workItem .imgBox .imgBoxLink:hover::before {
   width: 100%;
   width: calc(100% + 1px);
+}
+
+#works .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #works .workList .workItem .imgBox .imgBoxLink:hover::after, #works .workList .workItem .imgBox .imgBoxLink:hover::before {
+  width: 100%;
 }
 
 #works .workList .workItem .imgBox .imgBoxLink::before {
@@ -471,6 +493,14 @@ reproduced or used in any manner whatsoever.
 /* ==============
     Recources
    ============= */
+#resources .thumbnail .thumbnailText {
+  margin-bottom: 0;
+}
+
+#resources .thumbnail .lastRow {
+  margin-bottom: 0 !important;
+}
+
 #resources a {
   color: #55747C;
 }

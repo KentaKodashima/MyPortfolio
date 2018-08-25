@@ -33,9 +33,12 @@ reproduced or used in any manner whatsoever.
   transition: background-color 0.3s;
   #logoImg {
     transition: 0.3s;
+    @include max-screen($breakpMobileLand-max) {
+      vertical-align: middle;
+    }
   }
   @include max-screen($breakpMobileLand-max) {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     background-color: $baseColor;
   }
   .navbar-toggler {

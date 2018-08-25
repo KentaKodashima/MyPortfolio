@@ -85,8 +85,8 @@ reproduced or used in any manner whatsoever.
 #resources,
 #profile,
 #contact {
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 @media screen and (max-width: 600px) {

@@ -217,8 +217,14 @@ reproduced or used in any manner whatsoever.
 }
 
 @media screen and (max-width: 600px) {
+  #nav #logoImg {
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 600px) {
   #nav {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     background-color: #1F2029;
   }
 }
