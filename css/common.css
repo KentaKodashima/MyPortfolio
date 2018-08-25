@@ -125,6 +125,10 @@ reproduced or used in any manner whatsoever.
   }
 }
 
+#profile .sectionTitle {
+  margin-bottom: 1rem;
+}
+
 .sectionTitleC {
   color: #1DA9A2;
 }
