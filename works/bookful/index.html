@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Amtrip | Kenta Kodashima</title>
+  <title>Bookful | Kenta Kodashima</title>
   <meta name="description" content="Kenta Kodashima - iOS Developer Based in Vancouver">
   <meta name="author" content="Kenta Kodashima">
 
   <!-- Open Graph data -->
-  <meta property="og:title" content="Amtrip | Kenta Kodashima" />
+  <meta property="og:title" content="Bookful | Kenta Kodashima" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kentakodashima.com/works/amtrip/" />
   <meta property="og:image" content="https://kentakodashima.com/img/kentakodashima_ogimage.png" />
@@ -88,23 +88,23 @@
       </nav>
       <div class="container">
         <div class="appOverviewBox">
-          <h1 class="appName">Amtrip</h1>
+          <h1 class="appName">Bookful</h1>
           <div class="appInfo row">
             <div class="col-md-3 col-6 infoCol">
               <p class="appInfoLabel">Category:</p>
-              <p class="appInfoContent">iOS app</p>
+              <p class="appInfoContent">Android app</p>
             </div>
             <div class="col-md-3 col-6 infoCol">
               <p class="appInfoLabel">LANGUAGE:</p>
-              <p class="appInfoContent">Swift 4</p>
+              <p class="appInfoContent">Java</p>
             </div>
             <div class="col-md-3 col-6 infoCol">
               <p class="appInfoLabel">FEATURES:</p>
-              <p class="appInfoContent">Realm, Google Places Autocomplete API</p>
+              <p class="appInfoContent">Realm</p>
             </div>
             <div class="col-md-3 col-6 infoCol">
               <p class="appInfoLabel">Production:</p>
-              <p class="appInfoContent">March 2018 - July 2018</p>
+              <p class="appInfoContent">About 1.5 months total</p>
             </div>
           </div>
         </div>
@@ -116,10 +116,11 @@
           <h2 class="sectionTitle">App Summary</h2>
           <div class="detailText">
             <p>
-              Amtrip is a simple traveler's journal app.
-              <br /> Using this app, users can easily make records of their trips.
-              <br />This app is available on the <a href="https://itunes.apple.com/ca/app/amtrip/id1416443046?mt=8">App
-                Store</a>.
+              Bookful is a simple tool to keep records of the books you've read.
+              <br /> It is kind of a hard task to remember the contents of the books by reading just one time.
+              <br /> Making reading records using this app might help you remember.
+              <br />This app is available on the <a href="https://play.google.com/store/apps/details?id=kentakodashima.com.bookful">Google
+                Play Store</a>.
             </p>
           </div>
         </div>
@@ -127,26 +128,20 @@
       <section id="home" class="contentSection">
         <div class="container">
           <h2 class="sectionTitle">Top Page</h2>
-          <ul class="row appScreenshots">
+          <ul class="row appScreenshots justify-content-center">
             <li class="col-md-3 appScreenshotImg">
               <img src="./img/top_no_data_label.png" alt="Top page screen 1">
             </li>
             <li class="col-md-3 appScreenshotImg">
               <img src="./img/top_page.png" alt="Top page screen 2">
             </li>
-            <li class="col-md-3 appScreenshotImg">
-              <img src="./img/top_thumbnail.png" alt="Top page screen 3">
-            </li>
-            <li class="col-md-3 appScreenshotImg">
-              <img src="./img/top_multi_thumbs.png" alt="Top page screen 4">
-            </li>
           </ul>
           <div class="detailText">
             <ol>
-              <li>When there is no data available, it shows texts saying"There are no pages yet.".</li>
-              <li>The background picture is randomly piccked from the images of the pages which belong to the album.</li>
-              <li>The date label would be updated when the user creates the new page which has older date.</li>
-              <li>I chose UICollecUICollectionView to show thumbnails because it's more flexible than UITableView.</li>
+              <li>When there is no data available, it shows texts saying "There is no record yet.".</li>
+              <li>The cells are listed using RecyclerView.</li>
+              <li>In order to show TextView at the bottom of a cell, I put a gradient View on the thumbnail image.</li>
+              <li>In order to make margins around RecyclerView items, I created the CustomItemDecoration class.</li>
             </ol>
           </div>
         </div>
@@ -154,95 +149,81 @@
       <section id="creation" class="contentSection">
         <div class="container">
           <h2 class="sectionTitle">Creation Page</h2>
-          <ul class="row appScreenshots">
-            <li class="col-md-3 appScreenshotImg">
-              <img src="./img/creation_page.png" alt="Creation page screen 1">
-            </li>
-            <li class="col-md-3 appScreenshotImg">
-              <img src="./img/ceration_create_album.png" alt="Creation page screen 2">
-            </li>
-            <li class="col-md-3 appScreenshotImg">
-              <img src="./img/creation_google_places_api.png" alt="Creation page screen 3">
-            </li>
-            <li class="col-md-3 appScreenshotImg">
-              <img src="./img/creation_imagepicker.png" alt="Creation page screen 4">
-            </li>
-          </ul>
-          <div class="detailText">
-            <ol>
-              <li>When the user taps on"Album Title" textField, AlbumCreateVC shows up. This let user choose from
-                existing
-                album or create a new album.</li>
-              <li>When the user taps on"Date" textField, UIDatePicker shows up. Texts change responding to the user's
-                action.
-                The default value is today's date.</li>
-              <li>When the user taps on"Location" textField, Autocomplete Controller from Google Places API shows up.
-                The
-                user can easily search and pick a location.</li>
-              <li>Tapping on the buttons with the camera icon and library icon brings up UIImagePickerController.</li>
-              <li>In order to display thumbnails of images, I used UICollectionView horizontally.</li>
-              <li>The images is copied and stored into app's FileManager directory. Database just knows the path to the
-                images.</li>
-              <li>An image is deleted from UI and FileManager directory by tapping the delete button at the right above
-                of
-                UICollectionViewCell.
-              </li>
-            </ol>
-          </div>
-        </div>
-      </section>
-      <section id="favorite" class="cf contentSection">
-        <div class="container">
-          <h2 class="sectionTitle">Favorite Page</h2>
           <ul class="row appScreenshots justify-content-center">
             <li class="col-md-3 appScreenshotImg">
-              <img src="./img/favorite_page.png" alt="Favorite page screen 1">
+              <img src="./img/creation_empty.png" alt="Creation page screen 1">
             </li>
             <li class="col-md-3 appScreenshotImg">
-              <img src="./img/favorite_detail_page.png" alt="Favorite page screen 2">
+              <img src="./img/creation_editing.png" alt="Creation page screen 2">
             </li>
           </ul>
           <div class="detailText">
             <ol>
-              <li>Only shows pages which selected as a favorite page.</li>
-              <li>Toggling the favorite state with the barButtonItem on detail page.</li>
-              <li>When there is no data available, it shows texts saying"There are no pages yet.".</li>
+              <li>The gray default image is replaced when the user uploads an image.</li>
+              <li>The image is copied into file directory and stored as an String image path by RealmObject.</li>
+              <li>Record object is created only when the user taps the "SAVE THIS PAGE" button at the bottom.</li>
+              <li>The user can leave the image empty.</li>
+              <li>If the user has empty fields, AlertDialog shows up.</li>
             </ol>
           </div>
         </div>
       </section>
       <section id="search" class="contentSection">
         <div class="container">
-          <h2 class="sectionTitle">Seach Page</h2>
+          <h2 class="sectionTitle">Search Page</h2>
           <div class="row appScreenshots justify-content-center">
             <div class="col-md-3 appScreenshotImg">
               <img src="./img/search_page.png" alt="Search page screen 1">
             </div>
+            <div class="col-md-3 appScreenshotImg">
+              <img src="./img/search_swipe.gif" alt="Search page screen 1">
+            </div>
           </div>
           <div class="detailText">
             <ol>
-              <li>Its UI show pages which contain texts on UISearchView.</li>
-              <li>Filtering the RealmObjects using NSPredicate with searchText.</li>
-              <li>When there is no data available, it shows texts saying"There are no pages yet.".</li>
+              <li>Its UI shows records which contain texts from the search box in Records' title.</li>
+              <li>The cells are listed using RecyclerView.</li>
+              <li>The cells can be swipe to delete.</li>
+              <li>Filtering the RealmObjects using onQueryTextChange() with newText from the search box.</li>
+              <li>When there is no data available, it shows texts saying "There is no record yet.".</li>
             </ol>
           </div>
         </div>
       </section>
-      <section id="yourPage" class="contentSection">
+      <section id="recordDetail" class="contentSection">
         <div class="container">
-          <h2 class="sectionTitle">Your Page</h2>
+          <h2 class="sectionTitle">Record Detail</h2>
           <ul class="row appScreenshots justify-content-center">
             <li class="col-md-3 appScreenshotImg">
-              <img src="./img/yourpage_segmented_control_albums.png" alt="Your Page screen 1">
+              <img src="./img/detail_page.png" alt="Record Detail screen 1">
             </li>
             <li class="col-md-3 appScreenshotImg">
-              <img src="./img/yourpage_segmented_control_pages.png" alt="Your Page screen 2">
+              <img src="./img/detail_multi-function_button.png" alt="Record Detail screen 2">
             </li>
           </ul>
           <div class="detailText">
             <ol>
-              <li>Using UISegmentedControl to show different contents.</li>
-              <li>When there is no data available, it shows texts saying"There are no pages yet.".</li>
+              <li>It displays the data from the Record object which has the specific recordKey.</li>
+              <li>When the user taps the button at the right top of action bar, 'Edit' and 'Delete' menu appears.</li>
+              <li>'Edit' on the menu leads to Editing activity.</li>
+              <li>'Delete' on the menu actually deletes the Record from database and leads to the previous activity.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section id="editRecord" class="contentSection">
+        <div class="container">
+          <h2 class="sectionTitle">Edit Record</h2>
+          <ul class="row appScreenshots justify-content-center">
+            <li class="col-md-3 appScreenshotImg">
+              <img src="./img/edit_page.png" alt="Record Detail screen 1">
+            </li>
+          </ul>
+          <div class="detailText">
+            <ol>
+              <li>The user can edit any information related to the Record.</li>
+              <li>Instead of putting "SAVE THIS PAGE" button at the bottom, I put "Done" button at the right top of the
+                action bar.</li>
             </ol>
           </div>
         </div>
@@ -250,16 +231,15 @@
       <section id="marketingButtons">
         <div class="container">
           <div class="githubArea">
-            <a class="githubButton" href="https://github.com/KentaKodashima/Amtrip">
+            <a class="githubButton" href="https://github.com/KentaKodashima/Bookful">
               <i class="fab fa-github"></i>Src on Github
             </a>
           </div>
           <div class="appStoreArea">
-            <a href="https://itunes.apple.com/ca/app/amtrip/id1416443046?mt=8" class="appStoreButton">
-              <!-- <span class="logoText">MyLogo</span> -->
-              <object id="appStoreButtonImg" type="image/svg+xml" data="./img/app_store_badge.svg">
-                <img src="./img/app_store_badge.png" alt="App Store Badge">
-              </object>
+            <a href="https://play.google.com/store/apps/details?id=kentakodashima.com.bookful" class="appStoreButton">
+              <div id="appStoreButtonImg" class="google">
+                <img alt='Get it on Google Play' src='./img/google-play-badge.png' />
+              </div>
             </a>
           </div>
         </div>

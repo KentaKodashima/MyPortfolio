@@ -92,20 +92,12 @@ reproduced or used in any manner whatsoever.
   }
 }
 
-#home,
-#creation,
-#favorite,
-#search,
-#yourPage {
+.contentSection {
   padding-bottom: 70px;
 }
 
 @media screen and (max-width: 600px) {
-  #home,
-  #creation,
-  #favorite,
-  #search,
-  #yourPage {
+  .contentSection {
     padding-bottom: 40px;
   }
 }
@@ -382,6 +374,22 @@ reproduced or used in any manner whatsoever.
   padding: 20px;
 }
 
+#summary .detailText {
+  text-align: center;
+}
+
+#summary .detailText p {
+  margin: 0;
+}
+
+#summary .detailText a {
+  color: #1DA9A2;
+}
+
+#summary .detailText a:hover, #summary .detailText a:active, #summary .detailText a:focus {
+  color: #4ce0d9;
+}
+
 /* ==============
      Marketing
   ============= */
@@ -423,6 +431,10 @@ reproduced or used in any manner whatsoever.
 
 #marketingButtons .appStoreArea .appStoreButton #appStoreButtonImg {
   width: 180px;
+}
+
+#marketingButtons .appStoreArea .appStoreButton #appStoreButtonImg.google {
+  width: 208px;
 }
 
 /* ==============

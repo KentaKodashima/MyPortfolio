@@ -27,11 +27,7 @@ reproduced or used in any manner whatsoever.
   }
 }
 
-#home,
-#creation,
-#favorite,
-#search,
-#yourPage {
+.contentSection {
   padding-bottom: 70px;
   @include max-screen($breakpMobileLand-max) {
     padding-bottom: 40px;
@@ -95,6 +91,18 @@ reproduced or used in any manner whatsoever.
   padding: 20px;
 }
 
+#summary {
+  .detailText {
+    text-align: center;
+    p {
+      margin: 0;
+    }
+    a {
+      @include linkColor($codingGreen);
+    }
+  }
+}
+
 /* ==============
      Marketing
   ============= */
@@ -128,6 +136,9 @@ reproduced or used in any manner whatsoever.
       display: inline-block;
       #appStoreButtonImg {
         width: 180px;
+      }
+      #appStoreButtonImg.google {
+        width: 208px;
       }
     }
   }
