@@ -1,0 +1,300 @@
+@import "wp";
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : style.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+
+@import "variables";
+@import "mixin";
+
+/* ==============
+      Header
+  ============= */
+@import "_nav";
+#header {
+  background: url('./img/header-bg.jpg') top center no-repeat;
+  background-size: cover;
+  padding: 20% 0 20%;
+  color: $colorWhite;
+  @include max-screen($breakpMobileLand-max) {
+    padding: 40% 0 12%;
+  }
+  .container {
+    #heroText {
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      text-shadow: 1px 1px 20px rgba(0,0,0,0.3);
+      filter: glow(color=#000000,strength=3), alpha(opacity=70);
+      .title {
+        font-size: 5rem;
+        margin: 0;
+        line-height: 1;
+        font-weight: bold;
+        @include max-screen($breakpMobileLand-max) {
+          font-size: 3.2rem;
+          margin-bottom: 0.4rem;
+        }
+      }
+      .subTitle {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        @include max-screen($breakpMobileLand-max) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+/* ==============
+      Works
+  ============= */
+#works {
+  .workList {
+    .workItem {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .imgBox {
+        position: relative;
+        @include max-screen($breakpMobileLand-max) {
+          margin: 0;
+        }
+        .imgBoxLink, .mask {
+          &::after, &::before {
+            background-color: $codingGreen;
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 10;
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+            @include max-screen($breakpMobileLand-max) {
+              transition: none;
+              -webkit-transition: none;
+            }
+          }
+        }
+        .imgBoxLink {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          text-align: center;
+          color: $codingGreen;
+          &:hover {
+            .mask::before, .mask::after {
+              height: 100%;
+              height: calc(100% + 1px);
+            }
+            *::-ms-backdrop, .mask::before, .mask::after {
+              height: 100%;
+            }
+            &::after, &::before {
+              width: 100%;
+              width: calc(100% + 1px);
+            }
+            *::-ms-backdrop, &::after, &::before {
+              width: 100%;
+            }
+          }
+          &::before {
+            bottom: -1px;
+            height: 20px;
+            right: -1px;
+            width: 0px;
+          }
+          &::after {
+            height: 20px;
+            left: -1px;
+            top: -1px;
+            width: 0px;
+          }
+          .mask {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            background-color: rgba(256,256,256, 0.8);
+            transition: all 0.2s ease;
+            &::before {
+              height: 0px;
+              right: -1px;
+              top: -1px;
+              width: 20px;
+            }
+            &::after {
+              bottom: -1px;
+              height: 0px;
+              left: -1px;
+              width: 20px;
+            }
+            .maskContainer {
+              position: absolute;
+              width: 80%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -webkit-transform: translate(-50%, -50%);
+              .captionTitle {
+                font-size: 1.5rem;
+                font-weight: bold;
+              }
+              .captionDetail {
+                font-size: 1.5rem;
+              }
+            }
+          }
+          &:hover {
+            .mask {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==============
+      Skills
+  ============= */
+#skills {
+  background-color: $baseColor;
+  box-sizing: content-box;
+  .container {
+    .icons {
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      background-color: #fff;
+      border-radius: 50%;
+      box-sizing: border-box;
+      color: $codingGreen;
+      font-size: 5rem;
+      line-height: 2em;
+      margin: 0;
+    }
+    .skillName {
+      font-weight: bold;
+      color: $colorPlainText;
+      font-size: 1.3rem;
+      margin: 15px 0 20px;
+    }
+    .description {
+      color: $colorPlainText;
+      text-align: left;
+    }
+  }
+}
+
+/* ==============
+    Recources
+   ============= */
+#resources {
+  .thumbnail {
+    .thumbnailText {
+      margin-bottom: 0;
+    }
+    .lastRow {
+      margin-bottom: 0 !important;
+    }
+  }
+  a {
+    .thumbnailImg {
+      display: inline-block;
+      width: 100%;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+    .resourceName {
+      font-size: 1.5rem;
+    }
+    @include linkColor($textColorBase);
+  }
+}
+
+/* ==============
+      Profile
+  ============= */
+#profile {
+  background-color: $baseColor;
+  color: $colorPlainText;
+  .container {
+    @include max-screen($breakpMobileLand-max) {
+      text-align: center;
+    }
+    .profileImg {
+      @include max-screen($breakpMobileLand-max) {
+        margin-bottom: 25px;
+      }
+    }
+    .sectionTitle {
+      text-align: left;
+      color: $codingGreen;
+      @include max-screen($breakpMobileLand-max) {
+        text-align: center;
+      }
+    }
+    .profileText {
+      @include max-screen($breakpMobileLand-max) {
+        margin-bottom: 2rem;
+      }
+    }
+    .icons {
+      li {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* ==============
+      Contact
+  ============= */
+#contact {
+  text-align: center;
+  padding-bottom: 30px !important;
+  .greetingText {
+    margin-bottom: 2rem;
+    @include max-screen($breakpMobileLand-max) {
+      margin-bottom: 1.2rem;
+    }
+  }
+  .contactButton {
+    display: block;
+    width: 270px;
+    margin: auto;
+    font-size: 1.4rem;
+    color: $colorWhite;
+    padding: 1rem 1.8rem;
+    background-color: $codingGreen;
+    border: $codingGreen solid 5px;
+    border-radius: 15px;
+    &:hover {
+      color: $codingGreen;
+      background-color: $colorWhite;
+      transition: all 0.5s;
+    }
+  }
+}
+
+
+/* ==============
+      Footer
+  ============= */
+@import "_footer";

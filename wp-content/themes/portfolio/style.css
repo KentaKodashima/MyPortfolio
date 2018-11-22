@@ -1,0 +1,645 @@
+@charset "UTF-8";
+/*
+Theme Name: kentakodashima.com
+Description: Style for kentakodashima.com
+Author: Kenta Kodashima
+Author URI: https://kentakodashima.com/
+Version: 1.0
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : style.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _mixin.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/* ==============
+    Link styles
+  ============= */
+/* ==============
+   Media queries
+  ============= */
+/* ==============
+      Header
+  ============= */
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _nav.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _mixin.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/** =========
+  Font
+========= **/
+/** =========
+  Colors
+========= **/
+/** =========
+  Size
+========= **/
+/** =========
+  Media Queries
+========= **/
+/* ==============
+    Link styles
+  ============= */
+/* ==============
+   Media queries
+  ============= */
+#nav.navScroll {
+  background-color: #1F2029;
+  transition: background-color 0.3s linear;
+  top: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: padding 0.5s;
+}
+
+#nav.navScroll #logoImg {
+  transform: scale(0.8, 0.8);
+  transition: 0.3s;
+  vertical-align: middle;
+}
+
+#nav {
+  padding: 1rem 0;
+  transition: padding 0.5s;
+  transition: background-color 0.3s;
+}
+
+#nav #logoImg {
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  #nav #logoImg {
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nav {
+    padding: 0.5rem 1rem;
+    background-color: #1F2029;
+  }
+}
+
+#nav .navbar-toggler {
+  height: 30px;
+  padding: 25px 15px;
+  background-color: #1DA9A2;
+}
+
+#nav .navbar-toggler .hamburgerBorder {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 0;
+  position: relative;
+}
+
+#nav .navbar-toggler .hamburgerBorder:before {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: -10px;
+}
+
+#nav .navbar-toggler .hamburgerBorder:after {
+  content: "";
+  position: absolute;
+  transition: all 100ms ease;
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: #E1E2E7;
+  top: 10px;
+}
+
+#nav.isOpen .navbar-toggler .hamburgerBorder {
+  background-color: transparent;
+}
+
+#nav.isOpen .navbar-toggler .hamburgerBorder:before {
+  transform: rotate(45deg) translate(7px, 7px);
+  transition: all 100ms ease;
+}
+
+#nav.isOpen .navbar-toggler .hamburgerBorder:after {
+  transform: rotate(-45deg) translate(7px, -7px);
+  transition: all 100ms ease;
+}
+
+#nav #navbarNav .nav-link {
+  color: #1DA9A2;
+  font-size: 1.5rem;
+}
+
+#nav #navbarNav .active .nav-link {
+  background-color: #1DA9A2;
+  color: #fff !important;
+  border-radius: 10px;
+}
+
+#nav .isOpen .navContents {
+  display: block !important;
+  float: none;
+  padding-top: 66px;
+}
+
+#nav .isOpen .navContents li {
+  display: block;
+  margin-right: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+
+#nav .isOpen .navContents li:last-child {
+  border-bottom: none;
+}
+
+#nav .isOpen .navContents li a {
+  display: block;
+  width: 100%;
+}
+
+#nav .isOpen .navContents li a:hover {
+  opacity: 0.7;
+}
+
+#header {
+  background: url("./img/header-bg.jpg") top center no-repeat;
+  background-size: cover;
+  padding: 20% 0 20%;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  #header {
+    padding: 40% 0 12%;
+  }
+}
+
+#header .container #heroText {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  filter: glow(color=#000000, strength=3), alpha(opacity=70);
+}
+
+#header .container #heroText .title {
+  font-size: 5rem;
+  margin: 0;
+  line-height: 1;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  #header .container #heroText .title {
+    font-size: 3.2rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+#header .container #heroText .subTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  #header .container #heroText .subTitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* ==============
+      Works
+  ============= */
+#works .workList .workItem {
+  margin-bottom: 30px;
+}
+
+#works .workList .workItem:last-child {
+  margin-bottom: 0;
+}
+
+#works .workList .workItem .imgBox {
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  #works .workList .workItem .imgBox {
+    margin: 0;
+  }
+}
+
+#works .workList .workItem .imgBox .imgBoxLink::after, #works .workList .workItem .imgBox .imgBoxLink::before, #works .workList .workItem .imgBox .mask::after, #works .workList .workItem .imgBox .mask::before {
+  background-color: #1DA9A2;
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 10;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+
+@media screen and (max-width: 600px) {
+  #works .workList .workItem .imgBox .imgBoxLink::after, #works .workList .workItem .imgBox .imgBoxLink::before, #works .workList .workItem .imgBox .mask::after, #works .workList .workItem .imgBox .mask::before {
+    transition: none;
+    -webkit-transition: none;
+  }
+}
+
+#works .workList .workItem .imgBox .imgBoxLink {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  color: #1DA9A2;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::after {
+  height: 100%;
+  height: calc(100% + 1px);
+}
+
+#works .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::after {
+  height: 100%;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink:hover::after, #works .workList .workItem .imgBox .imgBoxLink:hover::before {
+  width: 100%;
+  width: calc(100% + 1px);
+}
+
+#works .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #works .workList .workItem .imgBox .imgBoxLink:hover::after, #works .workList .workItem .imgBox .imgBoxLink:hover::before {
+  width: 100%;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink::before {
+  bottom: -1px;
+  height: 20px;
+  right: -1px;
+  width: 0px;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink::after {
+  height: 20px;
+  left: -1px;
+  top: -1px;
+  width: 0px;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.2s ease;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask::before {
+  height: 0px;
+  right: -1px;
+  top: -1px;
+  width: 20px;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask::after {
+  bottom: -1px;
+  height: 0px;
+  left: -1px;
+  width: 20px;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionDetail {
+  font-size: 1.5rem;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink:hover .mask {
+  opacity: 1;
+}
+
+/* ==============
+      Skills
+  ============= */
+#skills {
+  background-color: #1F2029;
+  box-sizing: content-box;
+}
+
+#skills .container .icons {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background-color: #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #1DA9A2;
+  font-size: 5rem;
+  line-height: 2em;
+  margin: 0;
+}
+
+#skills .container .skillName {
+  font-weight: bold;
+  color: #E1E2E7;
+  font-size: 1.3rem;
+  margin: 15px 0 20px;
+}
+
+#skills .container .description {
+  color: #E1E2E7;
+  text-align: left;
+}
+
+/* ==============
+    Recources
+   ============= */
+#resources .thumbnail .thumbnailText {
+  margin-bottom: 0;
+}
+
+#resources .thumbnail .lastRow {
+  margin-bottom: 0 !important;
+}
+
+#resources a {
+  color: #55747C;
+}
+
+#resources a .thumbnailImg {
+  display: inline-block;
+  width: 100%;
+}
+
+#resources a:hover {
+  opacity: 0.7;
+}
+
+#resources a .resourceName {
+  font-size: 1.5rem;
+}
+
+#resources a:hover, #resources a:active, #resources a:focus {
+  color: #89a6ae;
+}
+
+/* ==============
+      Profile
+  ============= */
+#profile {
+  background-color: #1F2029;
+  color: #E1E2E7;
+}
+
+@media screen and (max-width: 600px) {
+  #profile .container {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #profile .container .profileImg {
+    margin-bottom: 25px;
+  }
+}
+
+#profile .container .sectionTitle {
+  text-align: left;
+  color: #1DA9A2;
+}
+
+@media screen and (max-width: 600px) {
+  #profile .container .sectionTitle {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #profile .container .profileText {
+    margin-bottom: 2rem;
+  }
+}
+
+#profile .container .icons li {
+  text-align: center;
+}
+
+/* ==============
+      Contact
+  ============= */
+#contact {
+  text-align: center;
+  padding-bottom: 30px !important;
+}
+
+#contact .greetingText {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  #contact .greetingText {
+    margin-bottom: 1.2rem;
+  }
+}
+
+#contact .contactButton {
+  display: block;
+  width: 270px;
+  margin: auto;
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 1rem 1.8rem;
+  background-color: #1DA9A2;
+  border: #1DA9A2 solid 5px;
+  border-radius: 15px;
+}
+
+#contact .contactButton:hover {
+  color: #1DA9A2;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+/* ==============
+      Footer
+  ============= */
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _footer.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+/* ==============
+      Footer
+  ============= */
+#footer {
+  text-align: center;
+  background-color: #1F2029;
+  color: #E1E2E7;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+#footer .icons {
+  margin-bottom: 1rem;
+}
+
+#footer .footerText a {
+  color: #E1E2E7;
+}
+
+#footer .footerText a:hover, #footer .footerText a:active, #footer .footerText a:focus {
+  color: white;
+}

@@ -1,0 +1,116 @@
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _nav.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+
+@import "variables";
+@import "mixin";
+
+#nav.navScroll {
+  background-color: $baseColor;
+  transition: background-color 0.3s linear;
+  top: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: padding 0.5s;
+  #logoImg {
+    transform: scale(0.8, 0.8);
+    transition: 0.3s;
+    vertical-align: middle;
+  }
+}
+#nav {
+  padding: 1rem 0;
+  transition: padding 0.5s;
+  transition: background-color 0.3s;
+  #logoImg {
+    transition: 0.3s;
+    @include max-screen($breakpMobileLand-max) {
+      vertical-align: middle;
+    }
+  }
+  @include max-screen($breakpMobileLand-max) {
+    padding: 0.5rem 1rem;
+    background-color: $baseColor;
+  }
+  .navbar-toggler {
+    height: 30px;
+    padding: 25px 15px;
+    background-color: $codingGreen;
+    .hamburgerBorder {
+      @include hamburgerBorder(0);
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        transition: all 100ms ease;
+        @include hamburgerBorder(-10px);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        transition: all 100ms ease;
+        @include hamburgerBorder(10px);
+      }
+    }
+  }
+  &.isOpen {
+    .navbar-toggler {
+      .hamburgerBorder {
+        background-color: transparent;
+        &:before {
+          transform: rotate(45deg) translate(7px, 7px);
+          transition: all 100ms ease;
+        }
+        &:after {
+          transform: rotate(-45deg) translate(7px, -7px);
+          transition: all 100ms ease;
+        }
+      }
+    }
+  }
+  #navbarNav {
+    .nav-link {
+      color: $codingGreen;
+      font-size: 1.5rem;
+    }
+    .active {
+      .nav-link {
+        background-color: $codingGreen;
+        color: $colorWhite !important;
+        border-radius: 10px;
+      }
+    }
+  }
+  .isOpen {
+    .navContents {
+      display: block !important;
+      float: none;
+      padding-top: 66px;
+      li {
+        display: block;
+        margin-right: 0;
+        width: 100%;
+        border-bottom:1px solid #fff;
+        &:last-child {
+          border-bottom: none;
+        }
+        a {
+          display: block;
+          width: 100%;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _footer.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+
+/* ==============
+      Footer
+  ============= */
+#footer {
+  text-align: center;
+  background-color: $baseColor;
+  color: $colorPlainText;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  .icons {
+    margin-bottom: 1rem; 
+  }
+  .footerText a {
+    @include linkColor($colorPlainText);
+  }
+}

@@ -1,0 +1,50 @@
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : _variables.scss
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion there of must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+
+/** =========
+  Font
+========= **/
+$fontFamilyBase: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial" ,sans-serif;
+
+/** =========
+  Colors
+========= **/
+$colorWhite: #fff;
+$colorPlainText: #E1E2E7;
+$textColorBase: #55747C; //4d4d4d
+$baseColor: #1F2029;
+$codingGreen: #1DA9A2;
+$githubGrayDark: #333;
+$colorLightGray: #F3F3F3;
+
+/** =========
+  Size
+========= **/
+$fontSizeBase: 16px;
+$sectionTitle: 3rem;
+$sectionTitleMobile: 2rem;
+
+/** =========
+  Media Queries
+========= **/
+$breakpMobilePortrait-min: 320px;
+$breakpMobilePortrait-max: 480px;
+
+$breakpMobileLnad-min: 481px;
+$breakpMobileLand-max: 600px;
+
+$breakpTablet-min: 601px;
+$breakpTablet-max: 960px;
+
+$breakpPc-min: 961px;
+$breakpPc-max: 1024px;
