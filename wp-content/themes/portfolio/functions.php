@@ -84,9 +84,50 @@ function register_cpt_resources() {
  
     register_post_type( 'resource', $args );
 }
+
+add_action( 'init', 'register_cpt_blog_article' );
+function register_cpt_blog_article() {
+ 
+    $labels = array(
+        'name' => ( 'blog_articles' ),
+        'singular_name' => ( 'blog_article' ),
+        'add_new' => ( 'Add New Blog Article' ),
+        'add_new_item' => ( 'Add New Blog Article' ),
+        'edit_item' => ( 'Edit Blog Article' ),
+        'new_item' => ( 'New Blog Article' ),
+        'view_item' => ( 'View Blog Article' ),
+        'search_items' => ( 'Search Blog Articles' ),
+        'not_found' => ( 'No blog article found' ),
+        'not_found_in_trash' => ( 'No blog article found in Trash' ),
+        'parent_item_colon' => ( 'Parent blog article' ),
+        'menu_name' => ( 'Blog Articles' ),
+    );
+ 
+    $args = array(
+        'labels' => $labels,
+        'description' => 'The links of blog articles',
+        'public' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+
+        'show_ui' => true,
+        'show_in_nav_menus' => true,
+        'show_in_menu' => true,
+        'capability_type' => 'post',
+
+        'hierarchical' => true,
+        'supports' => array( 'title', 'thumbnail', 'custom-fields' ),
+        
+        'has_archive' => true,
+        'rewrite' => true,
+        'query_var' => true,
+        'can_export' => true,
+    );
+ 
+    register_post_type( 'blog_article', $args );
+}
  
 // Add thumbnail functionality
-add_theme_support( 'post-thumbnails', array( 'work' ) );
-add_theme_support( 'post-thumbnails', array( 'resource' ) );
+add_theme_support( 'post-thumbnails', array( 'work', 'resource', 'blog_article' ) );
 set_post_thumbnail_size( 150, 150, true );
 ?>

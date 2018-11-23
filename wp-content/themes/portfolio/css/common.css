@@ -80,7 +80,17 @@ reproduced or used in any manner whatsoever.
 /* ==============
    Common styles
   ============= */
-#works,
+#works {
+  padding-top: 90px;
+}
+
+@media screen and (max-width: 600px) {
+  #works {
+    padding-top: 45px;
+  }
+}
+
+#blogArticles,
 #skills,
 #resources,
 #profile,
@@ -90,7 +100,7 @@ reproduced or used in any manner whatsoever.
 }
 
 @media screen and (max-width: 600px) {
-  #works,
+  #blogArticles,
   #skills,
   #resources,
   #profile,

@@ -341,25 +341,25 @@ reproduced or used in any manner whatsoever.
 /* ==============
       Works
   ============= */
-#works .workList .workItem {
+#works .workList .workItem, #blogArticles .workList .workItem {
   margin-bottom: 30px;
 }
 
-#works .workList .workItem:last-child {
+#works .workList .workItem:last-child, #blogArticles .workList .workItem:last-child {
   margin-bottom: 0;
 }
 
-#works .workList .workItem .imgBox {
+#works .workList .workItem .imgBox, #blogArticles .workList .workItem .imgBox {
   position: relative;
 }
 
 @media screen and (max-width: 600px) {
-  #works .workList .workItem .imgBox {
+  #works .workList .workItem .imgBox, #blogArticles .workList .workItem .imgBox {
     margin: 0;
   }
 }
 
-#works .workList .workItem .imgBox .imgBoxLink::after, #works .workList .workItem .imgBox .imgBoxLink::before, #works .workList .workItem .imgBox .mask::after, #works .workList .workItem .imgBox .mask::before {
+#works .workList .workItem .imgBox .imgBoxLink::after, #works .workList .workItem .imgBox .imgBoxLink::before, #works .workList .workItem .imgBox .mask::after, #works .workList .workItem .imgBox .mask::before, #blogArticles .workList .workItem .imgBox .imgBoxLink::after, #blogArticles .workList .workItem .imgBox .imgBoxLink::before, #blogArticles .workList .workItem .imgBox .mask::after, #blogArticles .workList .workItem .imgBox .mask::before {
   background-color: #1DA9A2;
   content: '';
   display: block;
@@ -370,13 +370,13 @@ reproduced or used in any manner whatsoever.
 }
 
 @media screen and (max-width: 600px) {
-  #works .workList .workItem .imgBox .imgBoxLink::after, #works .workList .workItem .imgBox .imgBoxLink::before, #works .workList .workItem .imgBox .mask::after, #works .workList .workItem .imgBox .mask::before {
+  #works .workList .workItem .imgBox .imgBoxLink::after, #works .workList .workItem .imgBox .imgBoxLink::before, #works .workList .workItem .imgBox .mask::after, #works .workList .workItem .imgBox .mask::before, #blogArticles .workList .workItem .imgBox .imgBoxLink::after, #blogArticles .workList .workItem .imgBox .imgBoxLink::before, #blogArticles .workList .workItem .imgBox .mask::after, #blogArticles .workList .workItem .imgBox .mask::before {
     transition: none;
     -webkit-transition: none;
   }
 }
 
-#works .workList .workItem .imgBox .imgBoxLink {
+#works .workList .workItem .imgBox .imgBoxLink, #blogArticles .workList .workItem .imgBox .imgBoxLink {
   position: relative;
   display: block;
   overflow: hidden;
@@ -384,39 +384,39 @@ reproduced or used in any manner whatsoever.
   color: #1DA9A2;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::after {
+#works .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::after, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover .mask::after {
   height: 100%;
   height: calc(100% + 1px);
 }
 
-#works .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::after {
+#works .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #works .workList .workItem .imgBox .imgBoxLink:hover .mask::after, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover .mask::before, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover .mask::after {
   height: 100%;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink:hover::after, #works .workList .workItem .imgBox .imgBoxLink:hover::before {
+#works .workList .workItem .imgBox .imgBoxLink:hover::after, #works .workList .workItem .imgBox .imgBoxLink:hover::before, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover::after, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover::before {
   width: 100%;
   width: calc(100% + 1px);
 }
 
-#works .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #works .workList .workItem .imgBox .imgBoxLink:hover::after, #works .workList .workItem .imgBox .imgBoxLink:hover::before {
+#works .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #works .workList .workItem .imgBox .imgBoxLink:hover::after, #works .workList .workItem .imgBox .imgBoxLink:hover::before, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover *::-ms-backdrop, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover::after, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover::before {
   width: 100%;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink::before {
+#works .workList .workItem .imgBox .imgBoxLink::before, #blogArticles .workList .workItem .imgBox .imgBoxLink::before {
   bottom: -1px;
   height: 20px;
   right: -1px;
   width: 0px;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink::after {
+#works .workList .workItem .imgBox .imgBoxLink::after, #blogArticles .workList .workItem .imgBox .imgBoxLink::after {
   height: 20px;
   left: -1px;
   top: -1px;
   width: 0px;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink .mask {
+#works .workList .workItem .imgBox .imgBoxLink .mask, #blogArticles .workList .workItem .imgBox .imgBoxLink .mask {
   width: 100%;
   height: 100%;
   display: block;
@@ -428,21 +428,21 @@ reproduced or used in any manner whatsoever.
   transition: all 0.2s ease;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink .mask::before {
+#works .workList .workItem .imgBox .imgBoxLink .mask::before, #blogArticles .workList .workItem .imgBox .imgBoxLink .mask::before {
   height: 0px;
   right: -1px;
   top: -1px;
   width: 20px;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink .mask::after {
+#works .workList .workItem .imgBox .imgBoxLink .mask::after, #blogArticles .workList .workItem .imgBox .imgBoxLink .mask::after {
   bottom: -1px;
   height: 0px;
   left: -1px;
   width: 20px;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer {
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer, #blogArticles .workList .workItem .imgBox .imgBoxLink .mask .maskContainer {
   position: absolute;
   width: 80%;
   top: 50%;
@@ -451,16 +451,16 @@ reproduced or used in any manner whatsoever.
   -webkit-transform: translate(-50%, -50%);
 }
 
-#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionTitle {
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionTitle, #blogArticles .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionTitle {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionDetail {
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionDetail, #blogArticles .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .captionDetail {
   font-size: 1.5rem;
 }
 
-#works .workList .workItem .imgBox .imgBoxLink:hover .mask {
+#works .workList .workItem .imgBox .imgBoxLink:hover .mask, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover .mask {
   opacity: 1;
 }
 

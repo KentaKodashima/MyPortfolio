@@ -83,7 +83,7 @@
               if( $app_store_info['app_store_badge'] ):
           ?>
             <a href="<?php echo $app_link ?>" class="appStoreButton">
-              <div id="appStoreButtonImg" class="google">
+              <div id="appStoreButtonImg" class="<?php if ( get_field('category') == 'Android' ) { ?> google <?php } ?>">
                 <img alt='<?php echo $app_store_info['app_store_badge']['alt'] ?>' src='<?php echo $app_store_info['app_store_badge']['url'] ?>' />
               </div>
             </a>

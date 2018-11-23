@@ -17,7 +17,14 @@ reproduced or used in any manner whatsoever.
 /* ==============
    Common styles
   ============= */
-#works,
+#works {
+  padding-top: 90px;
+  @include max-screen($breakpMobileLand-max) {
+    padding-top: 45px;
+  }
+}
+
+#blogArticles,
 #skills,
 #resources,
 #profile,

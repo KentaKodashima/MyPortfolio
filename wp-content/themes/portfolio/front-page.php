@@ -20,15 +20,15 @@
         <h2 class="sectionTitle">Works</h2>
         <?php
           $work_args = array(
-            'post_type' => 'works'
+            'post_type' => 'work'
           );
           $work_query = new WP_Query( $work_args );
         ?>
         <ul class="workList row cf">
-          <?php while ( $work_query->have_posts() ) : $work_query->the_post(); ?>
+          <?php if ( $work_query->have_posts() ) : while($work_query->have_posts()): $work_query->the_post(); ?>
           <li class="workItem col-md-4" ontouchstart="">
             <figure class="imgBox">
-              <a href="<?php echo the_permalink(); ?>" class="imgBoxLink">
+              <a href="<?php the_permalink(); ?>" class="imgBoxLink">
                 <?php
                   $image_id = get_post_thumbnail_id();
                   $image_url = wp_get_attachment_image_src($image_id, true);
@@ -36,14 +36,47 @@
                 <img src="<?php echo $image_url[0]; ?>" alt="<?php echo get_the_title(); ?>">
                 <figcaption class="mask">
                   <div class="maskContainer">
-                    <h3 class="captionTitle"><?php echo the_title(); ?></h3>
-                    <p class="captionDetail"><?php echo the_field('catch_text'); ?></p>
+                    <h3 class="captionTitle"><?php the_title(); ?></h3>
+                    <p class="captionDetail"><?php the_field('catch_text'); ?></p>
                   </div>
                 </figcaption>
               </a>
             </figure>
           </li>
-          <?php endwhile; ?>
+          <?php endwhile; endif; ?>
+        </ul>
+        <?php wp_reset_postdata(); ?>
+      </div>
+    </section>
+    <section id="blogArticles" class="mainTop section">
+      <div class="container">
+        <h2 class="sectionTitle">Blog Articles</h2>
+        <?php
+          $blog_args = array(
+            'post_type' => 'blog_article'
+          );
+          $blog_query = new WP_Query( $blog_args );
+        ?>
+        <ul class="workList row cf">
+          <?php if ( $blog_query->have_posts() ) : while($blog_query->have_posts()): $blog_query->the_post(); ?>
+          <li class="workItem col-md-4" ontouchstart="">
+            <figure class="imgBox">
+              <a href="<?php the_permalink(); ?>" class="imgBoxLink">
+                <?php
+                  $image_id = get_post_thumbnail_id();
+                  $image_url = wp_get_attachment_image_src($image_id, true);
+                ?>
+                <img src="<?php echo $image_url[0]; ?>" alt="<?php echo get_the_title(); ?>">
+                <figcaption class="mask">
+                  <div class="maskContainer">
+                    <h3 class="captionTitle"><?php the_title(); ?></h3>
+                    <p class="captionDetail"><?php the_field('blog_name'); ?></p>
+                  </div>
+                </figcaption>
+              </a>
+            </figure>
+          </li>
+          <?php endwhile; endif; ?>
         </ul>
         <?php wp_reset_postdata(); ?>
       </div>
