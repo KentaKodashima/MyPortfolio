@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-3 col-6 infoCol">
               <p class="appInfoLabel">FEATURES:</p>
-              <p class="appInfoContent"><?php the_field('language') ?></p>
+              <p class="appInfoContent"><?php the_field('features') ?></p>
             </div>
             <div class="col-md-3 col-6 infoCol">
               <p class="appInfoLabel">Production:</p>
@@ -40,7 +40,7 @@
           $page_name = get_sub_field('page_name');
           $screenshotCount = count(get_sub_field('screenshots'));
         ?>
-          <section id="home" class="contentSection">
+          <section class="contentSection">
             <div class="container">
               <h2 class="sectionTitle"><?php echo $page_name ?></h2>
               <?php if( have_rows('screenshots') ): ?>
