@@ -354,6 +354,10 @@ reproduced or used in any manner whatsoever.
   }
 }
 
+.appScreenshots .appScreenshotImg {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
 @media screen and (max-width: 600px) {
   .appScreenshots .appScreenshotImg {
     margin-bottom: 20px;
@@ -367,6 +371,14 @@ reproduced or used in any manner whatsoever.
   .appScreenshots .appScreenshotImg img {
     max-width: 280px;
   }
+}
+
+.col-md-12.appScreenshotImg {
+  margin-bottom: 20px;
+}
+
+.col-md-12.appScreenshotImg:last-child {
+  margin-bottom: 0;
 }
 
 .detailText {

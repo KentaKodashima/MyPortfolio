@@ -80,14 +80,31 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="hamburgerBorder"></span>
           </button>
+          <?php 
+            $works_link = "#works";
+            $blog_link = "#blogArticles";
+            $skills_link = "#skills";
+            $resources_link = "#resources";
+            $profile_link = "#profile";
+            $contact_link = "#contact";
+            
+            if (is_single()) {
+              $works_link = home_url() . "/#works";
+              $blog_link = home_url() . "/#blogArticles";
+              $skills_link = home_url() . "/#skills";
+              $resources_link = home_url() . "/#resources";
+              $profile_link = home_url() . "/#profile";
+              $contact_link = home_url() . "/#contact";
+            } 
+          ?>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item nav-works"><a class="nav-link" href="#works">Works</a></li>
-              <li class="nav-item nav-blog"><a class="nav-link" href="#blogArticles">Blog</a></li>
-              <li class="nav-item nav-skills"><a class="nav-link" href="#skills">Skills</a></li>
-              <li class="nav-item nav-resources"><a class="nav-link" href="#resources">Resources</a></li>
-              <li class="nav-item nav-profile"><a class="nav-link" href="#profile">Profile</a></li>
-              <li class="nav-item nav-contact"><a class="nav-link" href="#contact">Contact</a></li>
+              <li class="nav-item nav-works"><a class="nav-link" href="<?php echo $works_link ?>">Works</a></li>
+              <li class="nav-item nav-blog"><a class="nav-link" href="<?php echo $blog_link ?>">Blog</a></li>
+              <li class="nav-item nav-skills"><a class="nav-link" href="<?php echo $skills_link ?>">Skills</a></li>
+              <li class="nav-item nav-resources"><a class="nav-link" href="<?php echo $resources_link ?>">Resources</a></li>
+              <li class="nav-item nav-profile"><a class="nav-link" href="<?php echo $profile_link ?>">Profile</a></li>
+              <li class="nav-item nav-contact"><a class="nav-link" href="<?php echo $contact_link ?>">Contact</a></li>
             </ul>
           </div>
         </div>
