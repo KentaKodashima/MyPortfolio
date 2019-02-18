@@ -39,6 +39,10 @@
         <?php while( have_rows('page_details') ): the_row();
           $page_name = get_sub_field('page_name');
           $screenshotCount = count(get_sub_field('screenshots'));
+          $screenshotClassName = "col-md-3 appScreenshotImg";
+          if (get_field('category') == 'Website') {
+            $screenshotClassName = "col-md-12 appScreenshotImg";
+          }
         ?>
           <section class="contentSection">
             <div class="container">
@@ -48,7 +52,7 @@
                   <?php while( have_rows('screenshots') ): the_row(); 
                     $screenshot = get_sub_field('screenshot');
                   ?>
-                    <li class="col-md-3 appScreenshotImg">
+                    <li class="<?php echo $screenshotClassName ?>">
                       <img src="<?php echo $screenshot['url'] ?>" alt="<?php echo $screenshot['alt'] ?>">
                     </li>
                   <?php endwhile; ?>
@@ -72,17 +76,18 @@
       <section id="marketingButtons">
         <div class="container">
           <div class="githubArea">
-            <a class="githubButton" href="<?php the_field('github') ?>">
+            <a class="githubButton" href="<?php the_field('github') ?>" target="_blank">
               <i class="fab fa-github"></i>Src on Github
             </a>
           </div>
           <div class="appStoreArea">
           <?php
             $app_store_info = get_field('app_store_info');
+			$app_link = $app_store_info['app_store_link'];
             if( $app_store_info ):
               if( $app_store_info['app_store_badge'] ):
           ?>
-            <a href="<?php echo $app_link ?>" class="appStoreButton">
+            <a href="<?php echo $app_link ?>" target="_blank" class="appStoreButton">
               <div id="appStoreButtonImg" class="<?php if ( get_field('category') == 'Android' ) { ?> google <?php } ?>">
                 <img alt='<?php echo $app_store_info['app_store_badge']['alt'] ?>' src='<?php echo $app_store_info['app_store_badge']['url'] ?>' />
               </div>

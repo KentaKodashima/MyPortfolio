@@ -42,7 +42,7 @@ $(window).scroll(function () {
 
     // Each section's position
     $('section.section').each(function (i) {
-      sectionTopArr[i] = $(this).offset().top;
+      sectionTopArr[i] = $(this).offset().top - 14;
     });
 
     // Scroll events
@@ -58,31 +58,43 @@ $(window).scroll(function () {
         currentSec = sectionNum;
         if (currentSec == 0) {
           $(".nav-works").addClass('active');
+          $(".nav-blog").removeClass('active');
           $(".nav-skills").removeClass('active');
           $(".nav-resources").removeClass('active');
           $(".nav-profile").removeClass('active');
           $(".nav-contact").removeClass('active');
         } else if (currentSec == 1) {
-          $(".nav-skills").addClass('active');
+          $(".nav-blog").addClass('active');
           $(".nav-works").removeClass('active');
+          $(".nav-skills").removeClass('active');
           $(".nav-resources").removeClass('active');
           $(".nav-profile").removeClass('active');
           $(".nav-contact").removeClass('active');
         } else if (currentSec == 2) {
-          $(".nav-resources").addClass('active');
+          $(".nav-skills").addClass('active');
           $(".nav-works").removeClass('active');
-          $(".nav-skills").removeClass('active');
+          $(".nav-blog").removeClass('active');
+          $(".nav-resources").removeClass('active');
           $(".nav-profile").removeClass('active');
           $(".nav-contact").removeClass('active');
         } else if (currentSec == 3) {
+          $(".nav-resources").addClass('active');
+          $(".nav-works").removeClass('active');
+          $(".nav-blog").removeClass('active');
+          $(".nav-skills").removeClass('active');
+          $(".nav-profile").removeClass('active');
+          $(".nav-contact").removeClass('active');
+        } else if (currentSec == 4) {
           $(".nav-profile").addClass('active');
           $(".nav-works").removeClass('active');
+          $(".nav-blog").removeClass('active');
           $(".nav-skills").removeClass('active');
           $(".nav-resources").removeClass('active');
           $(".nav-contact").removeClass('active');
-        } else if (currentSec == 4) {
+        } else if (currentSec == 5) {
           $(".nav-contact").addClass('active');
           $(".nav-works").removeClass('active');
+          $(".nav-blog").removeClass('active');
           $(".nav-skills").removeClass('active');
           $(".nav-resources").removeClass('active');
           $(".nav-profile").removeClass('active');

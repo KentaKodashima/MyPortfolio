@@ -13,7 +13,7 @@
   <meta property="og:title" content="Kenta Kodashima | Mobile Developer" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kentakodashima.com/" />
-  <meta property="og:image" content="https://kentakodashima.com/img/kentakodashima_ogimage.png" />
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/kentakodashima_ogimage.png" />
   <meta property="og:description" content="Kenta Kodashima - iOS developer base in Vancouver" />
   <meta property="og:site_name" content="kentakodashima.com" />
 
@@ -23,7 +23,7 @@
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary_large_image">
 
-  <meta name="thumbnail" content="https://kentakodashima.com/img/kentakodashima_ogimage.png">
+  <meta name="thumbnail" content="<?php echo get_template_directory_uri(); ?>/img/kentakodashima_ogimage.png">
 
   <!-- Favicon -->
   <meta name=”msapplication-config” content=”/browserconfig.xml”> <meta name=”msapplication-TileColor” content=”#1F2029>
@@ -70,7 +70,7 @@
     <header id="header">
       <nav id="nav" class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-          <a href="#" class="logoImg navbar-brand">
+          <a href="https://kentakodashima.com/" class="logoImg navbar-brand">
             <!-- <span class="logoText">MyLogo</span> -->
             <object id="logoImg" type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
               <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo">
@@ -83,6 +83,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item nav-works"><a class="nav-link" href="#works">Works</a></li>
+              <li class="nav-item nav-blog"><a class="nav-link" href="#blogArticles">Blog</a></li>
               <li class="nav-item nav-skills"><a class="nav-link" href="#skills">Skills</a></li>
               <li class="nav-item nav-resources"><a class="nav-link" href="#resources">Resources</a></li>
               <li class="nav-item nav-profile"><a class="nav-link" href="#profile">Profile</a></li>
