@@ -477,6 +477,20 @@ reproduced or used in any manner whatsoever.
   opacity: 1;
 }
 
+#works .workList .workItem .imgBox .captionInfo, #blogArticles .workList .workItem .imgBox .captionInfo {
+  text-align: center;
+  margin-top: 8px;
+}
+
+#works .workList .workItem .imgBox .captionInfo .captionTitle, #blogArticles .workList .workItem .imgBox .captionInfo .captionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#works .workList .workItem .imgBox .captionInfo .captionDetail, #blogArticles .workList .workItem .imgBox .captionInfo .captionDetail {
+  font-size: 1.3rem;
+}
+
 /* ==============
       Skills
   ============= */
@@ -515,6 +529,10 @@ reproduced or used in any manner whatsoever.
    ============= */
 #resources .thumbnail .thumbnailText {
   margin-bottom: 0;
+}
+
+#resources .thumbnail .resourceName {
+  font-size: 1.2rem;
 }
 
 #resources .thumbnail .lastRow {

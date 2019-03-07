@@ -35,12 +35,14 @@
                 <img src="<?php echo $image_url[0]; ?>" alt="<?php echo get_the_title(); ?>">
                 <figcaption class="mask">
                   <div class="maskContainer">
-                    <h3 class="captionTitle"><?php the_title(); ?></h3>
-                    <p class="captionDetail"><?php the_field('catch_text'); ?></p>
                     <div class="maskButton">LEARN MORE</div>
                   </div>
                 </figcaption>
               </a>
+              <div class="captionInfo">
+                <h3 class="captionTitle"><?php the_title(); ?></h3>
+                <p class="captionDetail"><?php the_field('catch_text'); ?></p>
+              </div>
             </figure>
           </li>
           <?php endwhile; endif; ?>
@@ -69,12 +71,14 @@
                 <img src="<?php echo $image_url[0]; ?>" alt="<?php echo get_the_title(); ?>">
                 <figcaption class="mask">
                   <div class="maskContainer">
-                    <h3 class="captionTitle"><?php the_title(); ?></h3>
-                    <p class="captionDetail"><?php the_field('blog_name'); ?></p>
                     <div class="maskButton">LEARN MORE</div>
                   </div>
                 </figcaption>
               </a>
+              <div class="captionInfo">
+                <h3 class="captionTitle"><?php the_title(); ?></h3>
+                <p class="captionDetail"><?php the_field('blog_name'); ?></p>
+              </div>
             </figure>
           </li>
           <?php endwhile; endif; ?>
@@ -183,36 +187,32 @@
           <div class="thumbnails row cf">
             <?php if ( $website_query->have_posts() ) : while($website_query->have_posts()): $website_query->the_post(); ?>
               <div class="thumbnail col-md-3">
-                <a href="https://www.raywenderlich.com/">
-                  <div class="thumbnailImg">
-                    <?php
-                      $image_id = get_post_thumbnail_id();
-                      $image_url = wp_get_attachment_image_src($image_id, true);
-                    ?>
-                    <img src="<?php echo $image_url[0]; ?>" alt="<?php echo get_the_title(); ?>">
-                  </div>
-                  <p class="thumbnailText">
-                    <span class="resourceName"><?php the_title(); ?></span>
-                  </p>
-                </a>
+                <div class="thumbnailImg">
+                  <?php
+                    $image_id = get_post_thumbnail_id();
+                    $image_url = wp_get_attachment_image_src($image_id, true);
+                  ?>
+                  <img src="<?php echo $image_url[0]; ?>" alt="<?php echo get_the_title(); ?>">
+                </div>
+                <p class="thumbnailText">
+                  <span class="resourceName"><?php the_title(); ?></span>
+                </p>
               </div>
             <?php endwhile; endif; ?>
           </div>
           <div class="thumbnails row cf">
             <?php if ( $book_query->have_posts() ) : while($book_query->have_posts()): $book_query->the_post(); ?>
               <div class="thumbnail col-md-3 lastRow">
-                <a href="https://store.raywenderlich.com/products/realm-building-modern-swift-apps-with-realm-database">
-                  <div class="thumbnailImg">
-                    <?php
-                      $image_id = get_post_thumbnail_id();
-                      $image_url = wp_get_attachment_image_src($image_id, true);
-                    ?>
-                    <img src="<?php echo $image_url[0]; ?>" alt="<?php echo get_the_title(); ?>">
-                  </div>
-                  <p class="thumbnailText">
-                    <span class="resourceName"><?php the_title(); ?></span>
-                  </p>
-                </a>
+                <div class="thumbnailImg">
+                  <?php
+                    $image_id = get_post_thumbnail_id();
+                    $image_url = wp_get_attachment_image_src($image_id, true);
+                  ?>
+                  <img src="<?php echo $image_url[0]; ?>" alt="<?php echo get_the_title(); ?>">
+                </div>
+                <p class="thumbnailText">
+                  <span class="resourceName"><?php the_title(); ?></span>
+                </p>
               </div>
             <?php endwhile; endif; ?>
           </div>

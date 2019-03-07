@@ -175,6 +175,17 @@ reproduced or used in any manner whatsoever.
             }
           }
         }
+        .captionInfo {
+          text-align: center;
+          margin-top: 8px;
+          .captionTitle {
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+          .captionDetail {
+            font-size: 1.3rem;
+          }
+        }
       }
     }
   }
@@ -219,6 +230,9 @@ reproduced or used in any manner whatsoever.
   .thumbnail {
     .thumbnailText {
       margin-bottom: 0;
+    }
+    .resourceName {
+      font-size: 1.2rem;
     }
     .lastRow {
       margin-bottom: 0 !important;
