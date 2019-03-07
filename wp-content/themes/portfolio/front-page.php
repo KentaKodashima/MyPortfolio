@@ -37,6 +37,7 @@
                   <div class="maskContainer">
                     <h3 class="captionTitle"><?php the_title(); ?></h3>
                     <p class="captionDetail"><?php the_field('catch_text'); ?></p>
+                    <div class="maskButton">LEARN MORE</div>
                   </div>
                 </figcaption>
               </a>
@@ -49,7 +50,7 @@
     </section>
     <section id="blogArticles" class="section">
       <div class="container">
-        <h2 class="sectionTitle">Blog Articles</h2>
+        <h2 class="sectionTitle">Popular Articles on My Blog</h2>
         <?php
           $blog_args = array(
             'post_type' => 'blog_article'
@@ -70,6 +71,7 @@
                   <div class="maskContainer">
                     <h3 class="captionTitle"><?php the_title(); ?></h3>
                     <p class="captionDetail"><?php the_field('blog_name'); ?></p>
+                    <div class="maskButton">LEARN MORE</div>
                   </div>
                 </figcaption>
               </a>
@@ -90,8 +92,7 @@
             <p class="description">
               I have solid knowledge about iOS development basics such as delegation pattern, MVC pattern, ARC system
               etc.
-              In July of 2018, I published my very first own project on the App Store. In order to deepen my knowledge,
-              I study everyday using online courses and books.
+              In July of 2018, I published my very first own project on the App Store.
             </p>
             <ul class="tags">
               <li class="tagItem">Xcode</li>
@@ -100,30 +101,29 @@
               <li class="tagItem">Cocoapods</li>
               <li class="tagItem">Realm(Swift)</li>
               <li class="tagItem">Firebase(Swift)</li>
+              <li class="tagItem">Publishing</li>
+              <li class="tagItem">Common Libraries</li>
             </ul>
           </div>
           <div class="thumbnail col-md-4">
             <p class="icons"><i class="fas fa-mobile-alt"></i></p>
             <p class="skillName">Android Development</p>
             <p class="description">
-              Even though my interest is mainly in iOS development, I understand the basic concepts of Android
-              development such as Fragment, Lifecycle, Activity etc. In September of 2018, I published my first Android
-              app on the Google Play Store.
+              I understand the basic concepts of Android development such as Fragment, Lifecycle, Activity etc. In September of 2018, I published my first Android app on the Google Play Store.
             </p>
             <ul class="tags">
               <li class="tagItem">Android Studio</li>
               <li class="tagItem">Java</li>
               <li class="tagItem">Realm(Java)</li>
               <li class="tagItem">Firebase(Java)</li>
+              <li class="tagItem">Publishing</li>
             </ul>
           </div>
           <div class="thumbnail col-md-4">
             <p class="icons"><i class="fas fa-laptop-code"></i></p>
             <p class="skillName">Front-end Development</p>
             <p class="description">
-              As a Front-end developer in a design studio, I built some website and HTML emails. When I build a
-              website, I pay close attention
-              to the details such as spacing in pixels and font-size. I love writing the beautifully formated code.
+              As a Front-end developer in a design studio, I built some website and HTML emails. When I build a website, I pay close attention to the details such as spacing in pixels and  font-size. I love writing the beautifully formated code.
             </p>
             <ul class="tags">
               <li class="tagItem">HTML5</li>
@@ -132,6 +132,7 @@
               <li class="tagItem">jQuery</li>
               <li class="tagItem">React.js</li>
               <li class="tagItem">Redux</li>
+              <li class="tagItem">AWS/S3</li>
               <li class="tagItem">Bootstrap</li>
               <li class="tagItem">Gulp.js</li>
 			  <li class="tagItem">WordPress</li>
@@ -139,24 +140,22 @@
           </div>
           <div class="thumbnail col-md-4 noRightMargin">
             <p class="icons"><i class="fab fa-github"></i></p>
-            <p class="skillName">Version Control with Git</p>
+            <p class="skillName">Team Communication Tools</p>
             <p class="description">
-              Version control is an important factor in the process of the production. That's why I always leave the
-              details when I commit
-              and push to the repository. I understand the basic flow such as creating a development branch, fetch,
-              merge, push, reset, stash and rebase.
+              I always leave the details when I do git commit so that other developers can easily understand the changes. In order to communicate closely with team members, I make the most of tools such as Slack, Google Drive, Google Sheets, Google Docs and Zeplin.
             </p>
             <ul class="tags">
               <li class="tagItem">Github</li>
+              <li class="tagItem">Slack</li>
+              <li class="tagItem">Google Apps</li>
+              <li class="tagItem">Zeplin</li>
             </ul>
           </div>
           <div class="thumbnail col-md-4">
             <p class="icons"><i class="fas fa-paint-brush"></i></p>
             <p class="skillName">Design Applications</p>
             <p class="description">
-              I know how to use applications for designing. When I was a front-end developer, I did trivial design
-              adjustment using Photoshop.
-              Icon materials on my iOS app called "Amtrip" are made using Sketch.
+              I'm familiar with common applications for designing. When I was a front-end developer, I also did trivial design adjustment using Photoshop. Icon materials on my iOS app called "Amtrip" are made using Sketch.
             </p>
             <ul class="tags">
               <li class="tagItem">Photoshop</li>
@@ -183,7 +182,7 @@
         ?>
           <div class="thumbnails row cf">
             <?php if ( $website_query->have_posts() ) : while($website_query->have_posts()): $website_query->the_post(); ?>
-              <div class="thumbnail col-md-4">
+              <div class="thumbnail col-md-3">
                 <a href="https://www.raywenderlich.com/">
                   <div class="thumbnailImg">
                     <?php
@@ -231,7 +230,7 @@
             <div class="profileText">
               <p>I had been working as a front-end web developer and project manager in a web design studio in Tokyo. Now I'm completing a Web and Mobile App Development diploma at a college in Vancouver, seeking to get an opportunity as an iOS developer or a front-end web developer.</p>
               <p>I'm passionate about learning new things, sharing my knowledge, and making something useful thing for people. In order to share my knowledge, I write medium articles about what I learn from making apps.</p>
-              <p>My recent interest is in MySQL, RxSwift, Kotlin, React Native and Flutter.</p>
+              <p>My recent interest is in Docker, Node.js, MongoDB, MySQL, RxSwift, Kotlin, React Native and Flutter.</p>
             </div>
             <ul class="icons">
               <li><a href="https://github.com/KentaKodashima"><i class="fab fa-github"></i></a></li>

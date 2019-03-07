@@ -156,6 +156,17 @@ reproduced or used in any manner whatsoever.
               .captionDetail {
                 font-size: 1.5rem;
               }
+              .maskButton {
+                width: 60%;
+                margin: 0 auto;
+                padding: 8px 0;
+                border: solid 2px $codingGreen;
+                &:hover {
+                  transition: all 0.5s;
+                  color: $colorWhite;
+                  background-color: $codingGreen;
+                }
+              }
             }
           }
           &:hover {

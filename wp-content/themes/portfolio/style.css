@@ -460,6 +460,19 @@ reproduced or used in any manner whatsoever.
   font-size: 1.5rem;
 }
 
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .maskButton, #blogArticles .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .maskButton {
+  width: 60%;
+  margin: 0 auto;
+  padding: 8px 0;
+  border: solid 2px #1DA9A2;
+}
+
+#works .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .maskButton:hover, #blogArticles .workList .workItem .imgBox .imgBoxLink .mask .maskContainer .maskButton:hover {
+  transition: all 0.5s;
+  color: #fff;
+  background-color: #1DA9A2;
+}
+
 #works .workList .workItem .imgBox .imgBoxLink:hover .mask, #blogArticles .workList .workItem .imgBox .imgBoxLink:hover .mask {
   opacity: 1;
 }

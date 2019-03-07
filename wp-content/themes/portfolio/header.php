@@ -5,16 +5,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Kenta Kodashima | Mobile Developer</title>
-  <meta name="description" content="Kenta Kodashima - iOS Developer Based in Vancouver">
+  <title>Kenta Kodashima | Web and Mobile Developer</title>
+  <meta name="description" content="Kenta Kodashima - Web and Mobile Developer Based in Vancouver">
   <meta name="author" content="Kenta Kodashima">
 
   <!-- Open Graph data -->
-  <meta property="og:title" content="Kenta Kodashima | Mobile Developer" />
+  <meta property="og:title" content="Kenta Kodashima | Web and Mobile Developer" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kentakodashima.com/" />
   <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/kentakodashima_ogimage.png" />
-  <meta property="og:description" content="Kenta Kodashima - iOS developer base in Vancouver" />
+  <meta property="og:description" content="Kenta Kodashima - Web and Mobile Developer Based in Vancouver" />
   <meta property="og:site_name" content="kentakodashima.com" />
 
   <!-- Facebook -->
