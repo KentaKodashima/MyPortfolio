@@ -9,7 +9,6 @@
             <li><a href="https://www.linkedin.com/in/kenta-kodashima-61940611a/"><i class="fab fa-linkedin-in"></i></a></li>
             <li><a href="https://medium.com/@KentaKodashima"><i class="fab fa-medium-m"></i></a></li>
             <li><a href="https://www.facebook.com/kenta.kodashima.5"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://twitter.com/kentakodashima"><i class="fab fa-twitter"></i></a></li>
           </ul>
         </div>
       </div>
@@ -94,8 +93,7 @@
             <p class="icons"><i class="fas fa-mobile-alt"></i></p>
             <p class="skillName">iOS Development</p>
             <p class="description">
-              I have solid knowledge about iOS development basics such as delegation pattern, MVC pattern, ARC system
-              etc.
+              I have solid knowledge about iOS development basics such as delegation pattern, MVC pattern, ARC system, Optionals, Closures, etc.
               In July of 2018, I published my very first own project on the App Store.
             </p>
             <ul class="tags">
@@ -125,24 +123,42 @@
           </div>
           <div class="thumbnail col-md-4">
             <p class="icons"><i class="fas fa-laptop-code"></i></p>
-            <p class="skillName">Front-end Development</p>
+            <p class="skillName">Front-End Development</p>
             <p class="description">
-              As a Front-end developer in a design studio, I built some website and HTML emails. When I build a website, I pay close attention to the details such as spacing in pixels and  font-size. I love writing the beautifully formated code.
+              As a Front-end developer in a design studio, I had been building websites for the clients. I always write the beautifully formated code so that anyone can understand easily. 
             </p>
             <ul class="tags">
               <li class="tagItem">HTML5</li>
               <li class="tagItem">CSS3</li>
               <li class="tagItem">Sass</li>
               <li class="tagItem">jQuery</li>
-              <li class="tagItem">React.js</li>
+              <li class="tagItem">ReactJS</li>
               <li class="tagItem">Redux</li>
               <li class="tagItem">AWS/S3</li>
               <li class="tagItem">Bootstrap</li>
-              <li class="tagItem">Gulp.js</li>
-			  <li class="tagItem">WordPress</li>
+              <li class="tagItem">MaterializeCSS</li>
+              <li class="tagItem">Semantic UI</li>
+              <li class="tagItem">SEO</li>
+              <li class="tagItem">GulpJS</li>
+			        <li class="tagItem">WordPress</li>
             </ul>
           </div>
           <div class="thumbnail col-md-4 noRightMargin">
+            <p class="icons"><i class="fas fa-laptop-code"></i></p>
+            <p class="skillName">Back-End Development</p>
+            <p class="description">
+              In order to deepen my knowledge about web development, I learned back-end developement by myself and built a fullstack web app. Now I understand how I can set routes and how the browser handles requests.
+            </p>
+            <ul class="tags">
+              <li class="tagItem">NodeJS</li>
+              <li class="tagItem">Express</li>
+              <li class="tagItem">MongoDB</li>
+              <li class="tagItem">RESTful</li>
+              <li class="tagItem">PassportJS</li>
+              <li class="tagItem">Mongoose</li>
+            </ul>
+          </div>
+          <div class="thumbnail col-md-4">
             <p class="icons"><i class="fab fa-github"></i></p>
             <p class="skillName">Team Communication Tools</p>
             <p class="description">
@@ -159,7 +175,7 @@
             <p class="icons"><i class="fas fa-paint-brush"></i></p>
             <p class="skillName">Design Applications</p>
             <p class="description">
-              I'm familiar with common applications for designing. When I was a front-end developer, I also did trivial design adjustment using Photoshop. Icon materials on my iOS app called "Amtrip" are made using Sketch.
+              I'm familiar with common applications for designing. When I was working for the design studio, I also did trivial design adjustment using Photoshop. Icon materials on my iOS app called "Amtrip" are made using Sketch.
             </p>
             <ul class="tags">
               <li class="tagItem">Photoshop</li>
@@ -229,7 +245,7 @@
             <h3 class="sectionTitle sectionTitleC">Kenta Kodashima</h3>
             <div class="profileText">
               <p>I had been working as a front-end web developer and project manager in a web design studio in Tokyo. Now I'm completing a Web and Mobile App Development diploma at a college in Vancouver, seeking to get an opportunity as an iOS developer or a front-end web developer.</p>
-              <p>I'm passionate about learning new things, sharing my knowledge, and making something useful thing for people. In order to share my knowledge, I write medium articles about what I learn from making apps.</p>
+              <p>I'm passionate about learning new things, sharing my knowledge, and making something using modern technologies. In order to share my knowledge, I write medium articles about what I learn from making apps.</p>
               <p>My recent interest is in Docker, Node.js, MongoDB, MySQL, RxSwift, Kotlin, React Native and Flutter.</p>
             </div>
             <ul class="icons">
@@ -237,7 +253,6 @@
               <li><a href="https://www.linkedin.com/in/kenta-kodashima-61940611a/"><i class="fab fa-linkedin-in"></i></a></li>
               <li><a href="https://medium.com/@KentaKodashima"><i class="fab fa-medium-m"></i></a></li>
               <li><a href="https://www.facebook.com/kenta.kodashima.5"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="https://twitter.com/kentakodashima"><i class="fab fa-twitter"></i></a></li>
             </ul>
           </div>
         </div>
@@ -248,7 +263,7 @@
         <h2 class="sectionTitle">Contact</h2>
         <div class="content">
           <p class="greetingText">
-            Thank you for visiting this website.<br> Currently, I'm looking for a job opportunity as an iOS developer.<br>
+            Thank you for visiting this website.<br> Currently, I'm looking for a job opportunity as an iOS developer or a web developer.<br>
             Please
             feel free to contact me.
           </p>

@@ -6,7 +6,6 @@
           <li><a href="https://www.linkedin.com/in/kenta-kodashima-61940611a/"><i class="fab fa-linkedin-in"></i></a></li>
           <li><a href="https://medium.com/@KentaKodashima"><i class="fab fa-medium-m"></i></a></li>
           <li><a href="https://www.facebook.com/kenta.kodashima.5"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://twitter.com/kentakodashima"><i class="fab fa-twitter"></i></a></li>
         </ul>
         <p class="footerText footerGreeting">
           <a href="mailto:kentakodashima@gmail.com" class="emailLink">Feel free to ask me questions!</a>
