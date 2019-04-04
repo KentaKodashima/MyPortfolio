@@ -13,6 +13,32 @@ reproduced or used in any manner whatsoever.
 
 @import "variables";
 @import "mixin";
+@import "keyframes_mixin";
+
+/* ==============
+    Animations
+  ============= */
+@include keyframes(slideInBottom) {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 60%, 0)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+  }
+}
+
+.animation.active {
+  @include animation(slideInBottom 0.35s ease 0.15s);
+}
+
+@for $count from 1 through 4 {
+  .appScreenshots .animation.active:nth-child(#{$count}) {
+    @include animation(slideInBottom 0.5s ease 0.15s * $count);
+  }
+}
 
 /* ==============
      Base / Common

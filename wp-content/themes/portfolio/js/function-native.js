@@ -11,11 +11,14 @@ reproduced or used in any manner whatsoever.
 ======================================================================
 */
 
-let bodyElement = document.body;
-let htmlElement = document.getElementsByTagName("html")[0];
-let navElement = document.getElementById('nav')
+const bodyElement = document.body;
+const htmlElement = document.getElementsByTagName("html")[0];
+const navElement = document.getElementById('nav')
+const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 let elementsToAnimate = getElements('.animation')
+let sections = getElements('section.section')
 
 function getElements(element) {
   let elements = document.querySelectorAll(element);
@@ -25,6 +28,14 @@ function getElements(element) {
   else {
     return elements;
   }
+}
+
+function getOffsetTop(element = navElement) {
+  const rect = element.getBoundingClientRect();
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const offsetTop = rect.top + scrollTop;
+
+  return offsetTop;
 }
 
 // If #nav isOpen, fix the bg
@@ -109,10 +120,8 @@ window.addEventListener('scroll', () => {
 
   } else {
     /* How many pixels did the nav move? */
-    var mainTopEl = document.getElementsByClassName('mainTop');
-    var rect = mainTopEl.getBoundingClientRect();
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    var headerBottom = rect.top + scrollTop;
+    var mainTopElement = document.getElementsByClassName('mainTop');
+    var headerBottom = getOffsetTop(mainTopElement)
     let sectionTopArr = new Array();
 
     if (scrollTop >= headerBottom) {
@@ -126,23 +135,22 @@ window.addEventListener('scroll', () => {
     }
 
     // Each section's position
-    $('section.section').each(function (i) {
-      sectionTopArr[i] = $(this).offset().top - 14;
+    sections.forEach(function (val, i) {
+      sectionTopArr[i] = getOffsetTop(val) - 14;
     });
 
     // Keyframe animations
-    $(".animation").each(function () {
-      var position = $(this).offset().top; // The distance from the top to the element
-      var scroll = $(window).scrollTop(); // The scroll position
-      var windowHeight = $(window).height(); // The window height
+    elementsToAnimate.forEach(function (val) {
+      var position = getOffsetTop(val); // The distance from the top to the element
+      var scroll = scrollTop; // The scroll position
       if (scroll > position - windowHeight) { // The scroll position passed the element
-        $(this).addClass('active'); // Add the 'active' class
+        val.classList.add('active'); // Add the 'active' class
       }
     });
 
     // Scroll events
     for (var i = sectionTopArr.length - 1; i >= 0; i--) {
-      if ($(window).scrollTop() > sectionTopArr[i] - 50) {
+      if (scrollTop > sectionTopArr[i] - 50) {
         chengeSection(i);
         break;
       }
@@ -150,39 +158,39 @@ window.addEventListener('scroll', () => {
   }
 })
 
-$(function () {
-  // Toggling isOpen class
-  $('button.navbar-toggler').click(function () {
-    $("#nav").toggleClass('isOpen');
-  });
+// $(function () {
+//   // Toggling isOpen class
+//   $('button.navbar-toggler').click(function () {
+//     $("#nav").toggleClass('isOpen');
+//   });
 
-  $('a.nav-link').click(function () {
-    $("button.navbar-toggler").addClass('collapsed');
-    $("div.navbar-collapse").removeClass('show');
-    $("#nav").removeClass('isOpen');
-  });
+//   $('a.nav-link').click(function () {
+//     $("button.navbar-toggler").addClass('collapsed');
+//     $("div.navbar-collapse").removeClass('show');
+//     navElement.removeClass('isOpen');
+//   });
 
-  // Smooth scroll
-  var headerHeight = 40; // Not the navbar to cover the section title
+//   // Smooth scroll
+//   var headerHeight = 40; // Not the navbar to cover the section title
 
-  // Segue from app detail page
-  var urlHash = location.hash;
-  if (urlHash) {
-    $('body,html').stop().scrollTop(0);
-    setTimeout(function () {
-      var target = $(urlHash);
-      var position = target.offset().top - headerHeight;
-      $('body,html').stop().animate({ scrollTop: position }, 500);
-    }, 200);
-  }
+//   // Segue from app detail page
+//   var urlHash = location.hash;
+//   if (urlHash) {
+//     $('body,html').stop().scrollTop(0);
+//     setTimeout(function () {
+//       var target = $(urlHash);
+//       var position = target.offset().top - headerHeight;
+//       $('body,html').stop().animate({ scrollTop: position }, 500);
+//     }, 200);
+//   }
 
-  // Links inside the same page
-  $('a[href^="#"]').click(function () {
-    var speed = 400;
-    var href = $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top - headerHeight;
-    $('body,html').animate({ scrollTop: position }, speed, 'swing');
-    return false;
-  });
-});
+//   // Links inside the same page
+//   $('a[href^="#"]').click(function () {
+//     var speed = 400;
+//     var href = $(this).attr("href");
+//     var target = $(href == "#" || href == "" ? 'html' : href);
+//     var position = target.offset().top - headerHeight;
+//     $('body,html').animate({ scrollTop: position }, speed, 'swing');
+//     return false;
+//   });
+// });

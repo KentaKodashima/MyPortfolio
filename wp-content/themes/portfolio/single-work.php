@@ -27,8 +27,8 @@
     <div class="mainArea mainTop">
       <section id="summary" class="contentSection">
         <div class="container">
-          <h2 class="sectionTitle">App Summary</h2>
-          <div class="detailText">
+          <h2 class="sectionTitle animation">App Summary</h2>
+          <div class="detailText animation">
             <p>
               <?php the_field('app_summary') ?>
             </p>
@@ -46,19 +46,19 @@
         ?>
           <section class="contentSection">
             <div class="container">
-              <h2 class="sectionTitle"><?php echo $page_name ?></h2>
+              <h2 class="sectionTitle animation"><?php echo $page_name ?></h2>
               <?php if( have_rows('screenshots') ): ?>
                 <ul class="row appScreenshots <?php if($screenshotCount < 4) { ?> justify-content-center <?php } ?>">
                   <?php while( have_rows('screenshots') ): the_row(); 
                     $screenshot = get_sub_field('screenshot');
                   ?>
-                    <li class="<?php echo $screenshotClassName ?>">
+                    <li class="<?php echo $screenshotClassName ?> animation">
                       <img src="<?php echo $screenshot['url'] ?>" alt="<?php echo $screenshot['alt'] ?>">
                     </li>
                   <?php endwhile; ?>
                 </ul>
               <?php endif; ?>
-              <div class="detailText">
+              <div class="detailText animation">
                 <?php if( have_rows('page_descriptions') ): ?>
                   <ol>
                     <?php while( have_rows('page_descriptions') ): the_row(); 
@@ -76,7 +76,7 @@
       <section id="marketingButtons">
         <div class="container">
           <div class="githubArea">
-            <a class="githubButton" href="<?php the_field('github') ?>" target="_blank">
+            <a class="githubButton animation" href="<?php the_field('github') ?>" target="_blank">
               <i class="fab fa-github"></i>Src on Github
             </a>
           </div>
@@ -87,7 +87,7 @@
             if( $app_store_info ):
               if( $app_store_info['app_store_badge'] ):
           ?>
-            <a href="<?php echo $app_link ?>" target="_blank" class="appStoreButton">
+            <a href="<?php echo $app_link ?>" target="_blank" class="appStoreButton animation">
               <div id="appStoreButtonImg" class="<?php if ( get_field('category') == 'Android' ) { ?> google <?php } ?>">
                 <img alt='<?php echo $app_store_info['app_store_badge']['alt'] ?>' src='<?php echo $app_store_info['app_store_badge']['url'] ?>' />
               </div>

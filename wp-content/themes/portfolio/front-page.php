@@ -15,7 +15,7 @@
     </header>
     <section id="works" class="mainTop section">
       <div class="container">
-        <h2 class="sectionTitle">Works</h2>
+        <h2 class="sectionTitle animation">Works</h2>
         <?php
           $work_args = array(
             'post_type' => 'work'
@@ -51,7 +51,7 @@
     </section>
     <section id="blogArticles" class="section">
       <div class="container">
-        <h2 class="sectionTitle">Popular Articles on My Blog</h2>
+        <h2 class="sectionTitle animation">Popular Articles on My Blog</h2>
         <?php
           $blog_args = array(
             'post_type' => 'blog_article'
@@ -87,7 +87,7 @@
     </section>
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="sectionTitle sectionTitleC">Skills</h2>
+        <h2 class="sectionTitle sectionTitleC animation">Skills</h2>
         <div class="thumbnails row cf">
           <div class="thumbnail col-md-4 animation">
             <p class="icons"><i class="fas fa-mobile-alt"></i></p>
@@ -184,7 +184,7 @@
     </section>
     <section id="resources" class="section">
       <div class="container">
-        <h2 class="sectionTitle">My Study Resources</h2>
+        <h2 class="sectionTitle animation">My Study Resources</h2>
         <?php
           $website_args = array(
             'post_type' => 'resources_website'
@@ -234,17 +234,17 @@
     <section id="profile" class="section">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 profileImg">
+          <div class="col-md-4 profileImg animation">
             <img src="<?php echo get_template_directory_uri(); ?>/img/profile_img.jpg" alt="Picture of my self">
           </div>
           <div class="col-md-8">
-            <h3 class="sectionTitle sectionTitleC">Kenta Kodashima</h3>
-            <div class="profileText">
+            <h3 class="sectionTitle sectionTitleC animation">Kenta Kodashima</h3>
+            <div class="profileText animation">
               <p>I had been working as a front-end web developer and project manager in a web design studio in Tokyo. Now I'm completing a Web and Mobile App Development diploma at a college in Vancouver, seeking to get an opportunity as an iOS developer or a front-end web developer.</p>
               <p>I'm passionate about learning new things, sharing my knowledge, and making something using modern technologies. In order to share my knowledge, I write medium articles about what I learn from making apps.</p>
               <p>My recent interest is in Docker, Node.js, MongoDB, MySQL, RxSwift, Kotlin, React Native and Flutter.</p>
             </div>
-            <ul class="icons">
+            <ul class="icons animation">
               <li><a href="https://github.com/KentaKodashima"><i class="fab fa-github"></i></a></li>
               <li><a href="https://www.linkedin.com/in/kenta-kodashima-61940611a/"><i class="fab fa-linkedin-in"></i></a></li>
               <li><a href="https://medium.com/@KentaKodashima"><i class="fab fa-medium-m"></i></a></li>
@@ -256,14 +256,14 @@
     </section>
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="sectionTitle">Contact</h2>
+        <h2 class="sectionTitle animation">Contact</h2>
         <div class="content">
-          <p class="greetingText">
+          <p class="greetingText animation">
             Thank you for visiting this website.<br> Currently, I'm looking for a job opportunity as an iOS developer or a web developer.<br>
             Please
             feel free to contact me.
           </p>
-          <a class="contactButton" href="mailto:kentakodashima@gmail.com">
+          <a class="contactButton animation" href="mailto:kentakodashima@gmail.com">
             Send me an email
           </a>
         </div>

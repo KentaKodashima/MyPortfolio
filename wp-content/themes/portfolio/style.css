@@ -96,10 +96,13 @@ This source code or any portion there of must not be
 reproduced or used in any manner whatsoever.
 ======================================================================
 */
+/* ==============
+    Animations
+  ============= */
 @-webkit-keyframes slideInBottom {
   0% {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 60%, 0);
   }
   100% {
     opacity: 1;
@@ -110,7 +113,7 @@ reproduced or used in any manner whatsoever.
 @-moz-keyframes slideInBottom {
   0% {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 60%, 0);
   }
   100% {
     opacity: 1;
@@ -121,7 +124,7 @@ reproduced or used in any manner whatsoever.
 @keyframes slideInBottom {
   0% {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 60%, 0);
   }
   100% {
     opacity: 1;
@@ -129,18 +132,26 @@ reproduced or used in any manner whatsoever.
   }
 }
 
+.animation.active {
+  -webkit-animation: slideInBottom 0.35s ease 0.15s;
+  -moz-animation: slideInBottom 0.35s ease 0.15s;
+  animation: slideInBottom 0.35s ease 0.15s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 #works .animation.active:nth-child(1),
 #blogArticles .animation.active:nth-child(1),
 #skills .animation.active:nth-child(1),
 #profile .animation.active:nth-child(1),
 #resources .animation.active:nth-child(1) {
-  -webkit-animation: slideInBottom 0.7s ease 0.15s;
-  -moz-animation: slideInBottom 0.7s ease 0.15s;
-  animation: slideInBottom 0.7s ease 0.15s;
+  -webkit-animation: slideInBottom 0.5s ease 0.15s;
+  -moz-animation: slideInBottom 0.5s ease 0.15s;
+  animation: slideInBottom 0.5s ease 0.15s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 #works .animation.active:nth-child(2),
@@ -148,13 +159,12 @@ reproduced or used in any manner whatsoever.
 #skills .animation.active:nth-child(2),
 #profile .animation.active:nth-child(2),
 #resources .animation.active:nth-child(2) {
-  -webkit-animation: slideInBottom 0.7s ease 0.3s;
-  -moz-animation: slideInBottom 0.7s ease 0.3s;
-  animation: slideInBottom 0.7s ease 0.3s;
+  -webkit-animation: slideInBottom 0.5s ease 0.3s;
+  -moz-animation: slideInBottom 0.5s ease 0.3s;
+  animation: slideInBottom 0.5s ease 0.3s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 #works .animation.active:nth-child(3),
@@ -162,13 +172,12 @@ reproduced or used in any manner whatsoever.
 #skills .animation.active:nth-child(3),
 #profile .animation.active:nth-child(3),
 #resources .animation.active:nth-child(3) {
-  -webkit-animation: slideInBottom 0.7s ease 0.45s;
-  -moz-animation: slideInBottom 0.7s ease 0.45s;
-  animation: slideInBottom 0.7s ease 0.45s;
+  -webkit-animation: slideInBottom 0.5s ease 0.45s;
+  -moz-animation: slideInBottom 0.5s ease 0.45s;
+  animation: slideInBottom 0.5s ease 0.45s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 #works .animation.active:nth-child(4),
@@ -176,13 +185,12 @@ reproduced or used in any manner whatsoever.
 #skills .animation.active:nth-child(4),
 #profile .animation.active:nth-child(4),
 #resources .animation.active:nth-child(4) {
-  -webkit-animation: slideInBottom 0.7s ease 0.6s;
-  -moz-animation: slideInBottom 0.7s ease 0.6s;
-  animation: slideInBottom 0.7s ease 0.6s;
+  -webkit-animation: slideInBottom 0.5s ease 0.6s;
+  -moz-animation: slideInBottom 0.5s ease 0.6s;
+  animation: slideInBottom 0.5s ease 0.6s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 #works .animation.active:nth-child(5),
@@ -190,13 +198,12 @@ reproduced or used in any manner whatsoever.
 #skills .animation.active:nth-child(5),
 #profile .animation.active:nth-child(5),
 #resources .animation.active:nth-child(5) {
-  -webkit-animation: slideInBottom 0.7s ease 0.75s;
-  -moz-animation: slideInBottom 0.7s ease 0.75s;
-  animation: slideInBottom 0.7s ease 0.75s;
+  -webkit-animation: slideInBottom 0.5s ease 0.75s;
+  -moz-animation: slideInBottom 0.5s ease 0.75s;
+  animation: slideInBottom 0.5s ease 0.75s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 #works .animation.active:nth-child(6),
@@ -204,13 +211,12 @@ reproduced or used in any manner whatsoever.
 #skills .animation.active:nth-child(6),
 #profile .animation.active:nth-child(6),
 #resources .animation.active:nth-child(6) {
-  -webkit-animation: slideInBottom 0.7s ease 0.9s;
-  -moz-animation: slideInBottom 0.7s ease 0.9s;
-  animation: slideInBottom 0.7s ease 0.9s;
+  -webkit-animation: slideInBottom 0.5s ease 0.9s;
+  -moz-animation: slideInBottom 0.5s ease 0.9s;
+  animation: slideInBottom 0.5s ease 0.9s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 #works .animation.active:nth-child(7),
@@ -218,13 +224,12 @@ reproduced or used in any manner whatsoever.
 #skills .animation.active:nth-child(7),
 #profile .animation.active:nth-child(7),
 #resources .animation.active:nth-child(7) {
-  -webkit-animation: slideInBottom 0.7s ease 1.05s;
-  -moz-animation: slideInBottom 0.7s ease 1.05s;
-  animation: slideInBottom 0.7s ease 1.05s;
+  -webkit-animation: slideInBottom 0.5s ease 1.05s;
+  -moz-animation: slideInBottom 0.5s ease 1.05s;
+  animation: slideInBottom 0.5s ease 1.05s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 #works .animation.active:nth-child(8),
@@ -232,13 +237,12 @@ reproduced or used in any manner whatsoever.
 #skills .animation.active:nth-child(8),
 #profile .animation.active:nth-child(8),
 #resources .animation.active:nth-child(8) {
-  -webkit-animation: slideInBottom 0.7s ease 1.2s;
-  -moz-animation: slideInBottom 0.7s ease 1.2s;
-  animation: slideInBottom 0.7s ease 1.2s;
+  -webkit-animation: slideInBottom 0.5s ease 1.2s;
+  -moz-animation: slideInBottom 0.5s ease 1.2s;
+  animation: slideInBottom 0.5s ease 1.2s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 #works .animation.active:nth-child(9),
@@ -246,13 +250,12 @@ reproduced or used in any manner whatsoever.
 #skills .animation.active:nth-child(9),
 #profile .animation.active:nth-child(9),
 #resources .animation.active:nth-child(9) {
-  -webkit-animation: slideInBottom 0.7s ease 1.35s;
-  -moz-animation: slideInBottom 0.7s ease 1.35s;
-  animation: slideInBottom 0.7s ease 1.35s;
+  -webkit-animation: slideInBottom 0.5s ease 1.35s;
+  -moz-animation: slideInBottom 0.5s ease 1.35s;
+  animation: slideInBottom 0.5s ease 1.35s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 #works .animation.active:nth-child(10),
@@ -260,13 +263,12 @@ reproduced or used in any manner whatsoever.
 #skills .animation.active:nth-child(10),
 #profile .animation.active:nth-child(10),
 #resources .animation.active:nth-child(10) {
-  -webkit-animation: slideInBottom 0.7s ease 1.5s;
-  -moz-animation: slideInBottom 0.7s ease 1.5s;
-  animation: slideInBottom 0.7s ease 1.5s;
+  -webkit-animation: slideInBottom 0.5s ease 1.5s;
+  -moz-animation: slideInBottom 0.5s ease 1.5s;
+  animation: slideInBottom 0.5s ease 1.5s;
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
   animation-fill-mode: both;
-  transition-delay: 2s;
 }
 
 /* ==============

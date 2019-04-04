@@ -16,10 +16,13 @@ reproduced or used in any manner whatsoever.
 @import "mixin";
 @import "keyframes_mixin";
 
+/* ==============
+    Animations
+  ============= */
 @include keyframes(slideInBottom) {
   0% {
     opacity: 0;
-    transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 60%, 0)
   }
 
   100% {
@@ -28,14 +31,17 @@ reproduced or used in any manner whatsoever.
   }
 }
 
+.animation.active {
+  @include animation(slideInBottom 0.35s ease 0.15s);
+}
+
 @for $count from 1 through 10 {
   #works .animation.active:nth-child(#{$count}),
   #blogArticles .animation.active:nth-child(#{$count}),
   #skills .animation.active:nth-child(#{$count}),
   #profile .animation.active:nth-child(#{$count}),
   #resources .animation.active:nth-child(#{$count}) {
-    @include animation(slideInBottom 0.7s ease 0.15s * $count);
-    transition-delay: 2s;
+    @include animation(slideInBottom 0.5s ease 0.15s * $count);
   }
 }
 
