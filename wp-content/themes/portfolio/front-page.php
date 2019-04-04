@@ -24,7 +24,7 @@
         ?>
         <ul class="workList row cf">
           <?php if ( $work_query->have_posts() ) : while($work_query->have_posts()): $work_query->the_post(); ?>
-          <li class="workItem col-md-4" ontouchstart="">
+          <li class="workItem col-md-4 animation" ontouchstart="">
             <figure class="imgBox">
               <a href="<?php the_permalink(); ?>" class="imgBoxLink">
                 <?php
@@ -60,7 +60,7 @@
         ?>
         <ul class="workList row cf">
           <?php if ( $blog_query->have_posts() ) : while($blog_query->have_posts()): $blog_query->the_post(); ?>
-          <li class="workItem col-md-4" ontouchstart="">
+          <li class="workItem col-md-4 animation" ontouchstart="">
             <figure class="imgBox">
               <a href="<?php the_field('article_link'); ?>" class="imgBoxLink">
                 <?php
@@ -89,7 +89,7 @@
       <div class="container">
         <h2 class="sectionTitle sectionTitleC">Skills</h2>
         <div class="thumbnails row cf">
-          <div class="thumbnail col-md-4">
+          <div class="thumbnail col-md-4 animation">
             <p class="icons"><i class="fas fa-mobile-alt"></i></p>
             <p class="skillName">iOS Development</p>
             <p class="description">
@@ -97,31 +97,28 @@
               In July of 2018, I published my very first own project on the App Store.
             </p>
             <ul class="tags">
-              <li class="tagItem">Xcode</li>
               <li class="tagItem">Swift</li>
               <li class="tagItem">Objective-c</li>
-              <li class="tagItem">Cocoapods</li>
-              <li class="tagItem">Realm(Swift)</li>
-              <li class="tagItem">Firebase(Swift)</li>
+              <li class="tagItem">Realm</li>
+              <li class="tagItem">Firebase</li>
               <li class="tagItem">Publishing</li>
               <li class="tagItem">Common Libraries</li>
             </ul>
           </div>
-          <div class="thumbnail col-md-4">
+          <div class="thumbnail col-md-4 animation">
             <p class="icons"><i class="fas fa-mobile-alt"></i></p>
             <p class="skillName">Android Development</p>
             <p class="description">
               I understand the basic concepts of Android development such as Fragment, Lifecycle, Activity etc. In September of 2018, I published my first Android app on the Google Play Store.
             </p>
             <ul class="tags">
-              <li class="tagItem">Android Studio</li>
               <li class="tagItem">Java</li>
-              <li class="tagItem">Realm(Java)</li>
-              <li class="tagItem">Firebase(Java)</li>
+              <li class="tagItem">Realm</li>
+              <li class="tagItem">Firebase</li>
               <li class="tagItem">Publishing</li>
             </ul>
           </div>
-          <div class="thumbnail col-md-4">
+          <div class="thumbnail col-md-4 animation">
             <p class="icons"><i class="fas fa-laptop-code"></i></p>
             <p class="skillName">Front-End Development</p>
             <p class="description">
@@ -136,14 +133,13 @@
               <li class="tagItem">Redux</li>
               <li class="tagItem">AWS/S3</li>
               <li class="tagItem">Bootstrap</li>
-              <li class="tagItem">MaterializeCSS</li>
-              <li class="tagItem">Semantic UI</li>
+              <li class="tagItem">Other CSS frameworks</li>
               <li class="tagItem">SEO</li>
               <li class="tagItem">GulpJS</li>
 			        <li class="tagItem">WordPress</li>
             </ul>
           </div>
-          <div class="thumbnail col-md-4 noRightMargin">
+          <div class="thumbnail col-md-4 animation">
             <p class="icons"><i class="fas fa-laptop-code"></i></p>
             <p class="skillName">Back-End Development</p>
             <p class="description">
@@ -158,7 +154,7 @@
               <li class="tagItem">Mongoose</li>
             </ul>
           </div>
-          <div class="thumbnail col-md-4">
+          <div class="thumbnail col-md-4 animation">
             <p class="icons"><i class="fab fa-github"></i></p>
             <p class="skillName">Team Communication Tools</p>
             <p class="description">
@@ -171,7 +167,7 @@
               <li class="tagItem">Zeplin</li>
             </ul>
           </div>
-          <div class="thumbnail col-md-4">
+          <div class="thumbnail col-md-4 animation">
             <p class="icons"><i class="fas fa-paint-brush"></i></p>
             <p class="skillName">Design Applications</p>
             <p class="description">
@@ -202,7 +198,7 @@
         ?>
           <div class="thumbnails row cf">
             <?php if ( $website_query->have_posts() ) : while($website_query->have_posts()): $website_query->the_post(); ?>
-              <div class="thumbnail col-md-3">
+              <div class="thumbnail col-md-3 animation">
                 <div class="thumbnailImg">
                   <?php
                     $image_id = get_post_thumbnail_id();
@@ -218,7 +214,7 @@
           </div>
           <div class="thumbnails row cf">
             <?php if ( $book_query->have_posts() ) : while($book_query->have_posts()): $book_query->the_post(); ?>
-              <div class="thumbnail col-md-3 lastRow">
+              <div class="thumbnail col-md-3 lastRow animation">
                 <div class="thumbnailImg">
                   <?php
                     $image_id = get_post_thumbnail_id();
