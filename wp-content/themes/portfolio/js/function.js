@@ -14,6 +14,17 @@ reproduced or used in any manner whatsoever.
 // Add and remove .scrollTop class of #nav
 $(window).scroll(function () {
   var ua = navigator.userAgent;
+
+  // Keyframe animations
+  $(".animation").each(function () {
+    var position = $(this).offset().top; // The distance from the top to the element
+    var scroll = $(window).scrollTop(); // The scroll position
+    var windowHeight = $(window).height(); // The window height
+    if (scroll > position - windowHeight) { // The scroll position passed the element
+      $(this).addClass('active'); // Add the 'active' class
+    }
+  });
+
   if (ua.indexOf('iPhone') > 0 ||
     ua.indexOf('iPod') > 0 ||
     ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
@@ -45,15 +56,15 @@ $(window).scroll(function () {
       sectionTopArr[i] = $(this).offset().top - 14;
     });
 
-    // Keyframe animations
-    $(".animation").each(function () {
-      var position = $(this).offset().top; // The distance from the top to the element
-      var scroll = $(window).scrollTop(); // The scroll position
-      var windowHeight = $(window).height(); // The window height
-      if (scroll > position - windowHeight) { // The scroll position passed the element
-        $(this).addClass('active'); // Add the 'active' class
-      }
-    });
+    // // Keyframe animations
+    // $(".animation").each(function () {
+    //   var position = $(this).offset().top; // The distance from the top to the element
+    //   var scroll = $(window).scrollTop(); // The scroll position
+    //   var windowHeight = $(window).height(); // The window height
+    //   if (scroll > position - windowHeight) { // The scroll position passed the element
+    //     $(this).addClass('active'); // Add the 'active' class
+    //   }
+    // });
 
     // Scroll events
     for (var i = sectionTopArr.length - 1; i >= 0; i--) {

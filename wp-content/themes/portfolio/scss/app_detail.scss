@@ -31,12 +31,20 @@ reproduced or used in any manner whatsoever.
 }
 
 .animation.active {
-  @include animation(slideInBottom 0.35s ease 0.15s);
+  @include animation(slideInBottom 1.2s ease 0.15s);
+
+  @include max-screen($breakpMobileLand-max) {
+    @include animation(slideInBottom 0.85s ease 0.15s);
+  }
 }
 
 @for $count from 1 through 4 {
   .appScreenshots .animation.active:nth-child(#{$count}) {
-    @include animation(slideInBottom 0.5s ease 0.15s * $count);
+    @include animation(slideInBottom 1.2s ease 0.15s * $count);
+
+    @include max-screen($breakpMobileLand-max) {
+      @include animation(slideInBottom 0.85s ease 0.15s);
+    }
   }
 }
 

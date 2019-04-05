@@ -22,6 +22,7 @@ let sections = getElements('section.section')
 
 function getElements(element) {
   let elements = document.querySelectorAll(element);
+  console.log(elements);
   if (elements.length === 0) {
     return false;
   }
@@ -30,10 +31,10 @@ function getElements(element) {
   }
 }
 
-function getOffsetTop(element = navElement) {
-  const rect = element.getBoundingClientRect();
+function getOffsetTop(element) {
+  const rectTop = element.getBoundingClientRect().top;
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const offsetTop = rect.top + scrollTop;
+  const offsetTop = rectTop + scrollTop;
 
   return offsetTop;
 }
@@ -120,8 +121,8 @@ window.addEventListener('scroll', () => {
 
   } else {
     /* How many pixels did the nav move? */
-    var mainTopElement = document.getElementsByClassName('mainTop');
-    var headerBottom = getOffsetTop(mainTopElement)
+    let mainTopElement = document.getElementsByClassName('mainTop');
+    let headerBottom = getOffsetTop(mainTopElement)
     let sectionTopArr = new Array();
 
     if (scrollTop >= headerBottom) {
@@ -141,15 +142,15 @@ window.addEventListener('scroll', () => {
 
     // Keyframe animations
     elementsToAnimate.forEach(function (val) {
-      var position = getOffsetTop(val); // The distance from the top to the element
-      var scroll = scrollTop; // The scroll position
+      let position = getOffsetTop(val); // The distance from the top to the element
+      let scroll = scrollTop; // The scroll position
       if (scroll > position - windowHeight) { // The scroll position passed the element
         val.classList.add('active'); // Add the 'active' class
       }
     });
 
     // Scroll events
-    for (var i = sectionTopArr.length - 1; i >= 0; i--) {
+    for (let i = sectionTopArr.length - 1; i >= 0; i--) {
       if (scrollTop > sectionTopArr[i] - 50) {
         chengeSection(i);
         break;

@@ -80,6 +80,10 @@ reproduced or used in any manner whatsoever.
 /* ==============
    Common styles
   ============= */
+.animation {
+  opacity: 0;
+}
+
 #works {
   padding-top: 90px;
 }
