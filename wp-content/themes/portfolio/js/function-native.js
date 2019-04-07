@@ -10,7 +10,6 @@ This source code or any portion thereof must not be
 reproduced or used in any manner whatsoever.
 ======================================================================
 */
-
 const bodyElement = document.body;
 const htmlElement = document.getElementsByTagName("html")[0];
 const navElement = document.getElementById('nav')
@@ -74,6 +73,7 @@ function isNavOpen() {
     htmlElement.style.height = 'auto'
   }
 }
+
 /**
  * A helper function to highlight the menu to indicate which section the user is at.
  * @param {number} sectionNum - A section index
@@ -135,34 +135,73 @@ function changeSection(sectionNum) {
   }
 }
 
+/**
+ * A function to process smooth scrolling animation.
+ * */
 function smoothScrolling() {
   const headerHeight = 40;
+  const interval = 10;
+  const divisor = 8;
+  const range = (divisor / 2) + 1;
   const linksInsidePage = document.querySelectorAll('a[href^="#"]');
-  // const urlHash = location.hash;
-  // if (urlHash) {
-  //   $('body,html').stop().scrollTop(0);
-  //   setTimeout(function () {
-  //     var target = $(urlHash);
-  //     var position = target.offset().top - headerHeight;
-  //     $('body,html').stop().animate({ scrollTop: position }, 500);
-  //   }, 200);
-  // };
 
-  // Links inside the same page
+  // Loop through links inside the same page
   linksInsidePage.forEach(anchor => {
-    link.addEventListener('click', (event) => {
+    anchor.addEventListener('click', (event) => {
       event.preventDefault();
-      const speed = 400;
+
+      let move;
+      let currentPosition = window.pageYOffset || document.documentElement.scrollTop;
+      console.log(currentPosition);
       const href = anchor.getAttribute('href');
-      const target = document.querySelector(href == "#" || href == "" ? 'html' : href);
-      const position = target.getBoundingClientRect().top - headerHeight;
-      bodyElement.animate({scrollTop: [position]}, speed);
-      htmlElement.animate({scrollTop: [position]}, speed);
-      // $('body,html').animate({ scrollTop: position }, speed, 'swing');
-      return false;
+      const target = document.querySelector(href);
+      // const target = document.querySelector(href == "#" || href == "" ? 'html' : href);
+      const targetPosition = target.getBoundingClientRect().top + currentPosition - headerHeight;
+
+      (function doScroll() {
+        move = currentPosition + Math.round((targetPosition - currentPosition) / divisor);
+        window.scrollTo(0, move);
+        currentPosition = move;
+
+        if (document.body.clientHeight - window.innerHeight < targetPosition) {
+          // Scroll to the bottom
+          window.scrollTo(0, document.body.clientHeight);
+          return;
+        }
+
+        if (move >= targetPosition + range || move <= targetPosition - range) {
+          // Scroll to the range
+          window.setTimeout(doScroll, interval);
+        } else {
+          // Move to the exact position inside of the range
+          window.scrollTo(0, targetPosition);
+        }
+      })();
     })
   });
 }
+
+smoothScrolling();
+
+// scrollIntoView version
+// const linksInsidePage = document.querySelectorAll('a[href^="#"]');
+// linksInsidePage.forEach(anchor => {
+//   anchor.addEventListener('click', (event) => {
+//     // smoothScroll(anchor);
+//     //
+//     // return false;
+//     let hash = anchor.getAttribute('href');
+//     let target = document.querySelector(hash);
+//
+//     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+//
+//     // Update URL
+//     history.pushState(null, null, hash);
+//
+//     event.preventDefault();
+//   })
+// });
+
 
 let hamburgerButton = document.getElementsByClassName('navbar-toggler')[0];
 hamburgerButton.addEventListener('click', () => {
@@ -205,11 +244,14 @@ window.addEventListener('scroll', () => {
   }
 
   // Highlights menu
-  sections.forEach((val, index) => {
-    if (scrollTop > (getOffsetTopDifference(val) - 50)) {
-      changeSection(index);
-    }
-  });
+  const pageURL = location.href;
+  if (!pageURL.includes('/work/')) {
+    sections.forEach((val, index) => {
+      if (scrollTop > (getOffsetTopDifference(val) - 50)) {
+        changeSection(index);
+      }
+    });
+  }
 
   // Keyframe animations
   elementsToAnimate.forEach(val => {
