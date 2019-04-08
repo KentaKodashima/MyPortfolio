@@ -33,18 +33,6 @@ function getElements(element) {
 }
 
 /**
- * Pupulate the given array with the offsetTop properties of the given elements.
- * @param {array} elements - An array of HTML elements
- * @param {array} array - An empty array to populate
- * */
-function getOffsetTops(elements, array) {
-  elements.forEach(element => {
-    array.push(getOffsetTopDifference(element));
-    // array.push(element.offsetTop);
-  });
-}
-
-/**
  * Calculate the difference between the element's position and window's top.
  * @param {Element} element - Element object
  * @return {number}
@@ -146,28 +134,20 @@ function smoothScrolling() {
   const linksInsidePage = document.querySelectorAll('a[href^="#"]');
 
   // Loop through links inside the same page
-  linksInsidePage.forEach(anchor => {
-    anchor.addEventListener('click', (event) => {
+  linksInsidePage.forEach(function(anchor) {
+    anchor.addEventListener('click', function(event) {
       event.preventDefault();
 
       let move;
       let currentPosition = window.pageYOffset || document.documentElement.scrollTop;
-      console.log(currentPosition);
       const href = anchor.getAttribute('href');
-      const target = document.querySelector(href);
-      // const target = document.querySelector(href == "#" || href == "" ? 'html' : href);
+      const target = document.querySelector(href == "#" || href == "" ? 'html' : href);
       const targetPosition = target.getBoundingClientRect().top + currentPosition - headerHeight;
 
       (function doScroll() {
         move = currentPosition + Math.round((targetPosition - currentPosition) / divisor);
         window.scrollTo(0, move);
         currentPosition = move;
-
-        if (document.body.clientHeight - window.innerHeight < targetPosition) {
-          // Scroll to the bottom
-          window.scrollTo(0, document.body.clientHeight);
-          return;
-        }
 
         if (move >= targetPosition + range || move <= targetPosition - range) {
           // Scroll to the range
@@ -219,7 +199,7 @@ navLinks.forEach(element => {
   });
 });
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', function() {
   const ua = navigator.userAgent;
   if (ua.indexOf('iPhone') > 0 ||
     ua.indexOf('iPod') > 0 ||
@@ -246,15 +226,15 @@ window.addEventListener('scroll', () => {
   // Highlights menu
   const pageURL = location.href;
   if (!pageURL.includes('/work/')) {
-    sections.forEach((val, index) => {
-      if (scrollTop > (getOffsetTopDifference(val) - 50)) {
+    sections.forEach(function(val, index) {
+      if (scrollTop > (getOffsetTopDifference(val) - 90)) {
         changeSection(index);
       }
     });
   }
 
   // Keyframe animations
-  elementsToAnimate.forEach(val => {
+  elementsToAnimate.forEach(function(val) {
     const position = getOffsetTopDifference(val); // The distance from the top to the element
     if (scrollTop > position - windowHeight) { // The scroll position passed the element
       val.classList.add('active'); // Add the 'active' class
