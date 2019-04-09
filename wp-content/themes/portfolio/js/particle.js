@@ -1,3 +1,16 @@
+/*
+======================================================================
+Project Name    : My Portfolio
+File Name       : particle.js
+Encoding        : UTF-8
+
+Copyright © 2018 Kenta Kodashima. All rights reserved.
+
+This source code or any portion thereof must not be
+reproduced or used in any manner whatsoever.
+======================================================================
+*/
+
 (function() {
 
   var width,
