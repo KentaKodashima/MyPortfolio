@@ -644,12 +644,18 @@ reproduced or used in any manner whatsoever.
   background-size: cover;
   padding: 20% 0 20%;
   color: #fff;
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {
   #header {
     padding: 40% 0 12%;
   }
+}
+
+#header #particle-canvas {
+  position: absolute;
+  bottom: 0;
 }
 
 #header .container #heroText {

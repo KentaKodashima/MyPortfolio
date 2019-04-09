@@ -10,20 +10,20 @@ This source code or any portion thereof must not be
 reproduced or used in any manner whatsoever.
 ======================================================================
 */
-const bodyElement = document.body;
-const htmlElement = document.getElementsByTagName("html")[0];
-const navElement = document.getElementById('nav')
-const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var bodyElement = document.body;
+var htmlElement = document.getElementsByTagName("html")[0];
+var navElement = document.getElementById('nav');
+var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-const elementsToAnimate = getElements('.animation');
-const sections = getElements('section.section');
+var elementsToAnimate = getElements('.animation');
+var sections = getElements('section.section');
 
 /**
  * Get HTML elements using querySelectorAll().
  * @param {string} element - String which specifies HTML element
  * */
 function getElements(element) {
-  let elements = document.querySelectorAll(element);
+  var elements = document.querySelectorAll(element);
   if (elements.length === 0) {
     return false;
   }
@@ -38,9 +38,9 @@ function getElements(element) {
  * @return {number}
  * */
 function getOffsetTopDifference(element) {
-  const rectTop = element.getBoundingClientRect().top;
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  const offsetTop = rectTop + scrollTop;
+  var rectTop = element.getBoundingClientRect().top;
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var offsetTop = rectTop + scrollTop;
 
   return offsetTop;
 }
@@ -50,15 +50,11 @@ function getOffsetTopDifference(element) {
  * */
 function isNavOpen() {
   if (document.getElementById('nav').classList.contains('isOpen')) {
-    bodyElement.style.overflow = 'hidden';
-    bodyElement.style.height = '100%'
-    htmlElement.style.overflow = 'hidden';
-    htmlElement.style.height = '100%'
+    bodyElement.classList.add('fixBackground');
   } else {
-    bodyElement.style.overflow = 'visible';
-    bodyElement.style.height = 'auto'
-    htmlElement.style.overflow = 'visible';
-    htmlElement.style.height = 'auto'
+    if (bodyElement.classList.contains('fixBackground')) {
+      bodyElement.classList.remove('fixBackground');
+    }
   }
 }
 
@@ -67,13 +63,13 @@ function isNavOpen() {
  * @param {number} sectionNum - A section index
  * */
 function changeSection(sectionNum) {
-  const navWorks = document.getElementsByClassName('nav-works')[0];
-  const navBlog = document.getElementsByClassName('nav-blog')[0];
-  const navSkills = document.getElementsByClassName('nav-skills')[0];
-  const navResources = document.getElementsByClassName('nav-resources')[0];
-  const navProfile = document.getElementsByClassName('nav-profile')[0];
-  const navContact = document.getElementsByClassName('nav-contact')[0];
-  let currentSec = -1;
+  var navWorks = document.getElementsByClassName('nav-works')[0];
+  var navBlog = document.getElementsByClassName('nav-blog')[0];
+  var navSkills = document.getElementsByClassName('nav-skills')[0];
+  var navResources = document.getElementsByClassName('nav-resources')[0];
+  var navProfile = document.getElementsByClassName('nav-profile')[0];
+  var navContact = document.getElementsByClassName('nav-contact')[0];
+  var currentSec = -1;
 
   if (sectionNum != currentSec) {
     currentSec = sectionNum;
@@ -127,22 +123,22 @@ function changeSection(sectionNum) {
  * A function to process smooth scrolling animation.
  * */
 function smoothScrolling() {
-  const headerHeight = 40;
-  const interval = 10;
-  const divisor = 8;
-  const range = (divisor / 2) + 1;
-  const linksInsidePage = document.querySelectorAll('a[href^="#"]');
+  var headerHeight = 40;
+  var interval = 10;
+  var divisor = 8;
+  var range = (divisor / 2) + 1;
+  var linksInsidePage = document.querySelectorAll('a[href^="#"]');
 
   // Loop through links inside the same page
   linksInsidePage.forEach(function(anchor) {
     anchor.addEventListener('click', function(event) {
       event.preventDefault();
 
-      let move;
-      let currentPosition = window.pageYOffset || document.documentElement.scrollTop;
-      const href = anchor.getAttribute('href');
-      const target = document.querySelector(href == "#" || href == "" ? 'html' : href);
-      const targetPosition = target.getBoundingClientRect().top + currentPosition - headerHeight;
+      var move;
+      var currentPosition = window.pageYOffset || document.documentElement.scrollTop;
+      var href = anchor.getAttribute('href');
+      var target = document.querySelector(href == "#" || href == "" ? 'html' : href);
+      var targetPosition = target.getBoundingClientRect().top + currentPosition - headerHeight;
 
       (function doScroll() {
         move = currentPosition + Math.round((targetPosition - currentPosition) / divisor);
@@ -155,42 +151,29 @@ function smoothScrolling() {
         } else {
           // Move to the exact position inside of the range
           window.scrollTo(0, targetPosition);
+          history.pushState(null, null, href);
         }
       })();
     })
   });
 }
-
 smoothScrolling();
 
-// scrollIntoView version
-// const linksInsidePage = document.querySelectorAll('a[href^="#"]');
-// linksInsidePage.forEach(anchor => {
-//   anchor.addEventListener('click', (event) => {
-//     // smoothScroll(anchor);
-//     //
-//     // return false;
-//     let hash = anchor.getAttribute('href');
-//     let target = document.querySelector(hash);
-//
-//     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-//
-//     // Update URL
-//     history.pushState(null, null, hash);
-//
-//     event.preventDefault();
-//   })
-// });
+var ua = navigator.userAgent;
+if (ua.indexOf('iPhone') > 0 ||
+    ua.indexOf('iPod') > 0 ||
+    ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
 
+  var hamburgerButton = document.getElementsByClassName('navbar-toggler')[0];
+  hamburgerButton.addEventListener('click', function() {
+    navElement.classList.toggle('isOpen');
+    isNavOpen();
+  });
+}
 
-let hamburgerButton = document.getElementsByClassName('navbar-toggler')[0];
-hamburgerButton.addEventListener('click', () => {
-  navElement.classList.toggle('isOpen');
-})
-
-const navLinks = getElements('a.nav-link');
-const navbarToggler = getElements('button.navbar-toggler')[0];
-const navbarCollapse = getElements('div.navbar-collapse')[0];
+var navLinks = getElements('a.nav-link');
+var navbarToggler = getElements('button.navbar-toggler')[0];
+var navbarCollapse = getElements('div.navbar-collapse')[0];
 navLinks.forEach(element => {
   element.addEventListener('click', () => {
     navbarToggler.classList.add('collapsed');
@@ -200,73 +183,42 @@ navLinks.forEach(element => {
 });
 
 window.addEventListener('scroll', function() {
-  const ua = navigator.userAgent;
-  if (ua.indexOf('iPhone') > 0 ||
-    ua.indexOf('iPod') > 0 ||
-    ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
-
-    isNavOpen()
-  }
-
   /* How many pixels did the nav move? */
-  const mainTopElement = document.getElementsByClassName('mainTop')[0];
-  const headerBottom = getOffsetTopDifference(mainTopElement);
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var mainTopElement = document.getElementsByClassName('mainTop')[0];
+  var headerBottom = getOffsetTopDifference(mainTopElement);
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollTop >= headerBottom) {
-    navElement.classList.add('navScroll');
-  } else if (scrollTop <= headerBottom) {
-    navElement.classList.remove('navScroll');
-    const navWorks = document.getElementsByClassName('nav-works')[0];
-    if (navWorks.classList.contains('active')) {
-      navWorks.classList.remove('active');
-    }
-  }
+  if (!(ua.indexOf('iPhone') > 0) ||
+      !(ua.indexOf('iPod') > 0) ||
+      !(ua.indexOf('Android') > 0) && !(ua.indexOf('Mobile') > 0)) {
 
-  // Highlights menu
-  const pageURL = location.href;
-  if (!pageURL.includes('/work/')) {
-    sections.forEach(function(val, index) {
-      if (scrollTop > (getOffsetTopDifference(val) - 90)) {
-        changeSection(index);
+    if (scrollTop >= headerBottom) {
+      navElement.classList.add('navScroll');
+    } else if (scrollTop <= headerBottom) {
+      navElement.classList.remove('navScroll');
+      var navWorks = document.getElementsByClassName('nav-works')[0];
+      if (navWorks.classList.contains('active')) {
+        navWorks.classList.remove('active');
       }
-    });
+    }
+
+
+    // Highlights menu
+    var pageURL = location.href;
+    if (!pageURL.includes('/work/')) {
+      sections.forEach(function(val, index) {
+        if (scrollTop > (getOffsetTopDifference(val) - 90)) {
+          changeSection(index);
+        }
+      });
+    }
   }
 
   // Keyframe animations
   elementsToAnimate.forEach(function(val) {
-    const position = getOffsetTopDifference(val); // The distance from the top to the element
+    var position = getOffsetTopDifference(val); // The distance from the top to the element
     if (scrollTop > position - windowHeight) { // The scroll position passed the element
       val.classList.add('active'); // Add the 'active' class
     }
   });
-})
-
-// console.log(document.querySelectorAll('a[href^="#"]'))
-
-// $(function () {
-
-//   // Smooth scroll
-//   var headerHeight = 40; // Not the navbar to cover the section title
-
-//   // Segue from app detail page
-//   var urlHash = location.hash;
-//   if (urlHash) {
-//     $('body,html').stop().scrollTop(0);
-//     setTimeout(function () {
-//       var target = $(urlHash);
-//       var position = target.offset().top - headerHeight;
-//       $('body,html').stop().animate({ scrollTop: position }, 500);
-//     }, 200);
-//   }
-//
-//   // Links inside the same page
-//   $('a[href^="#"]').click(function () {
-//     var speed = 400;
-//     var href = $(this).attr("href");
-//     var target = $(href == "#" || href == "" ? 'html' : href);
-//     var position = target.offset().top - headerHeight;
-//     $('body,html').animate({ scrollTop: position }, speed, 'swing');
-//     return false;
-//   });
-// });
+});

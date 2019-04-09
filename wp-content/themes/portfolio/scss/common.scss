@@ -17,6 +17,10 @@ reproduced or used in any manner whatsoever.
 /* ==============
    Common styles
   ============= */
+.fixBackground {
+  overflow: hidden;
+}
+
 .animation {
   opacity: 0;
 }

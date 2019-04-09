@@ -12,6 +12,7 @@
           </ul>
         </div>
       </div>
+      <canvas id="particle-canvas"></canvas>
     </header>
     <section id="works" class="mainTop section">
       <div class="container">

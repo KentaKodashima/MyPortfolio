@@ -62,8 +62,13 @@ reproduced or used in any manner whatsoever.
   background-size: cover;
   padding: 20% 0 20%;
   color: $colorWhite;
+  position: relative;
   @include max-screen($breakpMobileLand-max) {
     padding: 40% 0 12%;
+  }
+  #particle-canvas {
+    position: absolute;
+    bottom: 0;
   }
   .container {
     #heroText {
