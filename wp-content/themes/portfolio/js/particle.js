@@ -4,6 +4,9 @@ Project Name    : My Portfolio
 File Name       : particle.js
 Encoding        : UTF-8
 
+This implementations is based on Rachel Smith's awesome work.
+https://tympanus.net/codrops/2014/09/23/animated-background-headers/
+
 Copyright © 2018 Kenta Kodashima. All rights reserved.
 
 This source code or any portion thereof must not be
@@ -11,15 +14,29 @@ reproduced or used in any manner whatsoever.
 ======================================================================
 */
 
-(function() {
+/**
+ * A helper function to detect mobile devices.
+ * @return {boolean} - Mobile: true, else: false
+ * */
+function isMobile() {
+  var ua = navigator.userAgent;
+  if (ua.indexOf('iPhone') > 0 ||
+      ua.indexOf('iPod') > 0 ||
+      ua.indexOf('iPad') > 0 ||
+      ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+    return true;
+  }
+}
 
+(function() {
   var width,
       height,
       headerElement,
       canvas,
       ctx,
       circles,
-      animateHeader = true;
+      animateHeader = true,
+      ua = navigator.userAgent;
 
   initHeader();
   addListeners();
@@ -28,7 +45,12 @@ reproduced or used in any manner whatsoever.
   function initHeader() {
     headerElement = document.getElementById('header');
     width = window.innerWidth;
-    height = headerElement.offsetHeight;
+
+    if (isMobile()) {
+      height = headerElement.offsetHeight;
+    } else {
+      height = window.innerHeight;
+    }
 
     headerElement.style.height = height+'px';
 
@@ -104,7 +126,7 @@ reproduced or used in any manner whatsoever.
       }
 
       _this.pos.y -= _this.velocity;
-      _this.alpha -= 0.0005;
+      _this.alpha -= 0.0003;
 
       // Draw a particle
       ctx.beginPath();
@@ -113,5 +135,4 @@ reproduced or used in any manner whatsoever.
       ctx.fill();
     };
   }
-
 })();

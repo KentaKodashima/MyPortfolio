@@ -19,7 +19,9 @@
   </div>
 
   <script src="<?php echo get_template_directory_uri(); ?>/js/function.js" type="text/javascript"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/particle.js" type="text/javascript"></script>
+  <?php if ( is_front_page() ): ?>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/particle.js" type="text/javascript"></script>
+  <?php endif; ?>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124602182-1"></script>
   <script>

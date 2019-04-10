@@ -37,7 +37,7 @@ reproduced or used in any manner whatsoever.
       vertical-align: middle;
     }
   }
-  @include max-screen($breakpMobileLand-max) {
+  @include max-screen($breakpTablet-max) {
     padding: 0.5rem 1rem;
     background-color: $baseColor;
   }

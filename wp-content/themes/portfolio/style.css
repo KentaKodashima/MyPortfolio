@@ -544,7 +544,7 @@ reproduced or used in any manner whatsoever.
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   #nav {
     padding: 0.5rem 1rem;
     background-color: #1F2029;

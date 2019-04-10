@@ -59,6 +59,20 @@ function isNavOpen() {
 }
 
 /**
+ * A helper function to detect mobile devices.
+ * @return {boolean} - Mobile: true, else: false
+ * */
+function isMobile() {
+  var ua = navigator.userAgent;
+  if (ua.indexOf('iPhone') > 0 ||
+      ua.indexOf('iPod') > 0 ||
+      ua.indexOf('iPad') > 0 ||
+      ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+    return true;
+  }
+}
+
+/**
  * A helper function to highlight the menu to indicate which section the user is at.
  * @param {number} sectionNum - A section index
  * */
@@ -159,28 +173,25 @@ function smoothScrolling() {
 }
 smoothScrolling();
 
-var ua = navigator.userAgent;
-if (ua.indexOf('iPhone') > 0 ||
-    ua.indexOf('iPod') > 0 ||
-    ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
-
+if (isMobile()) {
   var hamburgerButton = document.getElementsByClassName('navbar-toggler')[0];
   hamburgerButton.addEventListener('click', function() {
     navElement.classList.toggle('isOpen');
     isNavOpen();
   });
-}
 
-var navLinks = getElements('a.nav-link');
-var navbarToggler = getElements('button.navbar-toggler')[0];
-var navbarCollapse = getElements('div.navbar-collapse')[0];
-navLinks.forEach(element => {
-  element.addEventListener('click', () => {
-    navbarToggler.classList.add('collapsed');
-    navbarCollapse.classList.remove('show');
-    navElement.classList.remove('isOpen');
+  var navLinks = getElements('a.nav-link');
+  var navbarToggler = getElements('button.navbar-toggler')[0];
+  var navbarCollapse = getElements('div.navbar-collapse')[0];
+  navLinks.forEach(element => {
+    element.addEventListener('click', () => {
+      navbarToggler.classList.add('collapsed');
+      navbarCollapse.classList.remove('show');
+      navElement.classList.remove('isOpen');
+      isNavOpen();
+    });
   });
-});
+}
 
 window.addEventListener('scroll', function() {
   /* How many pixels did the nav move? */
@@ -188,10 +199,7 @@ window.addEventListener('scroll', function() {
   var headerBottom = getOffsetTopDifference(mainTopElement);
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (!ua.indexOf('iPhone') > 0 ||
-      !ua.indexOf('iPod') > 0 ||
-      !ua.indexOf('Android') > 0 && !ua.indexOf('Mobile') > 0) {
-
+  if (!isMobile()) {
     if (scrollTop >= headerBottom) {
       navElement.classList.add('navScroll');
     } else if (scrollTop <= headerBottom) {
